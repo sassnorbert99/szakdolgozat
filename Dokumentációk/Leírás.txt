@@ -1,0 +1,16 @@
+Fogyasztás (kw,w)
+-családiház
+-emeletes ház
+-iskola
+- szélerőmű termelése
+- napcella termelése
+- víz erőmű termelése
+
+Méretek
+-családiház  77 m^2
+https://www.budapestingatlan.info/article/milyen-nagy-az-atlagos-magyar-otthonu-329
+-emeletes ház
+-iskola
+-szélerőmű 
+-napcella 
+-víz erőmű 
