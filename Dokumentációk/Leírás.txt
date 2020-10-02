@@ -1,16 +1,37 @@
 Fogyasztás (kw,w)
--családiház
+----------------------------
+-családiház (4 fős) 230Kwh
 -emeletes ház
--iskola
-- szélerőmű termelése
+-bérház(4 fős)	200 kWh
+https://elmuemasz.hu/egyetemes-szolgaltatas/szolgaltatasok/villamos-energia/aramdij-kalkulatorok/lakossagi-aramdij-elmu?fbclid=IwAR3UKUacdAXQeBuYPsDckohKhAf_hY2TnitQqGmBwRiFq_ye-o84onVUPrc
+-----------------------------
+-iskola ? 
+- szélerőmű termelése 3MW
 - napcella termelése
+	91,67 kwh ~ 104,16 kwh
 - víz erőmű termelése
 
 Méretek
 -családiház  77 m^2
 https://www.budapestingatlan.info/article/milyen-nagy-az-atlagos-magyar-otthonu-329
 -emeletes ház
--iskola
--szélerőmű 
+35m magas 9m*9m
+-iskola ?
+-szélerőmű
+	magasság 105 m 
 -napcella 
 -víz erőmű 
+--------------------------------------------------------
+Linkek: 
+Szélerőmű
+http://mvm.hu/bemutatkozas/mvm-csoport/mvm-zold-generacio/szeleromuvek/
+
+Nepcellák 
+https://napelem.blog.hu/2017/09/19/mennyit_termel_a_napelem?fbclid=IwAR3sE8789AtK_I78fnyuNSUjIhDc4Mt0xFxk4Ol645jrABzI3rtvw5Y3p3g
+
+Bérházak családiházak
+https://elmuemasz.hu/egyetemes-szolgaltatas/szolgaltatasok/villamos-energia/aramdij-kalkulatorok/lakossagi-aramdij-elmu?fbclid=IwAR3UKUacdAXQeBuYPsDckohKhAf_hY2TnitQqGmBwRiFq_ye-o84onVUPrc
+
+-------------------------------------------------
+Feljegyzések
+1 MW = 1000 kwh
