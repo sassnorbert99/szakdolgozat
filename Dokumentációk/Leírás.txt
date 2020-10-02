@@ -9,6 +9,9 @@ https://elmuemasz.hu/egyetemes-szolgaltatas/szolgaltatasok/villamos-energia/aram
 - szélerőmű termelése 3MW
 - napcella termelése
 	91,67 kwh ~ 104,16 kwh
+	6- 8 m^2
+
+	pl. 1684*1002*35 mm
 - víz erőmű termelése
 
 Méretek
