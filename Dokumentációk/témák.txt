@@ -1,0 +1,48 @@
+Szakdoga
+
+Főbb témák/ közös feladatok:
+- TDK, OTDK
+- rendszer összefoglalóan
+- a mi rendszerünk működése
+- weblap működése
+- platformok
+- terepasztal működése
+- optimalizálás
+- fogyasztók ismertetése
+- termelők ismertetése
+- technológiák
+- előnyei, hátrányai
+- modellezések
+- python és C nyelv integrációja
+- Arduino szenzorok/kellékek ismertetése
+- Rajzok ismertetése
+- napcellák egységes arányaiban való számolás
+- víznek tartály működése
+Norbi témák:
+- suncalc optimalizálás 
+- számítások
+- napfelkelte, naplemente
+- weather station
+- telepített napcellák optimalizálása, tájolása
+- weblap bizonyos részei, támogatott és nem támogatott elemek
+- [RestAPI python hoz, de nem biztos]
+- telepített napcellák prototípusai (Az a nagy, amit elkészítettem)
+- energia tároló kellék/ismertetése (tölthető elem)
+
+
+Bevezető:
+- Teljes projekt
+- tiszta energia manapság
+- előnyök hátrányok
+- optimalizálás
+Fejlesztoi környezet és publikáció 12
+PyCharm - Python
+Arduino
+PHP / CodeIgniter
+(PHPMyAdmin)
+3.2. A Git verzióköveto rendszer . . . . . . . . . . . . . . . . . . . . . . . . 14
+Trello feladatkövető rendszer
+
+
+
+
