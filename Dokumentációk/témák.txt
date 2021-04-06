@@ -32,9 +32,10 @@ Norbi témák:
 Zsolti témái
 ----------------------------------------
 - Intelligens napcellák és kommunikációjuk
-- Földrajzi adatok lekérése php alapú rest apin keresztül a suncalc.org-ról, az adatok feldolgozása majd tovább küldése a nodemcura
+- Földrajzi adatok lekérése php alapú rest apin keresztül a suncalc.org-ról, az adatok feldolgozása majd tovább küldése a nodemcura, adatfeldolgozása és formája
 -Weboldalunkon a térkép elkészítése (hivatkozásokkal), az oldal reszponzívvá tétele
--Az eszközök működtetése php-> mqtt-> nodemcu
+-Az eszközök működtetése php-> mqtt-> nodemcu (Bluerhinos)
+-Várakoztatás megoldása.
 - A napcellák által termelt feszültség és teljesítmény kézzelfoghatósága
 - Nodemcu portkiosztása, c++ programozás
 
