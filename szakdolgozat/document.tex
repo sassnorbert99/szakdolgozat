@@ -90,8 +90,10 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\subsubsection{Asztal forgatása}
 				\par Az asztal forgatásához a deklinációs\cite{Kornyezet} szöget vettem segítségül. A deklinációs szög megmondja, hogy egy adott napban egy országban a Nap milyen szögben helyezkedik el szoláris délben, így képes minden ország beállításával is megmondani ezt a bizonyos szöget. Ehhez viszonyítottam az asztal eltolását, hiszen egy Magyarországhoz északibb ország különböző hónapokban más viselkedést produkálnak, például nyáron hegyesebb, télen tompább szög. Ugyanez igaz a nálunk délibb országokhoz is, csak ott ezek negáltja történik. 
 				\par Ez a bizonyos szög országon belül is havonta változik, minden nap maximum 0,5 fokkal. Az asztal tehát a deklinációs szög negáltjával fog változni, hiszen az arányokat megtartván az északi pontot helyezzük a megváltozott érték helyére.
-				
-		
+				\lstinputlisting[language=Python]{table.py}
+				\par A napcellák elhelyezkedése a Naphoz képest, illetve a pontos szög meghatározása ugyanebben a metódusban definiált. Az égtájak konstans értékként vannak definiálva, melyben az értékek fokban értendők. A napcellák elhelyezkedése tehát a Dél - deklináció. A napcellák hatékonyságáról\cite{gershoj} tanulmányok szerint a déli 35-40 fok az optimális, így a rendszert is úgy állítottuk be, hogy egy magyarországi déli tájolású 40 fokban legyen.
+				\lstinputlisting[language=Python]{solar.py}
+				\par FOLYTATÁSSSSS!!!!!!!
 			\subsubsection{Hibakezelések}
 				Lorem ipsum
 		\subsection{Napállás kalkulátor - Rest API}
@@ -268,6 +270,8 @@ Megjegyzés szövege.
 \textsc{\url{https://hu.wikipedia.org/wiki/Julián_dátum}}
 \bibitem{Kornyezet}
 \textsc{dr. Barótfi István}:  \emph{Környezettechnika}
+\bibitem{gershoj}
+\textsc{https://gershojenergia.com/napelem-kisokos/optimalis-napelem-elhelyezes/}
 
 
 \end{thebibliography}

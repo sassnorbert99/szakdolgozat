@@ -9,9 +9,11 @@ def move(self):
 
     if self > 0:
         move_desk = self * -1
-        print("Az asztalt " + str(round(move_desk, 2)) + " fokkal elkell tolni balra!")
+        print("Az asztalt " + str(round(move_desk, 2)) +
+              " fokkal elkell tolni balra!")
     elif self == 0:
         print("Az asztalt nem kell eltolni")
     else:
         move_desk = self * -1
-        print("Az asztalt " + str(round(move_desk, 2)) + " fokkal elkell tolni jobbra")
+        print("Az asztalt " + str(round(move_desk, 2)) +
+              " fokkal elkell tolni jobbra")
