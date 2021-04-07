@@ -62,8 +62,23 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését az 1.5. ábra mutatja.
 				\par KÉP!!!!!!!
 				\cite{Kornyezet}
-				
 			\end{definicio}
+			\begin{definicio}
+				Nappalhossza: meghatározható a napkelte óraszögéből. Mivel a napkeltétől a delelésig ugyanannyi idő telik el, mint a deleléstől napnyugtáig, a nappal hossza 2ws lesz, ezt elosztva 15 fokkal megkapjuk a nappal hosszát órában.
+				\[Nd = (2/15) ws\]
+				\cite{Kornyezet}
+			\end{definicio}
+			\begin{definicio}
+				Zenitszög: a függőleges és a Naphoz húzott egyenes által bezárt szög, azaz a vízszintes felületre érkező sugárzás beesési szöge. Adott időben a megfigyelőnek a Földön meghatározható a pozíciója, ezt nevezzük a megfigyelő zenitjének. Ez a pont metszéspontja a megfigyelő helyének földfelszíni normálisának és az égi mezőnek. Az ezzel a ponttal ellentétes helyen lévő zenitet nevezzük nadírnak. A megfigyelő horizontja egy nagy kör (az égi mezőben), egy olyan sík, amely átmegy a Föld középpontján és amelynek határát a zenit és a Föld normálisának metszővonala jelenti. A zenit szög az a szög, amely a lokális zenit, valamint a Nap és a megfigyelő által meghatározott egyenes egymással bezár. Ez a szög 0 és 90 fok között változhat.
+				\cite{Kornyezet}
+			\end{definicio}
+			\begin{definicio}
+				Napmagasság szöge: a Napnak szögben kifejezett magassága a megfigyelő horizontjából, azaz a vízszintes és a Naphoz húzott egyenes által bezárt szög. Értéke 0 és 90 fok között van. A napmagasság szöge komplementere a zenit szögnek.
+				\cite{Kornyezet}
+			\end{definicio}
+			\par Ezek definíciók alapján sikerült egy szélességi és hosszúsági fok, illetve egy a felhasználó által kiválasztott dátum megadásával kiszámolni az adott ország deklinációs, zenit, Napmagassági szög, illetve nappalhosszát kiszámolni.
+			\par KÉP A PYTHONNAL KÉSZÍTETT KÓDRÉSZLETRŐL!!!!!!!!!!!!!
+			\par 
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
 	\section{optimalizálás}
