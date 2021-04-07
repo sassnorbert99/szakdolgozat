@@ -24,9 +24,9 @@
 \institute{Matematikai és Informatikai Intézet}
 \title{A szakdolgozat címe}
 \author{Szerző neve\\szak}
-\supervisor{Tanár neve\\beosztás}
+\supervisor{Dr. Geda Gábor\\beosztás}
 \city{Eger}
-\date{2020}
+\date{2021}
 \maketitle
 \tableofcontents
 
@@ -79,7 +79,11 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		Modellünk olyan fogyasztási értékeket fog szemléltetni, mely a valóságnak arányosan eleget tesz. A fogyasztók számát dinamikusan lehet majd szabályozni, mely hatással lesz a rendszer működésére. A modellünkben a fogyasztók különböző nyitófeszültségű LED-ek lesznek, melyekkel a fogyasztók energiafelhasználását tudjuk szimbolizálni. A projektünkben a fogyasztók egységes áramot használnak, azonban a számítások során a valóságnak megfelelő értékekkel számolunk.
 		
 	\section{modellek}
-		\subsection{időjárás állomás}
+		\subsection{Időjárás állomás}
+			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti modellünk aktuális éghajlati adottságait.
+		\subsection{Fogyasztók modellezése}
+			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Kisméretű házak, épületek, gyárak, iskolák, melyek más fogyasztási igényekkel vannak ellátva)
+			
 	\section{prototípusok}
 		\subsection{telepített napcellák prototípusai}
 		\subsection{intelligens napcellák prototípusai}
@@ -105,6 +109,77 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\cite{Fazekas,Tomacs}
 	\section{CodeIgniter fejlesztői környezet}
 	\section{Adatbázis}
+	\section{Weblapról}
+		\subsection{vezérlő felület}
+			A rendszer fő szempontja a mobilos vezérlés, így jogosan érezhetjük azt, hogy ez inkább a fiatalabb generációkat célozza meg, azonban fontos, hogy minden korosztály számára érthető és egyértelmű legyen az információ, ami a felületen megjelenik.
+			Első lépésként a látogatóknak regisztrálni kell a felület használatához. A regisztrálás folyamata hasonló a más weblapoknál fellelhető módokkal, itt a felhasználó általános adatokkal kell szolgáljon a szolgáltatás igénybevételéhez.
+			
+			
+			\par KÉP!!!!!!!!!!
+			
+			\par Ahogy a képeken is látható, a felhasználónak rendelkeznie kell egy teljes névvel, irányítószámmal, email címmel, felhasználónévvel, valamint egy jelszóval. Az első képen a felhasználó számítógépes felületről tudja elérni, míg a második kép már telefonos felületen elérhető.
+			\par Természetesen a regisztrált felhasználóknak a bejelentkezés gombra kattintva egyből a kezdőlapra tud bejutni.
+			
+			
+			
+		\subsection{Beléptető modul}
+		\subsection{Kezdőlap}
+			A kezdőlapon a varázstorony aktuális hírei érhetők el, e-mail címek és nyitvatartási rendek. Kezdőlapunk egy már meglévő weblapnak alapját dolgozza fel
+			\par \url{(https://uni-eszterhazy.hu/hu/egyetem/kultura/varazstorony)}.
+		\subsection{Rólunk}
+			\par A fejléc következő része a Rólunk ablak, melyben a projektben résztvevő fejlesztők és egyéb szerkesztők neveit olvashatjuk. Ez az ablak ismerteti a felhasználókkal az egyes modulok felelőseit, forrásait.
+		\subsection{Blog}
+			\par A blog oldal azért készült, hogy a felhasználók észrevételeket, tapasztalatokat és egyéb véleményeket tudjanak feltölteni, ezáltal egymással is tudnak kommunikálni. A blogban lehet képet is feltölteni, valamint egyes kategóriák által lehet csoportosítani. A kategóriák a varázstoronyban megtalálható eszközök. További kategóriák létrehozásához admin szintű felhasználóra van szükség. Amennyiben igény keletkezik egy új kategória létrehozásához, úgy a felhasználók írhatnak a rendszer admin szintű felhasználóinak, ami átvizsgálás után létre is jön. A blogban továbbá lehet írni egy részletes leírást a témáról. Egy blog küldése után a rendszer megjegyzi az küldés utáni naptári időpontot, melyet a leírás fölött kiír.
+			\par KÉP!!!!!!!!!!!
+			\par Ahogyan a képeken is láthatjuk, weblapunk első posztja a Projekt1 kategóriába tartozik, ahol egy 16x2-es lcd kijelzőről készült képet is feltöltöttünk. Fontos azt is megjegyezni, hogy kategóriák azért kellenek, hogy később a posztokat listázni tudjuk kategóriák segítségével. Ha egy felhasználó csak egy bizonyos kategória iránt érdeklődik, lehetősége van azokat kilistázni, ezáltal egy kényelmesebb és könnyen kezelhető felület tárul elé. Weblapunk nagy hangsúlyt fektet a felhasználóbarát webes megjelenítésre, így egy letisztult és kényelmes weblap jelenik meg minden felhasználóink számára.
+		\subsection{Kategóriák}
+			\par Mint már említettük, szoftverünk tartalmaz egy kategória ablakot, melyben az eddig feltöltött összes kategória közül tud választani a felhasználó. Egy szabadon választott kategória kattintásra kilistázza az eddigi összes olyan posztot, észrevételeket és egyéb tartalmakat, melyek abban a kategóriában szerepelnek.  Ezáltal a felhasználó csak azokat a kategóriában szereplő tartalmakat olvashatja, amelyek érdeklik. A kategóriák a varázstoronyban szereplő eszközök, melyeket admin szintű felhasználók, illetve rendszer karbantartók tudnak módosítani, mezei felhasználónknak azonban személyes igény esetén lehetőségük van írni az üzemeltetőknek.
+			\par KÉP!!!!!!!!!!
+			\par Ahogy a képeken látható, weblapunk létrehozása után két kategóriát töltöttünk fel, melynek kattintására a kategória által létrehozott posztot olvashatjuk. Míg az első ábrán számítógépes felületről nyitottuk meg, a felhasználók számára kényelmesebb, hiszen a fejlécben minden információt láthatnak. A második ábra telefonról készült, így a telefonos megjelenítés szempontjából a fejléc tartalmait elrejtettük, mely a bal felső ikon kattintására kilistázódik. Szoftverünk multi platformos, tesztelve lett Windows-on, Linuxon, illetve MacOS alatt. Telefonon tesztelve lett Android, illetve IOS készülékeken.
+			\par További előnyként szolgál az is, hogy a kategóriák ABC sorrendben listázódnak ki, ezáltal további könnyedséggel szolgál egyes kategóriákat elérése.
+		\subsection{Térkép}
+			\par A felület segítségével a felhasználók idegenvezető nélkül bejárhatják a Varázstorony termeit, és különböző leírások segítik az egyes eszközök megismerését. Célunk, hogy azok a felhasználók, akik még nem jártak a varázstoronyban, tudjanak tájékozódni és ki tudják keresni a számukra érdekes témákat, melyről rendszerünk képekkel, információkkal és egyéb interaktív dolgokkal szolgál. A térkép fülre kattintva a varázstorony szintenkénti alaprajza található, ahol minden terem, folyosó, ahol eszközök találhatók, fel van tüntetve. Három fajta feltüntetés van a rendszerünkben.
+			\par
+			\begin{enumerate}
+				\item Megtekinthető tartalom:
+				\begin{itemize}
+					\item Felhasználóink meg tudják webes felületről tekinteni az egyes termek érdekességeit. A gombra kattintva egy pop-up szerű kép jelenik meg az egyes eszközökről.
+				\end{itemize}
+				\item Interaktív tartalom:
+				\begin{itemize}
+					\item Felhasználóink számára biztosítunk interaktív vetélkedőket egyes eszközök kattintása után. Ezek lehetnek kvízek, csoportos mini feladatok. 
+				\end{itemize}
+				\item Vezérelhető tartalom:
+				\begin{itemize}
+					\item Felhasználónk ilyen típusú gombra kattintva az olvasás és a megjelenő kép mellett vezérelni is tudja egyes eszközöket.
+				\end{itemize}
+			\end{enumerate}
+		\subsection{Jelmagyarázat a térképhez}
+			szoftverünk könnyebb értelmezése érdekében létrehoztunk egy jelmagyarázatot, melyben az egyes tartalmak funkcióit tároljuk. Weblapunk három funkciót biztosít a felhasználók számára:
+			\begin{itemize}
+				\item megtekinthető
+				\item interaktív
+				\item vezérelhető
+			\end{itemize}
+			\par A funkciók mellé szín is társul.
+			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\par Ahogy a mellékelt képen is láthatjuk, a megtekinthető tartalmak színe piros, azok a tartalmak, melyek interaktív feladatokat tartalmaznak sárgák, végül a tartalmak, melyeket vezérelni is lehet, kékes zöld színűek.
+			
+		\subsection{Eszközök}
+			\par A felhasználóknak lehetőségük van egyes eszközöket részletesebben tanulmányozni, mely az eszközök ablakra kattintva lesz elérhető. A gombra kattintva eléjük tárul az általunk fejlesztett projektek részletes beszámolója, illetve azok leírása, egyéb tartalma. Ezek természetesen a térkép menüpont alatt is megtalálhatók, hiszen azok gombaira kattintva átirányítja felhasználóinkat az általuk választott oldalra.
+			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\par Az első képen a Cartesius-búvár, illetve annak részletes leírása található, míg a második képen a terepasztal, mely egy intelligensen működő energetikai rendszert valósít meg.
+			
+		\subsection{Felhasználók}
+			\par Weblapunk rendelkezik admin szintű felhasználókkal, melyek feladata a kategóriák, illetve egyes posztok karbantartása. Így az admin felhasználók fejléce kiegészül egy “Kategória készítése” menüponttal, melyben az általa, vagy közösen megbeszélt kategóriákat tudja feltölteni. Adminként nem lehet regisztrálni, ezt a rendszer tulajdonostól lehet igényelni, melyet a rendszer karbantartó át ír az adatbázison keresztül.
+			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\par Ahogyan a képen is látható, az admin továbbá rendelkezik egy Users menüponttal, melyben megtekintheti az egyes usereket (regisztrált felhasználókat), illetve azok adatait adatbiztonság céljából. Továbbá megtekintheti, hogy kik adminok a rendszer felhasználói közül.
+			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\par A képen látható adatokat szándékosan nem jelenítjük meg adatbiztonság érdekében. Ahogy az ábra is mutatja, listázva vannak a felhasználók. Az admin szintnek két lehetséges értéke van, 0, ha a felhasználó nem admin, 1, ha a felhasználó admin.
+			\par Ahogy a képen láthatjuk, az 1-es, 4-es és 5-ös ID-vel rendelkező felhasználóink admin szintje 1, tehát admin szintű felhasználó.
+		\subsection{Poszt készítése}
+		\subsection{Kategória készítése}
+		
 
 \chapter{Fejlesztői környezetek és publikációi}
 	\section{Git verziókövető rendszer}
