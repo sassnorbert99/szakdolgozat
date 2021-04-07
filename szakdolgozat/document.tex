@@ -12,6 +12,7 @@
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
 \usepackage{mathtools,amssymb,amsthm}
+\usepackage{listings}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -57,7 +58,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 \chapter{Rendszerünk működése}
 	\section{Terepasztalunk működése}
 		\subsection{Napállás kalkulátor}
-			A feladat elkészítéséért Sass-Gyarmati Norbert a felelős. Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
+			A feladat elkészítéséért Sass-Gyarmati Norbert a felelős. 
+			\par Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
+			\par Feladatomat Python nyelven írtam, melyhez a PyCharm Community Edition keretrendszert használtam. 
 			\begin{definicio}
 				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését az 1.5. ábra mutatja.
 				\par KÉP!!!!!!!
@@ -78,7 +81,16 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\end{definicio}
 			\par Ezek definíciók alapján sikerült egy szélességi és hosszúsági fok, illetve egy a felhasználó által kiválasztott dátum megadásával kiszámolni az adott ország deklinációs, zenit, Napmagassági szög, illetve nappalhosszát kiszámolni.
 			\par KÉP A PYTHONNAL KÉSZÍTETT KÓDRÉSZLETRŐL!!!!!!!!!!!!!
-			\par 
+			\par A további adatok kiszámításához (napfelkelte, naplemente, asztal elfordulása) ezek adatok elengedhetetlenek.
+			\subsubsection{Napfelkelte, naplemente kiszámítása}
+				\par A napfelkelte és napnyugta meghatározása a pontos földrajzi koordináták (hosszúsági és szélességi fok) valamint a dátum alapján történik.\cite{kiszamolo}
+				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
+				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
+				\lstinputlisting[language=Python]{calcriseset.py}
+				
+		
+			\subsubsection{Hibakezelések}
+				Lorem ipsum
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
 	\section{optimalizálás}
@@ -252,11 +264,13 @@ Megjegyzés szövege.
 \end{megjegyzes}
 
 \begin{thebibliography}{2}
-\bibitem{Fazekas}
-\textsc{Fazekas István}: \emph{Valószínűségszámítás}, Debreceni Egyetem, Debrecen, 2004.
-\bibitem{Tomacs}
-\textsc{Tómács Tibor}: \emph{A valószínűségszámítás alapjai}, Líceum Kiadó, Eger, 2005.
+\bibitem{kiszamolo}
+\textsc{\url{https://kiszamolo.com/napfelkelte-napnyugta-kalkulator/}}.
+\bibitem{julian}
+\textsc{\url{https://hu.wikipedia.org/wiki/Julián_dátum}}
 \bibitem{Kornyezet}
 \textsc{dr. Barótfi István}:  \emph{Környezettechnika}
+
+
 \end{thebibliography}
 \end{document}
