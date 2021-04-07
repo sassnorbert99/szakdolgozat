@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  7 APR 2021 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  7 APR 2021 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,14 +770,14 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 [15
 
 ] [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
  [17
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 228.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 228.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 6511FF2C74AFDFD66FD95ED88F563F14;9814.
  ) 
@@ -795,7 +795,7 @@ texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
 dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/
 type1/public/lm/lmri12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
 ic/lm/lmtt12.pfb>
-Output written on document.pdf (17 pages, 172949 bytes).
+Output written on document.pdf (17 pages, 174425 bytes).
 PDF statistics:
  420 PDF objects out of 1000 (max. 8388607)
  386 compressed objects within 4 object streams

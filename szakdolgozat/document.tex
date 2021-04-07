@@ -182,7 +182,12 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		
 
 \chapter{Fejlesztői környezetek és publikációi}
+	\par Ebben a fejezetben bemutatjuk az általunk használt fejlesztői környezetet és a fejlesztéshez szükséges komponenseket, azok tulajdonságait, illetve funkcióit.
 	\section{Git verziókövető rendszer}
+	Mivel ketten dolgoztunk a terepasztal projekten, meg kellett oldanunk, hogy szimultán tudjunk dolgozni, azaz egymástól függetlenül. A projekt első verzióit egy tárhelyre töltöttük fel, melyről mindig le kellett tölteni az aktuális verziót, majd vissza feltölteni az új, módosítottat. Ezzel a módszerrel egyszerre csak egy ember tudott dolgozni, ami nagyon megnahezítette a fejlesztési tevékenységünket.
+	\par Szükségünk volt egy verziókövető rendszer elsajátításához. Ezen rendszerek legnagyobb előnyei, hogy egy projekten többen is dolgozhatunk egyszerre, anélkül, hogy egymás munkáját hátráltatnánk, illetve ha valaki változtatást készít és feltölti, azt a rendszer nyomon tudja követni. Ha ketten egyszerre ugyanazon az állományon végeznek módosítást, a rendszer feltöltéskor megpróbálja összefésülni (merge) a módosításokat, ha nem sikerül, jól láthatóan megjeleníti az ütközéseket. Ilyen esetekben megtudjuk nézni a konfliktust okozó állományokat és lehetőségünk van a két állományt manuálisan összefésülni. Ezzel a módszerrel folyamatosan szinkronban lehetett mindkettőnk munkája.
+	\par A Git verziókövető rendszert választottuk, mert korábban már használtuk Windows, illetve Linux rendszeren, és jó tapasztalataink vannak róla. Korábbi kurzusainkon is használtuk, így könnyebb volt a Git verziókövetőt elsajátítani. 
+	\par Ahhoz, hogy fejlesztés közben ne hátráltassuk egymás munkáját, szükség van egy kliensre, mely könnyen kezelhető felületet biztosít a hozzáféréshez, a projekt klónozásához, feltöltéshez, stb. Windows alatt a Github Desktopot használjuk, MacOS alatt pedig terminálban kezeljük a verziókövető funkcióit.
 	\section{Trello feladatkövető rendszer}
 	\section{Technológiák}
 		\subsection{Python}
