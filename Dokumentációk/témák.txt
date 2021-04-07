@@ -18,7 +18,12 @@ Főbb témák/ közös feladatok:
 - Rajzok ismertetése
 - napcellák egységes arányaiban való számolás
 - víznek tartály működése
+
+
+
+
 Norbi témák:
+-----------------------------------------
 - suncalc optimalizálás 
 - számítások
 - napfelkelte, naplemente
