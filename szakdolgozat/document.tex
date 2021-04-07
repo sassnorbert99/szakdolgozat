@@ -87,6 +87,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
 				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
 				\lstinputlisting[language=Python]{calcriseset.py}
+			\subsubsection{Asztal forgatása}
+				\par Az asztal forgatásához a deklinációs\cite{Kornyezet} szöget vettem segítségül. A deklinációs szög megmondja, hogy egy adott napban egy országban a Nap milyen szögben helyezkedik el szoláris délben, így képes minden ország beállításával is megmondani ezt a bizonyos szöget. Ehhez viszonyítottam az asztal eltolását, hiszen egy Magyarországhoz északibb ország különböző hónapokban más viselkedést produkálnak, például nyáron hegyesebb, télen tompább szög. Ugyanez igaz a nálunk délibb országokhoz is, csak ott ezek negáltja történik. 
+				\par Ez a bizonyos szög országon belül is havonta változik, minden nap maximum 0,5 fokkal. Az asztal tehát a deklinációs szög negáltjával fog változni, hiszen az arányokat megtartván az északi pontot helyezzük a megváltozott érték helyére.
 				
 		
 			\subsubsection{Hibakezelések}
@@ -94,11 +97,6 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
 	\section{optimalizálás}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
-		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 		\subsection{telepített napcellák optimalizálása, tájolása}
 	\section{Termelők és fogyasztók}
 		\subsection{termelők ismertetése}

@@ -9,7 +9,8 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.1}Terepasztalunk m\IeC {\H u}k\IeC {\"o}d\IeC {\'e}se}{7}{section.3.1}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Nap\IeC {\'a}ll\IeC {\'a}s kalkul\IeC {\'a}tor}{7}{subsection.3.1.1}% 
 \select@language {magyar} \contentsline {subsubsection}{Napfelkelte, naplemente kisz\IeC {\'a}m\IeC {\'\i }t\IeC {\'a}sa}{8}{section*.3}% 
-\select@language {magyar} \contentsline {subsubsection}{Hibakezel\IeC {\'e}sek}{10}{section*.4}% 
+\select@language {magyar} \contentsline {subsubsection}{Asztal forgat\IeC {\'a}sa}{10}{section*.4}% 
+\select@language {magyar} \contentsline {subsubsection}{Hibakezel\IeC {\'e}sek}{10}{section*.5}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.1.2}Nap\IeC {\'a}ll\IeC {\'a}s kalkul\IeC {\'a}tor - Rest API}{10}{subsection.3.1.2}% 
 \select@language {magyar} \contentsline {section}{\numberline {3.2}optimaliz\IeC {\'a}l\IeC {\'a}s}{10}{section.3.2}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k optimaliz\IeC {\'a}l\IeC {\'a}sa, t\IeC {\'a}jol\IeC {\'a}sa}{10}{subsection.3.2.1}% 
