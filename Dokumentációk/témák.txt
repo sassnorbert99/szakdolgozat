@@ -33,6 +33,10 @@ Norbi témák:
 - [RestAPI python hoz, de nem biztos]
 - telepített napcellák prototípusai (Az a nagy, amit elkészítettem)
 - energia tároló kellék/ismertetése (tölthető elem)
+- fogyasztó probléma szimulálása, számítások
+- vízerőmű szimulálása
+- napcellák energiatermelésének kiszámolása
+- ENCODER
 
 Zsolti témái
 ----------------------------------------
@@ -43,6 +47,7 @@ Zsolti témái
 -Várakoztatás megoldása.
 - A napcellák által termelt feszültség és teljesítmény kézzelfoghatósága
 - Nodemcu portkiosztása, c++ programozás
+- Nodemcu + phpMyadmin közötti kommunikáció
 
 
 Bevezető:
