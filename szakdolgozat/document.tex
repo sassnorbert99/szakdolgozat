@@ -40,25 +40,21 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{Szakasz címe}
 		\subsection{Alszakasz címe}
 		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
 		
 		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 
 \chapter{Rendszerről összefoglalóan}
 	\section{Szakasz címe}
 		\subsection{Előnyök és hátrányok}
 		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
 		
 		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 	\section{rajzok ismertetése}
 
 \chapter{Rendszerünk működése}
 	\section{Terepasztalunk működése}
 		\subsection{Napállás kalkulátor}
-			A feladat elkészítéséért Sass-Gyarmati Norbert a felelős. 
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
 			\par Feladatomat Python nyelven írtam, melyhez a PyCharm Community Edition keretrendszert használtam. 
 			\begin{definicio}
@@ -98,6 +94,28 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				Lorem ipsum
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
+	\section{Szimulációk}
+		\subsection{Fogyasztó probléma szimulálása}
+			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Ahhoz, hogy a fogyasztók energiaigényeiket feltudjuk mérni, szükségünk volt egy szimulátor programra, melyben megtudjuk adni, hogy menni fogyasztó fogja használni a terepasztalunkat. A fogyasztók az alábbiak lehetnek:
+			\begin{itemize}
+				\item Családi házak
+				\item Lakások
+				\item Iskolák
+				\item Kórházak
+			\end{itemize}
+			\par A fogyasztók különböző energiaigényekkel rendelkeznek. Egy átlag családi háznak (4 fős) nagyjából 230 kWh energiára van szüksége egy hónapban. Kutatásaink során további statisztikát tudtunk levonni, amiben kiderült, hogy egy lakásnak, vagy bérháznak (4 fős) nagyjából 200 kWh energiára van szüksége\cite{kWh}. Az iskolákat, illetve kórházakat más matematikai műveletekkel lehet megadni. 
+			\par Először szükségünk volt olyan adatokra, hogy átlagosan mennyi energiát fogyasztanak ezek a különféle intézmények. A méréseket egy 2001-es tanulmány alapján készítettem, így minden érték csak egy megközelítő értéket ad. Mérések alapján kiderült, hogy egy átlagos iskolának nagyjából 20 kWh/$m^{2}$ energiaigényre van szüksége, míg egy kórháznak jelentősen nagyobb, körülbelül 100 kWh/$m^{2}$ energiaigényre van szüksége\cite{school}. 
+			\par Ezek után szükségem volt egy szabványra mely kimondja, hogy egy átlagos iskola, illetve kórház milyen szabályoknak kell megfeleljenek. A kutatásaimat felhasználva egy iskola hivatalos szabványa, hogy 2,5$m^{2}$ jut egy diák számára\cite{school_m2}. Tehát egy iskola kalkulálása ezek szorzatából tevődik össze. Továbbá kutatásaim arra is rámutattak, hogy egy kórházban 6-8$m^{2}$ jut egy beteg részére. Így az iskola, illetve a kórház mérete és ebből kiszámítva a fogyasztása nagyban függ az intézményekben tartózkodó tanulók, vagy betegektől.
+			\par Szimulátor programom Python nyelven írtam a PyCharm\footnote{A PyCharm egy integrált fejlesztői környezet (IDE), amelyet a számítógépes programozásban használnak, kifejezetten a Python nyelv számára\cite{pycharm}.} segítségével. 
+			
+			
+			
+			
+			
+		\subsection{Vízerőmű szimulálása}
+		\subsection{Napcellák teljesítményének szimulálása}
+		\subsection{Encoder működésének szimulálása}
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
 	\section{Termelők és fogyasztók}
@@ -140,10 +158,8 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{Támogatott elemek}
 		\subsection{Alszakasz címe}
 		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
 		
 		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 	\section{CodeIgniter fejlesztői környezet}
 	\section{Adatbázis}
 	\section{Weblapról}
@@ -231,16 +247,12 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{Technológiák}
 		\subsection{Python}
 		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
 		
 		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 		\subsection{Python és a C nyelv integrációja}
 		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
-		\cite[102.~oldal]{Fazekas}
 		
 		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\cite{Fazekas,Tomacs}
 		\subsection{PHP nyelv}
 	\section{Arduino}
 		\subsection{szenzorok és kellékek ismertetése}
@@ -272,7 +284,14 @@ Megjegyzés szövege.
 \textsc{dr. Barótfi István}:  \emph{Környezettechnika}
 \bibitem{gershoj}
 \textsc{https://gershojenergia.com/napelem-kisokos/optimalis-napelem-elhelyezes/}
-
+\bibitem{kWh}
+\textsc{\url{https://elmuemasz.hu/egyetemes-szolgaltatas/szolgaltatasok/villamos-energia/aramdij-kalkulatorok/lakossagi-aramdij-elmu?fbclid=IwAR3UKUacdAXQeBuYPsDckohKhAf_hY2TnitQqGmBwRiFq_ye-o84onVUPrc}}
+\bibitem{school}
+\textsc{\url{http://www.personal.ceu.hu/students/03/Alexandra_Novikova/2/El\%20tertiary\%20site\%20folders/documents/description_of_eltertiary_for_schools_hu6_ver2.pdf}}
+\bibitem{school_m2}
+\textsc{\url{https://www.origo.hu/itthon/20010414szabvany.html}}
+\bibitem{pycharm}
+\textsc{https://en.wikipedia.org/wiki/PyCharm}
 
 \end{thebibliography}
 \end{document}
