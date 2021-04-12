@@ -116,13 +116,20 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par Ahogy a kódrészletből tisztán látható, az iskola és kórház konstruktorai már egy tanuló, illetve beteg paramétert is várnak, melyből kitudja számolni az intézmény átlagos négyzetméterét, illetve ebből az adatból képes kiszámolni a négyzetméterre jutó energia igényüket.
 			\par A különféle fogyasztók értékeit listában tárolom, illetve ciklusok segítségével tudom feltölteni. A felhasználó a program lefutása után konzolból megadhatja a különböző értékeket, mely során a szoftver egyes osztályait meghívván, beállítja a számára szükséges értékekkel a paramétereit, majd közli a felhasználóval az alábbi adatokat:
 			\lstinputlisting[language=Python]{estate.py}	
-							
-			
-			
-			
-			
 			
 		\subsection{Vízerőmű szimulálása}
+			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par A vízerőmű rendszerünk, mely szivattyús tárolós elven működik, egy szimuláción keresztül is tudjuk szemléltetni. A szimuláció a folyamatot képes szemléltetni, a vízerőmű működését, illetve a leállítás- újraindítás folyamatát. 
+			\par A szimuláció elkészítéséhez Python programozási nyelvet használtam. 
+			\lstinputlisting[language=Python]{water.py}		
+			\lstinputlisting[language=Python]{watermain.py}					
+			\par Ahogy a kódrészletből is látható, maga a szoftver két külön szálon fut, egyik szál foglalkozik az erőmű működésével, míg a másik szál a felhasználók számára van, melyben konzolba beírva megadhatja az erőmű leállítás, illetve újraindítás funkciójának gombját. A rendszer egy körfolyamatban működik, mely ciklikusan ismétli önmagát, így ha a felhasználó nem állítja le a rendszert, örök körfolyamatban fog részt venni. 
+			\par A szálak egy közös osztályban vannak definiálva, melyben az osztály egyes metódusai végzik el a szálkezelést. A körfolyamat egyszerű, két tartály van, az első feljebb van, míg a második közel az elsőhöz. Legyenek elnevezve a tartályok, A: első tartály, B: második tartály. Kezdetben a B tartály tele van, amiben van egy szivattyú, mely elkezdi az A tartályba szivattyúzni a vizet. Ez a folyamat addig megy, míg az A tartály teljesen tele nem lesz. Fontos továbbá megjegyezni, hogy ilyen esetben nem feltétlenül lesz üres a B tartály. Az erőmű jó szemléltetése és átláthatósága érdekében a programomban ilyen esetben a B teljesen kiürül. Amint az A tartály tele lesz, megnyitja a csapot és visszafolyik a B tartályba a víz. A csapnál van a generátor, mely vízfolyamból elektromos áramot képes termelni. Amint az A tartály a teljes vízkészletet visszaadta a B tartálynak, a körfolyamat újraindul. 
+			\par A felhasználónak azonban van lehetősége ezt a folyamatot leállítani. Két opciója van:
+			\begin{itemize}
+				\item leállít: ez esetben az inputszalag egy "s" karaktert vár a felhasználótól. Az "s" gomb lenyomása után a szivattyú leáll, a csap kinyit, majd az A tartályban levő összes víz visszafolyik a B tartályba.
+				\item újraindít: amennyiben a folyamat leállt, a felhasználónak lehetősége van újraindítani, ez esetben az inputszalag egy "o" karaktert vár a felhasználótól. Az "o" gomb lenyomása után a szivattyú újra elindul, a csap lezár, így a B tartályból újra elindul a víz az A tartály felé.
+			\end{itemize}
 		\subsection{Napcellák teljesítményének szimulálása}
 		\subsection{Encoder működésének szimulálása}
 	\section{optimalizálás}
