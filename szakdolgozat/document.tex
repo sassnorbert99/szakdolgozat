@@ -90,7 +90,17 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\lstinputlisting[language=Python]{table.py}
 				\par A napcellák elhelyezkedése a Naphoz képest, illetve a pontos szög meghatározása ugyanebben a metódusban definiált. Az égtájak konstans értékként vannak definiálva, melyben az értékek fokban értendők. A napcellák elhelyezkedése tehát a Dél - deklináció. A napcellák hatékonyságáról\cite{gershoj} tanulmányok szerint a déli 35-40 fok az optimális, így a rendszert is úgy állítottuk be, hogy egy magyarországi déli tájolású 40 fokban legyen.
 				\lstinputlisting[language=Python]{solar.py}
-				\par FOLYTATÁSSSSS!!!!!!!
+				\par Ahogy a kódrészletből is látszik, mivel a telepített napcellák tájolástól és napszaktól függetlenül déli 40 fokban helyezkednek el, így az optimalizálás is csak a 40 fokos szöghöz igazodik. Optimalizálásnál az alábbi 5 esetek különböztetjük meg:
+				\begin{itemize}
+					\item Ha északkeletre esik: Azaz a szögtartomány így írható le: 0 < szög < 90. Ilyen esetben a hatékonyságuk 75\%-os
+					\item Ha délkeletre esik: Azaz a szögtartomány így írható le: 90 < szög < 180.
+					\par Ilyen esetben a hatékonyságuk 90\%-os
+					\item Ha délre esik: Azaz a szögtartomány pontosan 180 fokos. Ebben az esetben a hatékonyságuk 100\%-os
+					\item Ha délnyugatra esik: Azaz a szögtartomány így írható le: 180 < szög < 270.
+					\par Ilyen esetben a hatékonyságuk 90\%-os
+					\item Ha északnyugatra esik: Azaz ha egyik állításra sem igaz a feltétel. Ebben az esetben a hatékonyságuk 75\%-os
+				\end{itemize}
+				
 			\subsubsection{Hibakezelések}
 				Lorem ipsum
 		\subsection{Napállás kalkulátor - Rest API}

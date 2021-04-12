@@ -15,15 +15,15 @@
 \select@language {magyar} \contentsline {section}{\numberline {3.2}Szimul\IeC {\'a}ci\IeC {\'o}k}{12}{section.3.2}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.1}Fogyaszt\IeC {\'o} probl\IeC {\'e}ma szimul\IeC {\'a}l\IeC {\'a}sa}{12}{subsection.3.2.1}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.2}V\IeC {\'\i }zer\IeC {\H o}m\IeC {\H u} szimul\IeC {\'a}l\IeC {\'a}sa}{15}{subsection.3.2.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Napcell\IeC {\'a}k teljes\IeC {\'\i }tm\IeC {\'e}ny\IeC {\'e}nek szimul\IeC {\'a}l\IeC {\'a}sa}{17}{subsection.3.2.3}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.2.3}Napcell\IeC {\'a}k teljes\IeC {\'\i }tm\IeC {\'e}ny\IeC {\'e}nek szimul\IeC {\'a}l\IeC {\'a}sa}{18}{subsection.3.2.3}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.2.4}Encoder m\IeC {\H u}k\IeC {\"o}d\IeC {\'e}s\IeC {\'e}nek szimul\IeC {\'a}l\IeC {\'a}sa}{20}{subsection.3.2.4}% 
 \select@language {magyar} \contentsline {section}{\numberline {3.3}optimaliz\IeC {\'a}l\IeC {\'a}s}{20}{section.3.3}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.3.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k optimaliz\IeC {\'a}l\IeC {\'a}sa, t\IeC {\'a}jol\IeC {\'a}sa}{20}{subsection.3.3.1}% 
 \select@language {magyar} \contentsline {section}{\numberline {3.4}Termel\IeC {\H o}k \IeC {\'e}s fogyaszt\IeC {\'o}k}{20}{section.3.4}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}termel\IeC {\H o}k ismertet\IeC {\'e}se}{20}{subsection.3.4.1}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}fogyaszt\IeC {\'o}k ismertet\IeC {\'e}se}{20}{subsection.3.4.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {3.5}modellek}{20}{section.3.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.5.1}Id\IeC {\H o}j\IeC {\'a}r\IeC {\'a}s \IeC {\'a}llom\IeC {\'a}s}{20}{subsection.3.5.1}% 
+\select@language {magyar} \contentsline {section}{\numberline {3.5}modellek}{21}{section.3.5}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {3.5.1}Id\IeC {\H o}j\IeC {\'a}r\IeC {\'a}s \IeC {\'a}llom\IeC {\'a}s}{21}{subsection.3.5.1}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.5.2}Fogyaszt\IeC {\'o}k modellez\IeC {\'e}se}{21}{subsection.3.5.2}% 
 \select@language {magyar} \contentsline {section}{\numberline {3.6}protot\IeC {\'\i }pusok}{21}{section.3.6}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {3.6.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k protot\IeC {\'\i }pusai}{21}{subsection.3.6.1}% 
