@@ -131,7 +131,25 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\item leállít: ez esetben az inputszalag egy "s" karaktert vár a felhasználótól. Az "s" gomb lenyomása után a szivattyú leáll, a csap kinyit, majd az A tartályban levő összes víz visszafolyik a B tartályba.
 				\item újraindít: amennyiben a folyamat leállt, a felhasználónak lehetősége van újraindítani, ez esetben az inputszalag egy "o" karaktert vár a felhasználótól. Az "o" gomb lenyomása után a szivattyú újra elindul, a csap lezár, így a B tartályból újra elindul a víz az A tartály felé.
 			\end{itemize}
+			
 		\subsection{Napcellák teljesítményének szimulálása}
+			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par A napcellák aktuális termelési mértékének szimulálására szükségünk volt egy prototípus programra, mely képes egy opcionálisan megadott napcella termelési értékeit kiszámolni. A szimuláció megmondja az Arduinohoz csatolt napcella aktuális termelését Voltba, illetve ezt átváltva kiloWattban. A voltról kilowattra való átváltáshoz szükségünk volt még amperes számításra is. A képlet tehát:
+			\[P_{(kW)} = V_{(V)} * I_{(A)} / 1000\]
+			Az ampert konstans értékből kapjuk, mely az aktuális napcella maximális amper kapacitásából jön. Példaprogramomban egy 6V 4.5W 520mAh-ás napcellát alkalmaztam, így a mA-t Amperre átszámítva 0,52 értéket használtam. Az így kapott érték még csak Wattban adható meg, így el kell osztani 1000-el, hogy kW értéket kaphassunk.
+			\par Szimulációm szemléltetéséhez C++ nyelvet használtam, mely közvetlen kommunikál az Arduino UNO\footnote{Az Arduino Uno egy nyílt forráskódú mikrokontroller, mely az ATmega328P mikrovezérlőn alapszik, és amelyet az Arduino.cc fejlesztett ki.\cite{uno}} mikrokontrollerrel az Arduino\footnote{Az Arduino egy szabad szoftveres, nyílt forráskódú elektronikai fejlesztőplatform, arra tervezve, hogy a különböző projektekben az elektronikus eszközök könnyebben hozzáférhetőek, kezelhetőek legyenek.\cite{arduino}} szoftveren keresztül. A szimulátor program az inputról bemenő jelből konvertál egy Volt értéket, mely a következő képlettel számítható:
+			\[Volt = (input / 1024) * AP;\]
+			ahol
+			\begin{itemize}
+				\item input: a bemenő jelből származó adat
+				\item AP: maximális Volt érték, melyet képes az analóg port olvasni
+			\end{itemize}
+			A kód tehát:
+			\lstinputlisting[language=C++]{voltage.ino}			
+			A kódrészletben látható, hogy a napcellánk pozitív tartományát az Arduino UNO A0-ás portjához kapcsoltam, melyet az \textit{inPin} változóba deklaráltam. Az A0 egy analóg port, melyből a 0-ásat választottam ki. Továbbá az is látható, hogy később ennek a bemenetnek kiolvasott értékét elárolom egy \textit{value} változóba, mely után a képletbe behelyettesítve kitudom számolni az aktuális termelési értéket Voltban mérve. Az A érték jelen esetben 5 lesz, hiszen 5 Volt a maximális érték, melyet képes az analóg port fogadni.
+			\par A kilowatt kiszámításához be kellett vezetni egy konstans értéket, mely az aktuális napcella maximális teljesítményéből fakad. Ez a kísérletben 0,52 amper, hiszen a napcella 520mAh-t képes leadni. 
+			\par A kísérletek után a felhasználóval közölni kellett az adatokat, melyhez egy 16x2-es LCD kijelzőt használtam. A kijelzőn megjelenik az aktuális Volt, illetve ezt átszámítva a kilowatt értéke.
+			
 		\subsection{Encoder működésének szimulálása}
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
@@ -152,7 +170,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		
 	\section{modellek}
 		\subsection{Időjárás állomás}
-			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti modellünk aktuális éghajlati adottságait.
+			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti a teremben aktuális hőmérsékletet, illetve páratartalmat.
 		\subsection{Fogyasztók modellezése}
 			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Kisméretű házak, épületek, gyárak, iskolák, melyek más fogyasztási igényekkel vannak ellátva)
 			
@@ -318,6 +336,10 @@ Megjegyzés szövege.
 \textsc{\url{https://www.origo.hu/itthon/20010414szabvany.html}}
 \bibitem{pycharm}
 \textsc{https://en.wikipedia.org/wiki/PyCharm}
+\bibitem{uno}
+\textsc{\url{https://en.wikipedia.org/wiki/Arduino_Uno}}
+\bibitem{arduino}
+\textsc{\url{https://hu.wikipedia.org/wiki/Arduino}}
 
 \end{thebibliography}
 \end{document}
