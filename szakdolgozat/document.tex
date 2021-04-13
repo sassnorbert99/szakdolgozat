@@ -53,14 +53,16 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{rajzok ismertetése}
 
 \chapter{Rendszerünk működése}
-	\section{Terepasztalunk működése}
+	\section{Terepasztalunk mozgatása}
 		\subsection{Napállás kalkulátor}
 			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
 			\par Feladatomat Python nyelven írtam, melyhez a PyCharm Community Edition keretrendszert használtam. 
+			\par Kezdetben meg kellett határoznom egy évszámból, illetve szélességi és hosszúsági fokból a deklinációs, zenit, Napmagassági szöget, illetve a napfelkelte, naplementét, ezek kettő adatok alapján pedig a teljes nappalhosszt. 
+			\lstinputlisting[language=Python]{sunapp.py}
 			\begin{definicio}
-				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését az 1.5. ábra mutatja.
-				\par KÉP!!!!!!!
+				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését a 3.1-es ábra mutatja.
+			
 				\cite{Kornyezet}
 			\end{definicio}
 			\begin{definicio}
@@ -76,13 +78,19 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				Napmagasság szöge: a Napnak szögben kifejezett magassága a megfigyelő horizontjából, azaz a vízszintes és a Naphoz húzott egyenes által bezárt szög. Értéke 0 és 90 fok között van. A napmagasság szöge komplementere a zenit szögnek.
 				\cite{Kornyezet}
 			\end{definicio}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{declination}
+				\caption{A deklinációs szög értelmezése}
+				\label{fig:declination}
+			\end{figure}
 			\par Ezek definíciók alapján sikerült egy szélességi és hosszúsági fok, illetve egy a felhasználó által kiválasztott dátum megadásával kiszámolni az adott ország deklinációs, zenit, Napmagassági szög, illetve nappalhosszát kiszámolni.
-			\par KÉP A PYTHONNAL KÉSZÍTETT KÓDRÉSZLETRŐL!!!!!!!!!!!!!
 			\par A további adatok kiszámításához (napfelkelte, naplemente, asztal elfordulása) ezek adatok elengedhetetlenek.
 			\subsubsection{Napfelkelte, naplemente kiszámítása}
 				\par A napfelkelte és napnyugta meghatározása a pontos földrajzi koordináták (hosszúsági és szélességi fok) valamint a dátum alapján történik.\cite{kiszamolo}
 				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
 				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
+
 				\lstinputlisting[language=Python]{calcriseset.py}
 			\subsubsection{Asztal forgatása}
 				\par Az asztal forgatásához a deklinációs\cite{Kornyezet} szöget vettem segítségül. A deklinációs szög megmondja, hogy egy adott napban egy országban a Nap milyen szögben helyezkedik el szoláris délben, így képes minden ország beállításával is megmondani ezt a bizonyos szöget. Ehhez viszonyítottam az asztal eltolását, hiszen egy Magyarországhoz északibb ország különböző hónapokban más viselkedést produkálnak, például nyáron hegyesebb, télen tompább szög. Ugyanez igaz a nálunk délibb országokhoz is, csak ott ezek negáltja történik. 
@@ -154,8 +162,16 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\item input: a bemenő jelből származó adat
 				\item AP: maximális Volt érték, melyet képes az analóg port olvasni
 			\end{itemize}
-			A kód tehát:
-			\lstinputlisting[language=C++]{voltage.ino}			
+			\par Minden robotikai projektet egy kapcsolási rajz előz meg. A kapcsolási rajz a projekthez készített eszközök kapcsolásait tartalmazza, melyben előre definiáljk azokat a portokat, melyeket a hardver összeállítása után használni fogunk. Továbbá azért nagyon fontos minden építés előtt kapcsolási rajzot készíteni, mert ez alapján virtuálisan is ki lehet próbálni, ezzel hibákat tudunk megelőzni.
+			\par A kapcsolási rajz tehát:
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{solarCalculator}
+				\caption{Kapcsolási rajz a hardver összeállításáról}
+			\end{figure}
+			\par A kapcsolási rajz után a következő lépés a kód összeállítása. A kód megkezdése előtt fontos, hogy a kapcsolási rajzon definiált portokat használjuk a szoftveren is.
+			\par A kód tehát:
+			\lstinputlisting{voltage.ino}			
 			A kódrészletben látható, hogy a napcellánk pozitív tartományát az Arduino UNO A0-ás portjához kapcsoltam, melyet az \textit{inPin} változóba deklaráltam. Az A0 egy analóg port, melyből a 0-ásat választottam ki. Továbbá az is látható, hogy később ennek a bemenetnek kiolvasott értékét elárolom egy \textit{value} változóba, mely után a képletbe behelyettesítve kitudom számolni az aktuális termelési értéket Voltban mérve. Az A érték jelen esetben 5 lesz, hiszen 5 Volt a maximális érték, melyet képes az analóg port fogadni.
 			\par A kilowatt kiszámításához be kellett vezetni egy konstans értéket, mely az aktuális napcella maximális teljesítményéből fakad. Ez a kísérletben 0,52 amper, hiszen a napcella 520mAh-t képes leadni. 
 			\par A kísérletek után a felhasználóval közölni kellett az adatokat, melyhez egy 16x2-es LCD kijelzőt használtam. A kijelzőn megjelenik az aktuális Volt, illetve ezt átszámítva a kilowatt értéke.
@@ -280,7 +296,12 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Kapcsolatfelvétel}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Weblapunk tartalmaz egy kapcsolatfelvételi űrlapot, melynek célja a felhasználókkal való kommunikáció biztosítása. Amennyiben valamilyen hiba, esetleg észrevétel, panasz lépne fel, a felhasználóknak lehetőségük van ezeket a kéréseket elküldeni a rendszer üzemeltetőknek. A kapcsolatfelvételi űrlap a ,,Rólunk" menüpontban található meg a lap alján. A felhasználónak meg kell adnia a teljes nevét, email címét, egy tárgyat a levélnek, valamint a szövegtörzset, melyben 500 karakterben kifejtheti észrevételeit, esetleg panaszait. Az adat egy adatbázisban rögzül, melyhez a rendszer üzemeltetőknek, illetve az adatbázis üzemeltetőknek van joguk belépni.
-			\par KÉP!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{contactme}
+				\caption{Kapcsolatfelvételi lehetőség felhasználók számára}
+				\label{fig:contactme}
+			\end{figure}
 
 \chapter{Fejlesztői környezetek és publikációi}
 	\par Ebben a fejezetben bemutatjuk az általunk használt fejlesztői környezetet és a fejlesztéshez szükséges komponenseket, azok tulajdonságait, illetve funkcióit.
@@ -313,7 +334,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{PHP nyelv}
 	\section{Arduino}
 		\subsection{szenzorok és kellékek ismertetése}
-		
+
 
 
 \begin{tetel}
@@ -323,10 +344,6 @@ Tétel szövege.
 \begin{proof}
 Bizonyítás szövege.
 \end{proof}
-
-\begin{definicio}
-Definíció szövege.
-\end{definicio}
 
 \begin{megjegyzes}
 Megjegyzés szövege.
