@@ -1,3 +1,5 @@
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);
 class House{
   
   public:
@@ -29,7 +31,12 @@ long total_consume = 0;
 
 
 void setup() {                      
-  
+  lcd.init(); //1.sor
+  lcd.init(); //2.sor
+  lcd.backlight();
+  lcd.print("kWh/m = ");
+  lcd.setCursor(0,1); //bottom left
+  lcd.print("kWh/d = ");
   
   Serial.begin(9600);
   
@@ -113,7 +120,14 @@ void setup() {
 }
 
 void loop() {
+  lcd.display();
+  // put your main code here, to run repeatedly:
   
+  
+  lcd.setCursor(8,0);
+  lcd.print(total_consume);
+  lcd.setCursor(8,1);
+  lcd.print(total_consume/30);
   
   
 }
