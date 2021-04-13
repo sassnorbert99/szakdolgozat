@@ -59,7 +59,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
 			\par Feladatomat Python nyelven írtam, melyhez a PyCharm Community Edition keretrendszert használtam. 
 			\par Kezdetben meg kellett határoznom egy évszámból, illetve szélességi és hosszúsági fokból a deklinációs, zenit, Napmagassági szöget, illetve a napfelkelte, naplementét, ezek kettő adatok alapján pedig a teljes nappalhosszt. 
-			\lstinputlisting[language=Python]{sunapp.py}
+			\lstinputlisting[language=Python]{./codes/sunapp.py}
 			\begin{definicio}
 				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését a 3.1-es ábra mutatja.
 			
@@ -80,7 +80,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\end{definicio}
 			\begin{figure}[h]
 				\centering
-				\includegraphics[scale=0.30]{declination}
+				\includegraphics[scale=0.30]{./images/declination}
 				\caption{A deklinációs szög értelmezése}
 				\label{fig:declination}
 			\end{figure}
@@ -91,13 +91,13 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
 				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
 
-				\lstinputlisting[language=Python]{calcriseset.py}
+				\lstinputlisting[language=Python]{./codes/calcriseset.py}
 			\subsubsection{Asztal forgatása}
 				\par Az asztal forgatásához a deklinációs\cite{Kornyezet} szöget vettem segítségül. A deklinációs szög megmondja, hogy egy adott napban egy országban a Nap milyen szögben helyezkedik el szoláris délben, így képes minden ország beállításával is megmondani ezt a bizonyos szöget. Ehhez viszonyítottam az asztal eltolását, hiszen egy Magyarországhoz északibb ország különböző hónapokban más viselkedést produkálnak, például nyáron hegyesebb, télen tompább szög. Ugyanez igaz a nálunk délibb országokhoz is, csak ott ezek negáltja történik. 
 				\par Ez a bizonyos szög országon belül is havonta változik, minden nap maximum 0,5 fokkal. Az asztal tehát a deklinációs szög negáltjával fog változni, hiszen az arányokat megtartván az északi pontot helyezzük a megváltozott érték helyére.
-				\lstinputlisting[language=Python]{table.py}
+				\lstinputlisting[language=Python]{./codes/table.py}
 				\par A napcellák elhelyezkedése a Naphoz képest, illetve a pontos szög meghatározása ugyanebben a metódusban definiált. Az égtájak konstans értékként vannak definiálva, melyben az értékek fokban értendők. A napcellák elhelyezkedése tehát a Dél - deklináció. A napcellák hatékonyságáról\cite{gershoj} tanulmányok szerint a déli 35-40 fok az optimális, így a rendszert is úgy állítottuk be, hogy egy magyarországi déli tájolású 40 fokban legyen.
-				\lstinputlisting[language=Python]{solar.py}
+				\lstinputlisting[language=Python]{./codes/solar.py}
 				\par Ahogy a kódrészletből is látszik, mivel a telepített napcellák tájolástól és napszaktól függetlenül déli 40 fokban helyezkednek el, így az optimalizálás is csak a 40 fokos szöghöz igazodik. Optimalizálásnál az alábbi 5 esetek különböztetjük meg:
 				\begin{itemize}
 					\item Ha északkeletre esik: Azaz a szögtartomány így írható le: 0 < szög < 90. Ilyen esetben a hatékonyságuk 75\%-os
@@ -128,20 +128,20 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par Ezek után szükségem volt egy szabványra mely kimondja, hogy egy átlagos iskola, illetve kórház milyen szabályoknak kell megfeleljenek. A kutatásaimat felhasználva egy iskola hivatalos szabványa, hogy 2,5$m^{2}$ jut egy diák számára\cite{school_m2}. Tehát egy iskola kalkulálása ezek szorzatából tevődik össze. Továbbá kutatásaim arra is rámutattak, hogy egy kórházban 6-8$m^{2}$ jut egy beteg részére. Így az iskola, illetve a kórház mérete és ebből kiszámítva a fogyasztása nagyban függ az intézményekben tartózkodó tanulók, vagy betegektől.
 			\par Szimulátor programom Python nyelven írtam a PyCharm\footnote{A PyCharm egy integrált fejlesztői környezet (IDE), amelyet a számítógépes programozásban használnak, kifejezetten a Python nyelv számára\cite{pycharm}.} segítségével. A szimulátorban a felhasználó konzolos ablakon keresztül megadhatja a szoftvernek a házak, lakások, iskolák, kórházak, tanulók, illetve betegek számát, majd ezek adatokból képes kiszámolni az átlagos fogyasztási igényt, valamint ugyanezt az adatot lebontja napra pontosan.
 			\par Szoftveremben minden intézmény egy külön osztály, melyek más-más számításokat kell végezzenek az igény kiszámításához. 
-			\lstinputlisting[language=Python]{consumers.py}
+			\lstinputlisting[language=Python]{./codes/consumers.py}
 			\par Ahogy a kódrészletből is látható, egy családi ház konstruktorának fogyasztási értéke 230, míg egy lakás átlagos fogyasztási értéke 200. Napra lebontva pedig egy átlagos naphosszt választottam, így minden értéket 30-al oszt el, így lebontván napi szintre az értékeket. 
 			\par Az iskolák és kórházak összetettebb konstruktorral rendelkeznek, melyek nagyban függnek a paraméterként megadott tanulók, illetve betegektől.
-			\lstinputlisting[language=Python]{calculate_estates.py}	
+			\lstinputlisting[language=Python]{./codes/calculate_estates.py}	
 			\par Ahogy a kódrészletből tisztán látható, az iskola és kórház konstruktorai már egy tanuló, illetve beteg paramétert is várnak, melyből kitudja számolni az intézmény átlagos négyzetméterét, illetve ebből az adatból képes kiszámolni a négyzetméterre jutó energia igényüket.
 			\par A különféle fogyasztók értékeit listában tárolom, illetve ciklusok segítségével tudom feltölteni. A felhasználó a program lefutása után konzolból megadhatja a különböző értékeket, mely során a szoftver egyes osztályait meghívván, beállítja a számára szükséges értékekkel a paramétereit, majd közli a felhasználóval az alábbi adatokat:
-			\lstinputlisting[language=Python]{estate.py}	
+			\lstinputlisting[language=Python]{./codes/estate.py}	
 			
 		\subsection{Vízerőmű szimulálása}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par A vízerőmű rendszerünk, mely szivattyús tárolós elven működik, egy szimuláción keresztül is tudjuk szemléltetni. A szimuláció a folyamatot képes szemléltetni, a vízerőmű működését, illetve a leállítás- újraindítás folyamatát. 
 			\par A szimuláció elkészítéséhez Python programozási nyelvet használtam. 
-			\lstinputlisting[language=Python]{water.py}		
-			\lstinputlisting[language=Python]{watermain.py}					
+			\lstinputlisting[language=Python]{./codes/water.py}		
+			\lstinputlisting[language=Python]{./codes/watermain.py}					
 			\par Ahogy a kódrészletből is látható, maga a szoftver két külön szálon fut, egyik szál foglalkozik az erőmű működésével, míg a másik szál a felhasználók számára van, melyben konzolba beírva megadhatja az erőmű leállítás, illetve újraindítás funkciójának gombját. A rendszer egy körfolyamatban működik, mely ciklikusan ismétli önmagát, így ha a felhasználó nem állítja le a rendszert, örök körfolyamatban fog részt venni. 
 			\par A szálak egy közös osztályban vannak definiálva, melyben az osztály egyes metódusai végzik el a szálkezelést. A körfolyamat egyszerű, két tartály van, az első feljebb van, míg a második közel az elsőhöz. Legyenek elnevezve a tartályok, A: első tartály, B: második tartály. Kezdetben a B tartály tele van, amiben van egy szivattyú, mely elkezdi az A tartályba szivattyúzni a vizet. Ez a folyamat addig megy, míg az A tartály teljesen tele nem lesz. Fontos továbbá megjegyezni, hogy ilyen esetben nem feltétlenül lesz üres a B tartály. Az erőmű jó szemléltetése és átláthatósága érdekében a programomban ilyen esetben a B teljesen kiürül. Amint az A tartály tele lesz, megnyitja a csapot és visszafolyik a B tartályba a víz. A csapnál van a generátor, mely vízfolyamból elektromos áramot képes termelni. Amint az A tartály a teljes vízkészletet visszaadta a B tartálynak, a körfolyamat újraindul. 
 			\par A felhasználónak azonban van lehetősége ezt a folyamatot leállítani. Két opciója van:
@@ -164,14 +164,14 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\end{itemize}
 			\par Minden robotikai projektet egy kapcsolási rajz előz meg. A kapcsolási rajz a projekthez készített eszközök kapcsolásait tartalmazza, melyben előre definiáljk azokat a portokat, melyeket a hardver összeállítása után használni fogunk. Továbbá azért nagyon fontos minden építés előtt kapcsolási rajzot készíteni, mert ez alapján virtuálisan is ki lehet próbálni, ezzel hibákat tudunk megelőzni.
 			\par A kapcsolási rajz tehát:
-			\begin{figure}[h]
+			\begin{figure}[ht]
 				\centering
-				\includegraphics[scale=0.30]{solarCalculator}
+				\includegraphics[scale=0.30]{./images/solarCalculator}
 				\caption{Kapcsolási rajz a hardver összeállításáról}
 			\end{figure}
 			\par A kapcsolási rajz után a következő lépés a kód összeállítása. A kód megkezdése előtt fontos, hogy a kapcsolási rajzon definiált portokat használjuk a szoftveren is.
 			\par A kód tehát:
-			\lstinputlisting{voltage.ino}			
+			\lstinputlisting{./codes/voltage.ino}			
 			A kódrészletben látható, hogy a napcellánk pozitív tartományát az Arduino UNO A0-ás portjához kapcsoltam, melyet az \textit{inPin} változóba deklaráltam. Az A0 egy analóg port, melyből a 0-ásat választottam ki. Továbbá az is látható, hogy később ennek a bemenetnek kiolvasott értékét elárolom egy \textit{value} változóba, mely után a képletbe behelyettesítve kitudom számolni az aktuális termelési értéket Voltban mérve. Az A érték jelen esetben 5 lesz, hiszen 5 Volt a maximális érték, melyet képes az analóg port fogadni.
 			\par A kilowatt kiszámításához be kellett vezetni egy konstans értéket, mely az aktuális napcella maximális teljesítményéből fakad. Ez a kísérletben 0,52 amper, hiszen a napcella 520mAh-t képes leadni. 
 			\par A kísérletek után a felhasználóval közölni kellett az adatokat, melyhez egy 16x2-es LCD kijelzőt használtam. A kijelzőn megjelenik az aktuális Volt, illetve ezt átszámítva a kilowatt értéke.
@@ -296,9 +296,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Kapcsolatfelvétel}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Weblapunk tartalmaz egy kapcsolatfelvételi űrlapot, melynek célja a felhasználókkal való kommunikáció biztosítása. Amennyiben valamilyen hiba, esetleg észrevétel, panasz lépne fel, a felhasználóknak lehetőségük van ezeket a kéréseket elküldeni a rendszer üzemeltetőknek. A kapcsolatfelvételi űrlap a ,,Rólunk" menüpontban található meg a lap alján. A felhasználónak meg kell adnia a teljes nevét, email címét, egy tárgyat a levélnek, valamint a szövegtörzset, melyben 500 karakterben kifejtheti észrevételeit, esetleg panaszait. Az adat egy adatbázisban rögzül, melyhez a rendszer üzemeltetőknek, illetve az adatbázis üzemeltetőknek van joguk belépni.
-			\begin{figure}[h]
+			\begin{figure}[ht]
 				\centering
-				\includegraphics[scale=0.30]{contactme}
+				\includegraphics[scale=0.30]{./images/contactme}
 				\caption{Kapcsolatfelvételi lehetőség felhasználók számára}
 				\label{fig:contactme}
 			\end{figure}
@@ -310,13 +310,19 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\par Szükségünk volt egy verziókövető rendszer elsajátításához. Ezen rendszerek legnagyobb előnyei, hogy egy projekten többen is dolgozhatunk egyszerre, anélkül, hogy egymás munkáját hátráltatnánk, illetve ha valaki változtatást készít és feltölti, azt a rendszer nyomon tudja követni. Ha ketten egyszerre ugyanazon az állományon végeznek módosítást, a rendszer feltöltéskor megpróbálja összefésülni (merge) a módosításokat, ha nem sikerül, jól láthatóan megjeleníti az ütközéseket. Ilyen esetekben megtudjuk nézni a konfliktust okozó állományokat és lehetőségünk van a két állományt manuálisan összefésülni. Ezzel a módszerrel folyamatosan szinkronban lehetett mindkettőnk munkája.
 	\par A Git verziókövető rendszert választottuk, mert korábban már használtuk Windows, illetve Linux rendszeren, és jó tapasztalataink vannak róla. Korábbi kurzusainkon is használtuk, így könnyebb volt a Git verziókövetőt elsajátítani. 
 	\par Ahhoz, hogy fejlesztés közben ne hátráltassuk egymás munkáját, szükség van egy kliensre, mely könnyen kezelhető felületet biztosít a hozzáféréshez, a projekt klónozásához, feltöltéshez, stb. Windows alatt a Github Desktopot használjuk, MacOS alatt pedig terminálban kezeljük a verziókövető funkcióit.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.35]{./images/github}
+		\caption{Projekt elemei Githubon}
+		\label{fig:github}
+	\end{figure}
 	\section{Trello feladatkövető rendszer}
 	\par Ahhoz, hogy feltudjuk osztani kettőnk közt a feladatokat, szükségünk volt a verziókövető rendszeren kívül egy feladatkövető rendszerhez is. A projekt megkezdése előtt a feladatokat szóban, illetve papíralapon osztottuk fel, azonban egy idő után átláthatatlanná vált a feladatok megosztása. Szükségünk volt egy feladatkövető rendszer elsajátításában. Ezen rendszerek legnagyobb előnye, hogy táblázatokban tudjuk összefoglalni a feladatokat, illetve azokhoz könnyen hozzátudjuk rendelni a fejlesztőket. Választásunk a Trello feladatkövető rendszerre esett, mert korábban már használtuk, így könnyebb volt a rendszer elsajátítása. 
 	
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{trello}
+		\includegraphics[scale=0.35]{./images/trello}
 		\caption{A projekt feladataira bontva trelloban}
 		\label{fig:trello}
 	\end{figure}
@@ -324,18 +330,17 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	
 	\section{Technológiák}
 		\subsection{Python}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\subsection{Python és a C nyelv integrációja}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
 		\subsection{PHP nyelv}
-	\section{Arduino}
-		\subsection{szenzorok és kellékek ismertetése}
-
-
+	\section{Arduino szenzorok és kellékek ismertetése}
+		\subsection{Arduino UNO}
+		\subsection{Arduino NANO}
+		\subsection{16 x 2 LCD kijelző}
+		\subsection{DHT11}		
+		\subsection{ENCODER}
+		\subsection{I2C}
+		\subsection{title}
 
 \begin{tetel}
 Tétel szövege.
