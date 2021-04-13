@@ -43,7 +43,7 @@ void loop()
   int value = analogRead(inPin);         //Read the signal at pin A0 and result put on variable value
   
   float volts = (value / 1024.0) * 5;    //Convert 1024 levels in Volts value
-  float amper = 0.2;
+  float amper = 0.52;
   float kW = (volts * amper) / 1000;
 
   
