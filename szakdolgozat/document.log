@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  13 APR 2021 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  13 APR 2021 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,142 +873,157 @@ ifier (name{figure.3.2}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.7 void 
          setup() <./images/solarCalculator.png>]) [22] [23]
-<./images/consumeProblem.png, id=849, 642.4pt x 542.025pt>
-File: ./images/consumeProblem.png Graphic file (type png)
-<use ./images/consumeProblem.png>
-Package pdftex.def Info: ./images/consumeProblem.png  used on input line 210.
-(pdftex.def)             Requested size: 192.72148pt x 162.60875pt.
- [24]
-(./codes/consumer.ino [25pdfTeX warning (ext4): destination with the same ident
-ifier (name{figure.3.3}) has been already used, duplicate ignored
+<./images/TemperatureAndHumidity.png, id=848, 977.6525pt x 527.9725pt>
+File: ./images/TemperatureAndHumidity.png Graphic file (type png)
+<use ./images/TemperatureAndHumidity.png>
+Package pdftex.def Info: ./images/TemperatureAndHumidity.png  used on input lin
+e 205.
+(pdftex.def)             Requested size: 293.298pt x 158.39296pt.
+
+(./codes/weatherStationInit.ino [24pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.20       int 
-               patients = 100; <./images/consumeProblem.png>])
-(./codes/void.ino [26] [27]) (./codes/loop.ino) [28] [29]
+l.7 byte 
+         degree_symbol[8] = <./images/TemperatureAndHumidity.png>])
+(./codes/weatherStationVoid.ino [25]) (./codes/weatherStationLoop.ino [26])
+[27]
+<./images/consumeProblem.png, id=970, 642.4pt x 542.025pt>
+File: ./images/consumeProblem.png Graphic file (type png)
+<use ./images/consumeProblem.png>
+Package pdftex.def Info: ./images/consumeProblem.png  used on input line 225.
+(pdftex.def)             Requested size: 192.72148pt x 162.60875pt.
+ (./codes/consumer.ino [28pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.3.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.12   public:
+               <./images/consumeProblem.png>]) (./codes/void.ino [29] [30])
+(./codes/loop.ino) [31] [32]
 4. fejezet.
-[30
+[33
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 264.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 279.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [31] [32]
-[33]
-<./images/contactme.png, id=1017, 1284.8pt x 708.6475pt>
+) [34] [35]
+[36]
+<./images/contactme.png, id=1133, 1284.8pt x 708.6475pt>
 File: ./images/contactme.png Graphic file (type png)
 <use ./images/contactme.png>
-Package pdftex.def Info: ./images/contactme.png  used on input line 323.
+Package pdftex.def Info: ./images/contactme.png  used on input line 338.
 (pdftex.def)             Requested size: 385.44298pt x 212.59589pt.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [37pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.328 \chapter
+l.343 \chapter
               {Fejlesztői környezetek és publikációi} <./images/contactme.
 png>]
 5. fejezet.
-<./images/github.png, id=1024, 1284.8pt x 645.41125pt>
+<./images/github.png, id=1141, 1284.8pt x 645.41125pt>
 File: ./images/github.png Graphic file (type png)
 <use ./images/github.png>
-Package pdftex.def Info: ./images/github.png  used on input line 337.
+Package pdftex.def Info: ./images/github.png  used on input line 352.
 (pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
 
-Overfull \hbox (8.669pt too wide) in paragraph at lines 337--338
+Overfull \hbox (8.669pt too wide) in paragraph at lines 352--353
  [][] 
  []
 
-[35
+[38
 
 ]
-<./images/trello.png, id=1029, 1284.8pt x 645.41125pt>
+<./images/trello.png, id=1146, 1284.8pt x 645.41125pt>
 File: ./images/trello.png Graphic file (type png)
 <use ./images/trello.png>
-Package pdftex.def Info: ./images/trello.png  used on input line 347.
+Package pdftex.def Info: ./images/trello.png  used on input line 362.
 (pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
 
-Overfull \hbox (8.669pt too wide) in paragraph at lines 347--348
+Overfull \hbox (8.669pt too wide) in paragraph at lines 362--363
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.369 \end{tetel}
-                  <./images/github.png>] [37pdfTeX warning (ext4): destination 
+l.384 \end{tetel}
+                  <./images/github.png>] [40pdfTeX warning (ext4): destination 
 with the same identifier (name{figure.5.2}) has been already used, duplicate ig
 nored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.379 \begin{thebibliography}{2}
+l.394 \begin{thebibliography}{2}
                                  <./images/trello.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 []\T1/lmr/m/sc/12 https://gershojenergia.com/napelem-kisokos/optimalis-napelem-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 [][]$\T1/lmtt/m/sc/12 https : / / elmuemasz . hu / egyetemes-[]szolgaltatas / s
 zolgaltatasok /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 \T1/lmtt/m/sc/12 villamos-[]energia / aramdij-[]kalkulatorok / lakossagi-[]aram
 dij-[]elmu ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 \T1/lmtt/m/sc/12 fbclid = IwAR3UKUacdAXQeBuYPsDckohKhAf _ hY2TnitQqGmBwRiFq _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 [][]$\T1/lmtt/m/sc/12 http : / / www . personal . ceu . hu / students / 03 / Al
 exandra _ Novikova / 2 / El %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 \T1/lmtt/m/sc/12 20tertiary % 20site % 20folders / documents / description _ of
  _ eltertiary _
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
-[38
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+[41
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 402.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 417.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 0669B12D5A121A06B7E111AF9D1EA8D6;12358.
  ) 
 Here is how much of TeX's memory you used:
- 15882 strings out of 492616
- 229065 string characters out of 6129481
+ 16054 strings out of 492616
+ 231685 string characters out of 6129481
  515183 words of memory out of 5000000
- 18878 multiletter control sequences out of 15000+600000
+ 18937 multiletter control sequences out of 15000+600000
  78223 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,7n,42p,1816b,2027s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-19/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/
-fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvi
-ps/lm/lm-mathsy.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2019/texmf-d
+ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/
+dvips/lm/lm-ts1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/l
 mbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/loc
 al/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/
@@ -1017,12 +1032,13 @@ dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/
 type1/public/lm/lmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 /lm/lmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri12.p
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtcsc10.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on document.pdf (38 pages, 1420318 bytes).
+ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/lm/lmtcsc10.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on document.pdf (41 pages, 1491394 bytes).
 PDF statistics:
- 1239 PDF objects out of 1440 (max. 8388607)
- 1157 compressed objects within 12 object streams
- 604 named destinations out of 1000 (max. 500000)
- 576 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1379 PDF objects out of 1440 (max. 8388607)
+ 1290 compressed objects within 13 object streams
+ 707 named destinations out of 1000 (max. 500000)
+ 581 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -197,8 +197,23 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		
 	\section{modellek}
 		\subsection{Időjárás állomás}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti a teremben aktuális hőmérsékletet, illetve páratartalmat.
-			
+			\par A modell elkészítése előtt szükséges egy kapcsolási rajzot készíteni, melyben előre meghatározzuk a használni kívánt portok számát, illetve azok értékét. 
+				\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.30]{./images/TemperatureAndHumidity}
+				\caption{Kapcsolási rajz az időjárás állomáshoz}
+			\end{figure}
+			\par Ahogy a kapcsolási rajzon is látható az Arduino UNO-n kívül szükségünk van egy DHT11-es szenzorra, ismertebb nevén egy hőmérséklet és páratartalom szenzorra, valamint egy lcd kijelzőre és a hozzá tartozó I2C eszközre, mely egy protokollt valósít meg, amely adatok küldésére és fogadására szolgál.
+			\par A hardveres kapcsolási rajzot követően hozzákezdhetünk a szoftveres részhez. Mivel a felhasználó az lcd kijelzőn láthatja a hőmérsékletet, illetve páratartalmat, először az lcd működését kell definiálni. Fontos megjegyezni, hogy ez a 16x2-es lcd kijelző önállóan nem képes egyedi karakterek megjelenítésére, azonban egy karakternek lefoglalt helyre manuálisan készíthetünk egyet. Ez azért fontos, mert a fok jel csak így lesz megjeleníthető.
+			\par A kód elején szükséges az előre definiált portokat deklarálni, illetve egyéb olyan változókat, melyeket később a rendszer használni fog.
+			\lstinputlisting{./codes/weatherStationInit.ino}
+			\par Ezek után inicializálhatjuk az lcd-t, valamint kiírhatjuk a kezdeti értékeket az lcd kijelzőre. A kezdeti érték nem más, mint a ,,hom = ? $^{\circ}$C", ,,para = ? \%"				
+			\lstinputlisting{./codes/weatherStationVoid.ino}
+			\par Végezetül megírjuk rá a hőmérséklet és páratartalomhoz elkészített algoritmust a ,,loop()" metódusba.
+			\lstinputlisting{./codes/weatherStationLoop.ino}			
+			\par A felhasználó az összeállított hardver számítógéphez való kapcsolása után nyomon követheti a szobában mérhető aktuális hőmérséklet celsiusban, illetve páratartalmat százalékosan mérve.
 		\subsection{Fogyasztók modellezése}
 			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Családi házak, lakások, kórházak, valamint iskolák, melyek más fogyasztási igényekkel vannak ellátva) 
