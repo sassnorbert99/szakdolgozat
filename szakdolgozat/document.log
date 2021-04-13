@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  13 APR 2021 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  13 APR 2021 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -422,7 +422,16 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
-\c@tetel=\count132
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count132
+\float@exts=\toks28
+\float@box=\box31
+\@float@everytoks=\toks29
+\@floatcapt=\box32
+)
+\c@tetel=\count133
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -588,91 +597,91 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 25.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 25.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 26.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 25.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 26.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 26.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 25.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+(Font)              <6> on input line 26.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 25.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 26.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 25.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 25.
+(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
+\scratchcounter=\count134
 \scratchdimen=\dimen140
-\scratchbox=\box31
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count136
+\scratchbox=\box33
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count137
 \MPscratchDim=\dimen141
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -690,8 +699,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 25.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -699,11 +708,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count139
+\c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
 
 (./document.out) (./document.out)
 \@outlinefile=\write3
@@ -744,7 +753,7 @@ LaTeX Info: Redefining \nameref on input line 25.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count140
+\c@lstlisting=\count141
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/report.cls
 LaTeX Info: Redefining \cal on input line 576.
 LaTeX Info: Redefining \mit on input line 577.
@@ -752,7 +761,7 @@ LaTeX Info: Redefining \mit on input line 577.
 <eszterhazy-logo-hu.pdf, id=270, 256.07469pt x 84.78476pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
-Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 32.
+Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 33.
 (pdftex.def)             Requested size: 256.07405pt x 84.78453pt.
  [1
 
@@ -782,7 +791,7 @@ cument.toc
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 62.
+nput line 63.
 
 (./codes/sunapp.py [7
 
@@ -800,9 +809,16 @@ Overfull \hbox (10.17953pt too wide) in paragraph at lines 37--38
 <./images/declination.png, id=468, 576.1525pt x 550.055pt>
 File: ./images/declination.png Graphic file (type png)
 <use ./images/declination.png>
-Package pdftex.def Info: ./images/declination.png  used on input line 83.
+Package pdftex.def Info: ./images/declination.png  used on input line 84.
 (pdftex.def)             Requested size: 172.84708pt x 165.01776pt.
- [10 <./images/declination.png>] (./codes/calcriseset.py
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.92 				\par K
+               iszámításához egy metódust hoztam létre, melnyek a  ,,c...
+ <./images/declination.png>] (./codes/calcriseset.py
 Overfull \hbox (17.22949pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -848,104 +864,143 @@ Overfull \hbox (31.3294pt too wide) in paragraph at lines 15--16
 <./images/solarCalculator.png, id=789, 961.5925pt x 518.93875pt>
 File: ./images/solarCalculator.png Graphic file (type png)
 <use ./images/solarCalculator.png>
-Package pdftex.def Info: ./images/solarCalculator.png  used on input line 169.
+Package pdftex.def Info: ./images/solarCalculator.png  used on input line 170.
 (pdftex.def)             Requested size: 288.47997pt x 155.68282pt.
- (./codes/voltage.ino [21 <./images/solarCalculator.png>]) [22]
-[23] [24]
+ (./codes/voltage.ino [21pdfTeX warning (ext4): destination with the same ident
+ifier (name{figure.3.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.7 void 
+         setup() <./images/solarCalculator.png>]) [22] [23]
+<./images/consumeProblem.png, id=849, 642.4pt x 542.025pt>
+File: ./images/consumeProblem.png Graphic file (type png)
+<use ./images/consumeProblem.png>
+Package pdftex.def Info: ./images/consumeProblem.png  used on input line 210.
+(pdftex.def)             Requested size: 192.72148pt x 162.60875pt.
+ [24]
+(./codes/consumer.ino [25pdfTeX warning (ext4): destination with the same ident
+ifier (name{figure.3.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.20       int 
+               patients = 100; <./images/consumeProblem.png>])
+(./codes/void.ino [26] [27]) (./codes/loop.ino) [28] [29]
 4. fejezet.
-[25
-
-]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 242.
-
- (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [26] [27]
-[28]
-<./images/contactme.png, id=875, 1284.8pt x 708.6475pt>
-File: ./images/contactme.png Graphic file (type png)
-<use ./images/contactme.png>
-Package pdftex.def Info: ./images/contactme.png  used on input line 301.
-(pdftex.def)             Requested size: 385.44298pt x 212.59589pt.
- [29 <./images/contactme.png>]
-5. fejezet.
-<./images/github.png, id=882, 1284.8pt x 645.41125pt>
-File: ./images/github.png Graphic file (type png)
-<use ./images/github.png>
-Package pdftex.def Info: ./images/github.png  used on input line 315.
-(pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
-
-Overfull \hbox (8.669pt too wide) in paragraph at lines 315--316
- [][] 
- []
-
 [30
 
 ]
-<./images/trello.png, id=887, 1284.8pt x 645.41125pt>
-File: ./images/trello.png Graphic file (type png)
-<use ./images/trello.png>
-Package pdftex.def Info: ./images/trello.png  used on input line 325.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 264.
+
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [31] [32]
+[33]
+<./images/contactme.png, id=1017, 1284.8pt x 708.6475pt>
+File: ./images/contactme.png Graphic file (type png)
+<use ./images/contactme.png>
+Package pdftex.def Info: ./images/contactme.png  used on input line 323.
+(pdftex.def)             Requested size: 385.44298pt x 212.59589pt.
+ [34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.328 \chapter
+              {Fejlesztői környezetek és publikációi} <./images/contactme.
+png>]
+5. fejezet.
+<./images/github.png, id=1024, 1284.8pt x 645.41125pt>
+File: ./images/github.png Graphic file (type png)
+<use ./images/github.png>
+Package pdftex.def Info: ./images/github.png  used on input line 337.
 (pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
 
-Overfull \hbox (8.669pt too wide) in paragraph at lines 325--326
+Overfull \hbox (8.669pt too wide) in paragraph at lines 337--338
+ [][] 
+ []
+
+[35
+
+]
+<./images/trello.png, id=1029, 1284.8pt x 645.41125pt>
+File: ./images/trello.png Graphic file (type png)
+<use ./images/trello.png>
+Package pdftex.def Info: ./images/trello.png  used on input line 347.
+(pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
+
+Overfull \hbox (8.669pt too wide) in paragraph at lines 347--348
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[31 <./images/github.png>] [32 <./images/trello.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.369 \end{tetel}
+                  <./images/github.png>] [37pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.5.2}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.379 \begin{thebibliography}{2}
+                                 <./images/trello.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 []\T1/lmr/m/sc/12 https://gershojenergia.com/napelem-kisokos/optimalis-napelem-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 [][]$\T1/lmtt/m/sc/12 https : / / elmuemasz . hu / egyetemes-[]szolgaltatas / s
 zolgaltatasok /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 \T1/lmtt/m/sc/12 villamos-[]energia / aramdij-[]kalkulatorok / lakossagi-[]aram
 dij-[]elmu ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 \T1/lmtt/m/sc/12 fbclid = IwAR3UKUacdAXQeBuYPsDckohKhAf _ hY2TnitQqGmBwRiFq _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 [][]$\T1/lmtt/m/sc/12 http : / / www . personal . ceu . hu / students / 03 / Al
 exandra _ Novikova / 2 / El %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 \T1/lmtt/m/sc/12 20tertiary % 20site % 20folders / documents / description _ of
  _ eltertiary _
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
-[33
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
+[38
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 402.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 0669B12D5A121A06B7E111AF9D1EA8D6;12358.
  ) 
 Here is how much of TeX's memory you used:
- 15656 strings out of 492616
- 225742 string characters out of 6129481
- 513780 words of memory out of 5000000
- 18786 multiletter control sequences out of 15000+600000
+ 15882 strings out of 492616
+ 229065 string characters out of 6129481
+ 515183 words of memory out of 5000000
+ 18878 multiletter control sequences out of 15000+600000
  78223 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,7n,42p,1816b,2027s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -964,10 +1019,10 @@ type1/public/lm/lmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtcsc10.pfb></usr/local/tex
 live/2019/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on document.pdf (33 pages, 1376219 bytes).
+Output written on document.pdf (38 pages, 1420318 bytes).
 PDF statistics:
- 1071 PDF objects out of 1200 (max. 8388607)
- 998 compressed objects within 10 object streams
- 482 named destinations out of 1000 (max. 500000)
- 571 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1239 PDF objects out of 1440 (max. 8388607)
+ 1157 compressed objects within 12 object streams
+ 604 named destinations out of 1000 (max. 500000)
+ 576 words of extra memory for PDF output out of 10000 (max. 10000000)
 

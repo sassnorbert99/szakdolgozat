@@ -14,6 +14,7 @@
 \usepackage{mathtools,amssymb,amsthm}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{float}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -114,7 +115,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
 	\section{Szimulációk}
-		\subsection{Fogyasztó probléma szimulálása}
+		\subsection{Fogyasztó probléma szimulálása} \label{fogyaszto}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Ahhoz, hogy a fogyasztók energiaigényeiket feltudjuk mérni, szükségünk volt egy szimulátor programra, melyben megtudjuk adni, hogy menni fogyasztó fogja használni a terepasztalunkat. A fogyasztók az alábbiak lehetnek:
 			\begin{itemize}
@@ -197,9 +198,30 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{modellek}
 		\subsection{Időjárás állomás}
 			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti a teremben aktuális hőmérsékletet, illetve páratartalmat.
-		\subsection{Fogyasztók modellezése}
-			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Kisméretű házak, épületek, gyárak, iskolák, melyek más fogyasztási igényekkel vannak ellátva)
 			
+		\subsection{Fogyasztók modellezése}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
+			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Családi házak, lakások, kórházak, valamint iskolák, melyek más fogyasztási igényekkel vannak ellátva) 
+			\par Korábbi fejezetekben már kifejtettem  (\ref{fogyaszto}) a különféle fogyasztók havi, illetve napi fogyasztási igényeit. A szimulátor kiválóan mutatja, hogy a felhasználótól megkapott inputokból, melyek a fogyasztók beállításait végzik, hogy állítja elő a fogyasztási igény megközelítési értékét. 
+			\par Szimulátor után a következő feladat ennek az algoritmusnak lemodellezése Arduino-n, hogy később a teljes rendszer ezek adatok alapján tudja beállítani a fogyasztók igényeinek értékét. Fontos tudni, hogy míg a szimulációban a felhasználó minden adathoz hozzá fért, a modellünkben bizonyos értékek konstansként szerepelnek. Ilyen értékek a tanulók, illetve betegek beállítása. Mivel nem minden felhasználó ismert a témákban, így egy átlag beteg és tanuló állományt rögzít a rendszer. 
+			\par A modell, mint már említettem, C++ programozási nyelven írtam az Arduino IDE segítségével. A  modell önmaga nem igényel az  Arduino UNO mikrokontrolleren kívül egyéb alkatrészeket, azonban a szemléltetés érdekében egy 16x2-es kék lcd panellel összekötöttem az Arduino UNO, hogy minden lefutásnál közölje a felhasználóval a kívánt adatokat. A kapcsolási rajz tehát tartalmaz egy Arduino Uno mikrokontrollert és a hozzá kapcsolt lcd kijelzőt.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.30]{./images/consumeProblem}
+				\caption{Kapcsolási rajz a fogyasztó problémához}
+			\end{figure}
+			\par A modell az lcd panelen kívül egy úgynevezett soros porton közvetíti a kimenő értékeket, így a felhasználó a számítógépen is követheti a fogyasztók aktuális igényeinek megközelítő értékét.
+			\begin{megjegyzes}
+				Fontos tudni, hogy a soros portra kiírt adatok olvasásához is szükségünk van az Arduino UNO számítógéphez való csatlakoztatása.
+			\end{megjegyzes}
+			\par Miután definiáltuk a portokat a kapcsolási rajz segítségével, hozzá kezdhetünk a kódhoz, melyben az előre definiált portokat használjuk fel.
+			\par Először az osztályokat kell definiálni. Az osztályok a különféle fogyasztókat tartalmazza, melyek más fogyasztási értékkel kerülnek kiszámításra.
+			\lstinputlisting{./codes/consumer.ino}			
+			\par Majd ezután beállíthatjuk a szoftver lefutás utáni viselkedését. A következőkben definiálni fogjuk az lcd kijelzőt, valamint létrehozzuk az adatszerkezeteket, melyben tárolni tudjuk a deklarált fogyasztókat. Miután létrehoztuk és feltöltöttük az adatszerkezetben a kívánt adatokat, soros porton keresztül közvetítjük a felhasználónak a fogyasztási értékeket. 
+			\lstinputlisting{./codes/void.ino}				
+			\par A felhasználó ezután az Arduino UNO számítógéphez történő csatlakoztatása után soros porton keresztül követheti a szoftver kimeneti értékeit. Ezután már csak az lcd kijelzőn kell feltüntessük az értékeket, amennyiben a felhasználó nem csak a soros porton szeretné megtekinteni a tartalmat. Mivel az lcd kijelző 16x2-es, így csak két sorban tud, maximum 16 karakter/sort megjeleníteni. A szoftver szemléltetése érdekében az lcd csak a havi, illetve napi fogyasztási igényt közli a felhasználóval. 
+			\lstinputlisting{./codes/loop.ino}					
+			\par Ahogy a kódrészletből is látható, az lcd működéséhez szükséges paramétereket a loop() metódus törzsében kell definiálni, mivel az lcd kijeelzőn közölt adatok állandó jelleggel kell megjelenjenek.
 	\section{prototípusok}
 		\subsection{telepített napcellák prototípusai}
 		\subsection{intelligens napcellák prototípusai}
