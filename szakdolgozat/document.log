@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  14 APR 2021 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.20)  15 APR 2021 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -594,7 +594,11 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
-(./document.aux)
+(./document.aux
+
+LaTeX Warning: Label `fig:contactme' multiply defined.
+
+)
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -758,7 +762,7 @@ LaTeX Info: Redefining \nameref on input line 26.
 LaTeX Info: Redefining \cal on input line 576.
 LaTeX Info: Redefining \mit on input line 577.
 )
-<eszterhazy-logo-hu.pdf, id=270, 256.07469pt x 84.78476pt>
+<eszterhazy-logo-hu.pdf, id=274, 256.07469pt x 84.78476pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 33.
@@ -806,7 +810,7 @@ Overfull \hbox (10.17953pt too wide) in paragraph at lines 37--38
  []
 
 [8]) [9]
-<./images/declination.png, id=468, 576.1525pt x 550.055pt>
+<./images/declination.png, id=473, 576.1525pt x 550.055pt>
 File: ./images/declination.png Graphic file (type png)
 <use ./images/declination.png>
 Package pdftex.def Info: ./images/declination.png  used on input line 84.
@@ -861,7 +865,7 @@ Overfull \hbox (31.3294pt too wide) in paragraph at lines 15--16
 
 ) (./codes/estate.py [16]) [17] (./codes/water.py [18]) (./codes/watermain.py)
 [19] [20]
-<./images/solarCalculator.png, id=789, 961.5925pt x 518.93875pt>
+<./images/solarCalculator.png, id=794, 961.5925pt x 518.93875pt>
 File: ./images/solarCalculator.png Graphic file (type png)
 <use ./images/solarCalculator.png>
 Package pdftex.def Info: ./images/solarCalculator.png  used on input line 170.
@@ -873,7 +877,7 @@ ifier (name{figure.3.2}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.7 void 
          setup() <./images/solarCalculator.png>]) [22] [23]
-<./images/TemperatureAndHumidity.png, id=848, 977.6525pt x 527.9725pt>
+<./images/TemperatureAndHumidity.png, id=853, 977.6525pt x 527.9725pt>
 File: ./images/TemperatureAndHumidity.png Graphic file (type png)
 <use ./images/TemperatureAndHumidity.png>
 Package pdftex.def Info: ./images/TemperatureAndHumidity.png  used on input lin
@@ -889,7 +893,7 @@ l.7 byte
          degree_symbol[8] = <./images/TemperatureAndHumidity.png>])
 (./codes/weatherStationVoid.ino [25]) (./codes/weatherStationLoop.ino [26])
 [27]
-<./images/consumeProblem.png, id=970, 642.4pt x 542.025pt>
+<./images/consumeProblem.png, id=975, 642.4pt x 542.025pt>
 File: ./images/consumeProblem.png Graphic file (type png)
 <use ./images/consumeProblem.png>
 Package pdftex.def Info: ./images/consumeProblem.png  used on input line 225.
@@ -912,7 +916,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 279.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [34] [35]
 [36]
-<./images/contactme.png, id=1133, 1284.8pt x 708.6475pt>
+<./images/contactme.png, id=1138, 1284.8pt x 708.6475pt>
 File: ./images/contactme.png Graphic file (type png)
 <use ./images/contactme.png>
 Package pdftex.def Info: ./images/contactme.png  used on input line 338.
@@ -922,100 +926,116 @@ Package pdftex.def Info: ./images/contactme.png  used on input line 338.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.343 \chapter
-              {Fejlesztői környezetek és publikációi} <./images/contactme.
-png>]
+l.342 		\subsection
+                   {Galéria} <./images/contactme.png>]
+<./images/gallery.png, id=1146, 1284.8pt x 649.42625pt>
+File: ./images/gallery.png Graphic file (type png)
+<use ./images/gallery.png>
+Package pdftex.def Info: ./images/gallery.png  used on input line 347.
+(pdftex.def)             Requested size: 385.44298pt x 194.82938pt.
+ [38pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.353 \chapter
+              {Fejlesztői környezetek és publikációi} <./images/gallery.pn
+g>]
 5. fejezet.
-<./images/github.png, id=1141, 1284.8pt x 645.41125pt>
+<./images/github.png, id=1153, 1284.8pt x 645.41125pt>
 File: ./images/github.png Graphic file (type png)
 <use ./images/github.png>
-Package pdftex.def Info: ./images/github.png  used on input line 352.
-(pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
-
-Overfull \hbox (8.669pt too wide) in paragraph at lines 352--353
- [][] 
- []
-
-[38
-
-]
-<./images/trello.png, id=1146, 1284.8pt x 645.41125pt>
-File: ./images/trello.png Graphic file (type png)
-<use ./images/trello.png>
-Package pdftex.def Info: ./images/trello.png  used on input line 362.
+Package pdftex.def Info: ./images/github.png  used on input line 362.
 (pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
 
 Overfull \hbox (8.669pt too wide) in paragraph at lines 362--363
  [][] 
  []
 
+[39
+
+]
+<./images/trello.png, id=1158, 1284.8pt x 645.41125pt>
+File: ./images/trello.png Graphic file (type png)
+<use ./images/trello.png>
+Package pdftex.def Info: ./images/trello.png  used on input line 372.
+(pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
+
+Overfull \hbox (8.669pt too wide) in paragraph at lines 372--373
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 \end{tetel}
-                  <./images/github.png>] [40pdfTeX warning (ext4): destination 
+l.394 \end{tetel}
+                  <./images/github.png>] [41pdfTeX warning (ext4): destination 
 with the same identifier (name{figure.5.2}) has been already used, duplicate ig
 nored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.394 \begin{thebibliography}{2}
+l.404 \begin{thebibliography}{2}
                                  <./images/trello.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 []\T1/lmr/m/sc/12 https://gershojenergia.com/napelem-kisokos/optimalis-napelem-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 [][]$\T1/lmtt/m/sc/12 https : / / elmuemasz . hu / egyetemes-[]szolgaltatas / s
 zolgaltatasok /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 \T1/lmtt/m/sc/12 villamos-[]energia / aramdij-[]kalkulatorok / lakossagi-[]aram
 dij-[]elmu ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 \T1/lmtt/m/sc/12 fbclid = IwAR3UKUacdAXQeBuYPsDckohKhAf _ hY2TnitQqGmBwRiFq _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 [][]$\T1/lmtt/m/sc/12 http : / / www . personal . ceu . hu / students / 03 / Al
 exandra _ Novikova / 2 / El %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 \T1/lmtt/m/sc/12 20tertiary % 20site % 20folders / documents / description _ of
  _ eltertiary _
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
-[41
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 427.
+[42
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 427.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 417.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 427.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 427.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 0669B12D5A121A06B7E111AF9D1EA8D6;12358.
+(rerunfilecheck)             Checksum: F85760CDB062A05298DE82CBB66A4207;12502.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16054 strings out of 492616
- 231685 string characters out of 6129481
- 515183 words of memory out of 5000000
- 18937 multiletter control sequences out of 15000+600000
+ 16063 strings out of 492616
+ 231848 string characters out of 6129481
+ 515211 words of memory out of 5000000
+ 18942 multiletter control sequences out of 15000+600000
  78223 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,7n,42p,1816b,2027s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1035,10 +1055,10 @@ fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
 e/2019/texmf-dist/fonts/type1/public/lm/lmtcsc10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on document.pdf (41 pages, 1491394 bytes).
+Output written on document.pdf (42 pages, 2493567 bytes).
 PDF statistics:
- 1379 PDF objects out of 1440 (max. 8388607)
- 1290 compressed objects within 13 object streams
- 707 named destinations out of 1000 (max. 500000)
- 581 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1392 PDF objects out of 1440 (max. 8388607)
+ 1300 compressed objects within 13 object streams
+ 710 named destinations out of 1000 (max. 500000)
+ 594 words of extra memory for PDF output out of 10000 (max. 10000000)
 
