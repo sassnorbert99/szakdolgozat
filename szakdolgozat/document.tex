@@ -180,6 +180,24 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Encoder működésének szimulálása}
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
+			 \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			 \par Ahhoz, hogy a telepített napcellákat optimálisan tudjuk elhelyezni a terepasztalon, további tanulmányokat kellett végezni az egyes tájolások optimális értékeinek kiszámításához. 
+			 \par Az optimális értékeket Magyarország elhelyezkedési viszonylataira helyeztük, így minden érték Magyarországon belül optimális. Célunk, hogy a terepasztal felhasználói számára egy szemléltetést mutassunk, hogy Magyarországi tájolásokkal különböző országokban milyen értékekkel szolgálnak a különböző eszközök.
+			 \par Tanulmányok során megtudtuk, hogy a tető dőlésszöge, illetve a tájolás hatással van a teljesítményre, melyet a következő ábra szemléltet:
+			 \begin{figure}[H]
+			 	\centering
+			 	\includegraphics[scale=0.60]{./images/tajolas}
+			 	\caption{A tájolás és a tető dőlésszögének hatása a végleges teljesítményre\cite{tajolas}}
+			 \end{figure}
+			 \par Ezek értékek alapján tehát felállíthatunk egy táblázatot, melyben pontosan láthatjuk a dőlésszög, illetve tájolás alapján a teljesítmény értékét \%-ban mérve:
+			 \begin{figure}[H]
+			 	\centering
+			 	\includegraphics[scale=0.60]{./images/grafikon}
+			 	\caption{A tájolás és a tető dőlésszögének hatása táblázatban\cite{tajolas}}
+			 \end{figure}
+		 	\par Mivel a telepített napcellák nem változtathatják dőlésszögüket, így azok fixen 40$^{\circ}$-ra vannak beállítva. Ez esetben elég, ha a táblázatnak a 40$^{\circ}$-os sorát nézzük. 
+		 	\par Rendszerünk, mely képes az asztalt elforgatni, az asztal elforgatása után közli a felhasználóval a telepített napcellák aktuális pozícióját fokban mérve. Így a rendszer megmondja, hogy a napcellák aktuálisan hány százalékos teljesítménnyel képesek termelni áramot.
+		 	\par Jól láthatjuk, hogy a 40$^{\circ}$-os sornál a déli 40$^{\circ}$ az optimális, tehát a 100\%. Ezután ha a napcella Délkelet, illetve Délnyugat irányba néz, akkor már csak 90\%, továbbá ha keleti, vagy nyugati irányba néz, akkor csak 75\%-os teljesítményt képes leadni.
 	\section{Termelők és fogyasztók}
 		\subsection{termelők ismertetése}
 		\subsection{fogyasztók ismertetése}
@@ -236,9 +254,11 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\lstinputlisting{./codes/void.ino}				
 			\par A felhasználó ezután az Arduino UNO számítógéphez történő csatlakoztatása után soros porton keresztül követheti a szoftver kimeneti értékeit. Ezután már csak az lcd kijelzőn kell feltüntessük az értékeket, amennyiben a felhasználó nem csak a soros porton szeretné megtekinteni a tartalmat. Mivel az lcd kijelző 16x2-es, így csak két sorban tud, maximum 16 karakter/sort megjeleníteni. A szoftver szemléltetése érdekében az lcd csak a havi, illetve napi fogyasztási igényt közli a felhasználóval. 
 			\lstinputlisting{./codes/loop.ino}					
-			\par Ahogy a kódrészletből is látható, az lcd működéséhez szükséges paramétereket a loop() metódus törzsében kell definiálni, mivel az lcd kijeelzőn közölt adatok állandó jelleggel kell megjelenjenek.
+			\par Ahogy a kódrészletből is látható, az lcd működéséhez szükséges paramétereket a loop() metódus törzsében kell definiálni, mivel az lcd kijelzőn közölt adatok állandó jelleggel kell megjelenjenek.
 	\section{prototípusok}
 		\subsection{telepített napcellák prototípusai}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
+			
 		\subsection{intelligens napcellák prototípusai}
  	\section{Napcellák}
  		\subsection{telepített napcellák}
@@ -422,6 +442,8 @@ Megjegyzés szövege.
 \textsc{\url{https://en.wikipedia.org/wiki/Arduino_Uno}}
 \bibitem{arduino}
 \textsc{\url{https://hu.wikipedia.org/wiki/Arduino}}
+\bibitem{tajolas}
+\textsc{\url{https://gershojenergia.com/napelem-kisokos/optimalis-napelem-elhelyezes/}}
 
 \end{thebibliography}
 \end{document}
