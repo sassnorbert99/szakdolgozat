@@ -48,13 +48,12 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.7}T\IeC {\'e}rk\IeC {\'e}p}{36}{subsection.4.4.7}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.8}Jelmagyar\IeC {\'a}zat a t\IeC {\'e}rk\IeC {\'e}phez}{37}{subsection.4.4.8}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.9}Eszk\IeC {\"o}z\IeC {\"o}k}{37}{subsection.4.4.9}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.10}Eszk\IeC {\"o}z\IeC {\"o}k tartalm\IeC {\'a}nak olvas\IeC {\'a}sa}{37}{subsection.4.4.10}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.11}Felhaszn\IeC {\'a}l\IeC {\'o}k}{38}{subsection.4.4.11}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.12}Poszt k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{38}{subsection.4.4.12}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.13}Kateg\IeC {\'o}ria k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{38}{subsection.4.4.13}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.14}Kapcsolatfelv\IeC {\'e}tel}{38}{subsection.4.4.14}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.15}Gal\IeC {\'e}ria}{38}{subsection.4.4.15}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.16}\IeC {\"O}sszefoglal\IeC {\'o}}{39}{subsection.4.4.16}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.10}Felhaszn\IeC {\'a}l\IeC {\'o}k}{37}{subsection.4.4.10}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.11}Poszt k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{38}{subsection.4.4.11}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.12}Kateg\IeC {\'o}ria k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{38}{subsection.4.4.12}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.13}Kapcsolatfelv\IeC {\'e}tel}{38}{subsection.4.4.13}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.14}Gal\IeC {\'e}ria}{39}{subsection.4.4.14}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.15}\IeC {\"O}sszefoglal\IeC {\'o}}{39}{subsection.4.4.15}% 
 \select@language {magyar} \contentsline {chapter}{\numberline {5}Fejleszt\IeC {\H o}i k\IeC {\"o}rnyezetek \IeC {\'e}s publik\IeC {\'a}ci\IeC {\'o}i}{40}{chapter.5}% 
 \select@language {magyar} \contentsline {section}{\numberline {5.1}Git verzi\IeC {\'o}k\IeC {\"o}vet\IeC {\H o} rendszer}{40}{section.5.1}% 
 \select@language {magyar} \contentsline {section}{\numberline {5.2}Trello feladatk\IeC {\"o}vet\IeC {\H o} rendszer}{41}{section.5.2}% 
