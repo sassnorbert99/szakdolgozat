@@ -183,6 +183,20 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A kísérletek után a felhasználóval közölni kellett az adatokat, melyhez egy 16x2-es LCD kijelzőt használtam. A kijelzőn megjelenik az aktuális Volt, illetve ezt átszámítva a kilowatt értéke.
 			
 		\subsection{Encoder működésének szimulálása}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Vízerőművünk modellezéséhez, illetve szimulálásához elgengedhetetlen a vízturbina teljes forgásának kiszámítása egy adott időintervallum alatt. A forgási érték alapján lehet meghatározni, hogy egy vízturbina percenként hányszor forgatja meg a turbinát, illetve ezek forgatások során mennyi energia keletkezik.
+			\par Az érzékelő vagy szenzor olyan elem, amely egy mérendő tulajdonságtól függő jelet szolgáltat. A szenzorok csoportosíthatók az általuk mért fizikai, kémiai, biológiai mennyiségek alapján.\cite{encoder} 
+			\par Az encoder-t csoportosíthatjuk a fizikai mennyiség alapján, ezen belül is a forgómozgásra vonatkozó csoporthoz. Tehát az encoder képes megmondani a forgatási mozgáshoz tartozó elváltozásokat.
+			\par Szimulációm egy Arduino UNO-hoz csatolt Encoder működését mutatja be, melyről leolvashatjuk, hogy hányszor fordul egy teljes kört az encoder. 
+			\par Szimulációm szemléltetéséhez C++ nyelvet használtam, mely közvetlen kommunikál az Arduino UNO mikrokontrollerrel az Arduino saját szoftverén keresztül. 
+			\par A kapcsolási rajz tehát:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.35]{./images/encoderplan}
+				\caption{Kapcsolási rajz az encoder összeállításáról}
+			\end{figure}
+			\par Ahogy a képen is látható, a szimuláció előállításához nincs másra szükségünk, mint egy mikrokontrollerre, illetve az Arduino Encoderre és az ezeket összekötő jumper kábelekre\footnote{A jumper kábel egy elektromos vezeték, melynek mindkét vége catlakozóval, vagy pedig tűvel van ellátva}. Mivel a szimulációm nem lcd kijelzőn, hanem soros monitoron szemléltetem, így az lcd panelt és a hozzá szükséges i2c protokolt nem szükséges hozzá csatolni.
+			
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
 			 \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
@@ -478,6 +492,7 @@ Megjegyzés szövege.
 \textsc{\url{https://gershojenergia.com/napelem-kisokos/optimalis-napelem-elhelyezes/}}
 \bibitem{prototype}
 \textsc{\url{https://go.gale.com/ps/i.do?p=SCIC&u=dclib_main&v=2.1&it=r&id=GALE\%7CENKDZQ347975681&asid=1618891200000~6b0db278}}
-
+\bibitem{encoder}
+\textsc{\url{https://hu.wikipedia.org/wiki/Érzékelő}}
 \end{thebibliography}
 \end{document}
