@@ -348,6 +348,30 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A felhasználóknak lehetőségük van egyes eszközöket részletesebben tanulmányozni, mely az eszközök ablakra kattintva lesz elérhető. A gombra kattintva eléjük tárul az általunk fejlesztett projektek részletes beszámolója, illetve azok leírása, egyéb tartalma. Ezek természetesen a térkép menüpont alatt is megtalálhatók, hiszen azok gombaira kattintva átirányítja felhasználóinkat az általuk választott oldalra.
 			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			\par Az első képen a Cartesius-búvár, illetve annak részletes leírása található, míg a második képen a terepasztal, mely egy intelligensen működő energetikai rendszert valósít meg.
+		\subsection{Kvíz lehetőség}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Weblapunkon az eszközök menüpontnál néhány eszközön elérhető egy úgynevezett kvíz lehetőség, mely azért készült, hogy teszteljék tudásukat az adott témából. 
+			\par Az eszközök képet, illetve szöveget tartalmaznak, némelyek pedig interaktív tartalmakat, melyek a következők lehetnek:
+			\begin{itemize}
+				\item Vezérelhető felület
+				\item Interaktív kvíz felület
+			\end{itemize}
+			\par A kvíz felületet egy gombnyomással lehet elérni a kiválasztott eszköz menüpontnál, ezután lehetősége van a felhasználónak az eszközhöz csatolt olvasmány alapján kitölteni a teszt feladatokat. 
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{./images/quiztest}
+				\caption{Kvíz kitöltéséhez létrehozott form}
+				\label{fig:test}
+			\end{figure}
+			\par A tesztkitöltés után a ,,Beküld" gombra kattintva a weblap egy másik oldalra irányítja át a felhasználót, melyen meg tudja tekinteni az elért pontszámait, illetve egy kis megjegyzést a pontszámaihoz. Visszalépés esetén egy gomb funkcionál, mely rákkattintására vissza irányítja a felhasználót az eredeti oldalra.	
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.30]{./images/quizresult}
+				\caption{Kvíz eredményének közlése a felhasználó számára}
+				\label{fig:result}
+			\end{figure}
+			
+			
 		\subsection{Felhasználók}
 			\par Weblapunk rendelkezik admin szintű felhasználókkal, melyek feladata a kategóriák, illetve egyes posztok karbantartása. Így az admin felhasználók fejléce kiegészül egy “Kategória készítése” menüponttal, melyben az általa, vagy közösen megbeszélt kategóriákat tudja feltölteni. Adminként nem lehet regisztrálni, ezt a rendszer tulajdonostól lehet igényelni, melyet a rendszer karbantartó át ír az adatbázison keresztül.
 			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
