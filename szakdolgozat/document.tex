@@ -43,19 +43,12 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 \par Szakdolgozatunkban  a megújuló energiaforrások tudatos, és környezetvédő felhasználását szeretnénk modellezni.  A modellünkben az energiaforrásokat mikrokontrollerrel 
 ötvözve szeretnénk a leghatékonyabban szabályozni intelligens módon, azaz a rendszer képes önállóan optimalizálni a termelt és a felhasznált energia mennyiségét. Gyakorlati felhasználásban terepasztalon elhelyezett kisméretű modelleken szemléltetjük a különféle erőműveket, illetve energiatároló technológiákat, fogyasztókat. Fogyasztóinknak gyakorlati felhasználásuk lesz, mely azt jelenti, hogy a való életben megtalálható általános fogyasztókkal fogjuk szimulálni a projektet. Ilyenek lehetnek a családi házak, háztömbök, elektromos töltőállomások, iskolák és gyárak.
 
-\chapter{Tudományos Diákköri Konferencia}
-	\section{Szakasz címe}
-		\subsection{Alszakasz címe}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-
 \chapter{Rendszerről összefoglalóan}
-	\section{Szakasz címe}
-		\subsection{Előnyök és hátrányok}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
+	\section{Tudományos Diákköri Konferencia}
+	
+	\section{Előnyök és hátrányok}
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
 	\section{rajzok ismertetése}
 
 \chapter{Rendszerünk működése}
@@ -467,46 +460,46 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Arduino UNO}
 		\subsection{Arduino NANO}
 		\subsection{16 x 2 LCD kijelző}
-		\subsection{DHT11}		
-		\subsection{ENCODER} \label{encoder}
+		\subsection{Dht11}		
+		\subsection{Encoder} \label{encoder}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Ebben a fejezetben az encoder működéséről olvashatunk kicsit részletesebben, illetve szemléletesebben. Az forgási encoder, más néven tengely encoder, egy elektromechanikus eszköz, amely átalakítja a tengely  szöghelyzetét vagy mozgását analóg, vagy digitális kimeneti jelekké.\cite{encoderwiki}
 			\par Mint ahogy azt már olvashattuk, az encoder kimenete két jelet képes felvenni, 0-ás és 1-egy értékeket.  A 0-ás az alacsony, az 1-es pedig a magas feszültségi értéket jelenti. Egy encoder két kimeneti pinnel is rendelkezik, legyen az egyik A és B. Kezdetben, ha az encodert az óramutató járásával megegyezően forgatjuk, akkor az A jelű pinnek magas, míg a B jelű pinnek ugyanúgy alacsony értéke lesz. Az encodert tovább forgatva a B jelű pin is magas értéket vesz fel, ezek után az A pin alacsony lesz, míg a B pin magas, végezetül mindkét pin újra alacsony feszültségi értékkel fog rendelkezni. A következő ábrák a folyamat körforgását fogják szemléltetni.
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.50]{./images/firstenc}
-				\caption{A magas, B alacsony feszültségi szint}
+				\caption{A magas, B alacsony feszültségi szint\cite{youtubeenc}}
 				\label{fig:first}
 			\end{figure}
 			\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.50]{./images/secondenc}
-			\caption{A magas B magas feszültségi szint}
+			\caption{A magas B magas feszültségi szint\cite{youtubeenc}}
 			\label{fig:second}
 			\end{figure}
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.50]{./images/thirdenc}
-				\caption{A alacsony B magas feszültségi szint}
+				\caption{A alacsony B magas feszültségi szint\cite{youtubeenc}}
 				\label{fig:third}
 			\end{figure}
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.50]{./images/forthenc}
-				\caption{A alacsony B alacsony feszültségi szint}
+				\caption{A alacsony B alacsony feszültségi szint\cite{youtubeenc}}
 				\label{fig:forth}
 			\end{figure}
 			\par Korábban megbeszéltük, hogy míg egy óramutató járásával megegyezően forgó encoder A és B kimeneti pinjei eltérő értékeket vesznek fel, a folyamat teljes felírása után láthatjuk, hogy ellentétes forgás során mindkét pin értéke azonos lesz. A további képeken a feszültségi szinteket láthatjuk a forgási irányok megváltoztatása során.
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=0.50]{./images/fullenc}
-				\caption{Feszültségi szintek változása óramutató járásával megegyezően}
+				\caption{Feszültségi szintek változása óramutató járásával megegyezően\cite{youtubeenc}}
 				\label{fig:fullenc}
 			\end{figure}
 			\begin{figure}[h]
 				\centering
 				\includegraphics[scale=1.2]{./images/fullencback}
-				\caption{Feszültségi szintek változása óramutató járásával ellentétesen}
+				\caption{Feszültségi szintek változása óramutató járásával ellentétesen\cite{youtubeenc}}
 				\label{fig:fullencback}
 			\end{figure}
 		\clearpage
@@ -555,5 +548,7 @@ Megjegyzés szövege.
 \textsc{\url{https://hu.wikipedia.org/wiki/Érzékelő}}
 \bibitem{encoderwiki}
 \textsc{\url{https://en.wikipedia.org/wiki/Rotary_encoder}}
+\bibitem{youtubeenc}
+\textsc{\url{https://www.youtube.com/watch?v=v4BbSzJ-hz4}}
 \end{thebibliography}
 \end{document}
