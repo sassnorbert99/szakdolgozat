@@ -87,7 +87,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A további adatok kiszámításához (napfelkelte, naplemente, asztal elfordulása) ezek adatok elengedhetetlenek.
 			\subsubsection{Napfelkelte, naplemente kiszámítása}
 				\par A napfelkelte és napnyugta meghatározása a pontos földrajzi koordináták (hosszúsági és szélességi fok) valamint a dátum alapján történik.\cite{kiszamolo}
-				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
+				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset'' nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
 				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
 
 				\lstinputlisting[language=Python]{./codes/calcriseset.py}
@@ -200,11 +200,17 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par Ezek alapján tehát meghatározható az encoderek forgatási iránya, melyben mindkét irányban képes számításokat végezni. A kódolási folyamatban tehát megkülönböztethetjük a forgatási irányokat és ezeknek megfelelően képesek vagyunk elvégezni a számításokat.
 			\par Először szükségünk van a megfelelő portokat deklarálni, mellyel lefoglaljuk az Arduino UNO mikrokontrolleren található portok számát és értékét. A kód tehát:
 			\lstinputlisting{./codes/encoder.ino}
-			\par A kódrészletben jól látható, hogy az Arduino UNO mikrokontrolleren a digitális 3-ik, illetve 4-ik portot foglaltam le, továbbá létrehoztam egy számláló változót, melyben az encoder forgási értékét számolja, egy ,,totaldegree" változót, mely a 360$^{\circ}$-os teljes forgásokat számolja, egy ,,lastPin" változót, mely az alacsony - magas feszültségi értékek utolsó értékét tárolja, egy ,,aValue" változót, mely az aktuális feszültségi értékeket tárolja, illetve egy ,,operate" változót, mely azt a célt szolgálja, hogy a későbbiek során tudjuk, hogy merre forog az encoder.
-			\par A setup() metódusban hozzuk létre azokat a viselkedéseket, melyek nem ciklikusan ismétlődnek, ilyenek a pinek beállításai, a ,,lastPin" értékének kiolvasása, illetve a soros monitor beállításainak elvégzése.
-			\par A loop() metódusban először az ,,aValue"-nak adunk értéket, mely az A pin digitális portról kiolvasott értéke. Amennyiben ez a jelenlegi érték nem egyenlő a ,,lastPin" értékével, akkor tudjuk, hogy órajárással megegyezően forog az encoder, hiszen ellentétes értékekkel rendelkeznek. Ilyen esetben a ,,count" értékét emelhetjük eggyel, illetve az ,,operate" true érték adásával megjegyezhetjük, hogy az encoder biztosan az órajárással megyezően mozog.
+			\par A kódrészletben jól látható, hogy az Arduino UNO mikrokontrolleren a digitális 3-ik, illetve 4-ik portot foglaltam le, továbbá létrehoztam egy számláló változót, melyben az encoder forgási értékét számolja, egy ,,totaldegree'' változót, mely a 360$^{\circ}$-os teljes forgásokat számolja, egy ,,lastPin'' változót, mely az alacsony - magas feszültségi értékek utolsó értékét tárolja, egy ,,aValue'' változót, mely az aktuális feszültségi értékeket tárolja, illetve egy ,,operate'' változót, mely azt a célt szolgálja, hogy a későbbiek során tudjuk, hogy merre forog az encoder.
+			\par A setup() metódusban hozzuk létre azokat a viselkedéseket, melyek nem ciklikusan ismétlődnek, ilyenek a pinek beállításai, a ,,lastPin'' értékének kiolvasása, illetve a soros monitor beállításainak elvégzése.
+			\par A loop() metódusban először az ,,aValue''-nak adunk értéket, mely az A pin digitális portról kiolvasott értéke. Amennyiben ez a jelenlegi érték nem egyenlő a ,,lastPin'' értékével, akkor tudjuk, hogy órajárással megegyezően forog az encoder, hiszen ellentétes értékekkel rendelkeznek. Ilyen esetben a ,,count'' értékét emelhetjük eggyel, illetve az ,,operate'' true érték adásával megjegyezhetjük, hogy az encoder biztosan az órajárással megyezően mozog.
 			\par Mivel az encoder egy teljes forgást 40 ilyen értékkel tesz meg, ezért a teljes kör kiszámításához nincs más dolgunk, mint az aktuális értéket elosztani 40-el, így biztosan tudjuk, hogy amennyiben az érték osztható 40-el, írassa ki a rendszer a soros monitorra a jelenlegi teljes körök számát.
 			\par Ezek után már nincs más dolgunk, mint a lastPin értékét átállítani a jelenlegi feszültségi értékre, hiszen a következő cikluslefutás során az utolsó érték lesz az előzőnek az aktuális feszültségi értéke.
+			\par Miután megcsináltuk a kódot, nincs más dolgunk, mint a mikrokontrollerrel összekötött encodert számítógéphez csatlakoztatva feltölteni a kódot a mikrokontrollerünkre. Ezek után képesek vagyunk a soros monitoron keresztül végig követni a forgatási értékek változását, hogy pontosan hányszor fordult egy teljes kört, melyet a következő ábra is szemléltet, ahol jelenleg két teljes kört tett az encoderünk.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.35]{./images/serialmonitor}
+				\caption{Soros monitoron megjelenő adat, mely a teljes körök számát jelzi}
+			\end{figure}
 			\par Az encoderről részletesebben a \ref{encoder} fejezetben lehet olvasni.
 			
 	\section{optimalizálás}
@@ -257,9 +263,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A hardveres kapcsolási rajzot követően hozzákezdhetünk a szoftveres részhez. Mivel a felhasználó az lcd kijelzőn láthatja a hőmérsékletet, illetve páratartalmat, először az lcd működését kell definiálni. Fontos megjegyezni, hogy ez a 16x2-es lcd kijelző önállóan nem képes egyedi karakterek megjelenítésére, azonban egy karakternek lefoglalt helyre manuálisan készíthetünk egyet. Ez azért fontos, mert a fok jel csak így lesz megjeleníthető.
 			\par A kód elején szükséges az előre definiált portokat deklarálni, illetve egyéb olyan változókat, melyeket később a rendszer használni fog.
 			\lstinputlisting{./codes/weatherStationInit.ino}
-			\par Ezek után inicializálhatjuk az lcd-t, valamint kiírhatjuk a kezdeti értékeket az lcd kijelzőre. A kezdeti érték nem más, mint a ,,hom = ? $^{\circ}$C", ,,para = ? \%"				
+			\par Ezek után inicializálhatjuk az lcd-t, valamint kiírhatjuk a kezdeti értékeket az lcd kijelzőre. A kezdeti érték nem más, mint a ,,hom = ? $^{\circ}$C'', ,,para = ? \%''				
 			\lstinputlisting{./codes/weatherStationVoid.ino}
-			\par Végezetül megírjuk rá a hőmérséklet és páratartalomhoz elkészített algoritmust a ,,loop()" metódusba.
+			\par Végezetül megírjuk rá a hőmérséklet és páratartalomhoz elkészített algoritmust a ,,loop()'' metódusba.
 			\lstinputlisting{./codes/weatherStationLoop.ino}			
 			\par A felhasználó az összeállított hardver számítógéphez való kapcsolása után nyomon követheti a szobában mérhető aktuális hőmérséklet celsiusban, illetve páratartalmat százalékosan mérve.
 		\subsection{Fogyasztók modellezése}
@@ -387,7 +393,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\caption{Kvíz kitöltéséhez létrehozott form}
 				\label{fig:test}
 			\end{figure}
-			\par A tesztkitöltés után a ,,Beküld" gombra kattintva a weblap egy másik oldalra irányítja át a felhasználót, melyen meg tudja tekinteni az elért pontszámait, illetve egy kis megjegyzést a pontszámaihoz. Visszalépés esetén egy gomb funkcionál, mely rákkattintására vissza irányítja a felhasználót az eredeti oldalra.	
+			\par A tesztkitöltés után a ,,Beküld'' gombra kattintva a weblap egy másik oldalra irányítja át a felhasználót, melyen meg tudja tekinteni az elért pontszámait, illetve egy kis megjegyzést a pontszámaihoz. Visszalépés esetén egy gomb funkcionál, mely rákkattintására vissza irányítja a felhasználót az eredeti oldalra.	
 			\begin{figure}[ht]
 				\centering
 				\includegraphics[scale=0.30]{./images/quizresult}
@@ -407,7 +413,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Kategória készítése}
 		\subsection{Kapcsolatfelvétel}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
-			\par Weblapunk tartalmaz egy kapcsolatfelvételi űrlapot, melynek célja a felhasználókkal való kommunikáció biztosítása. Amennyiben valamilyen hiba, esetleg észrevétel, panasz lépne fel, a felhasználóknak lehetőségük van ezeket a kéréseket elküldeni a rendszer üzemeltetőknek. A kapcsolatfelvételi űrlap a ,,Rólunk" menüpontban található meg a lap alján. A felhasználónak meg kell adnia a teljes nevét, email címét, egy tárgyat a levélnek, valamint a szövegtörzset, melyben 500 karakterben kifejtheti észrevételeit, esetleg panaszait. Az adat egy adatbázisban rögzül, melyhez a rendszer üzemeltetőknek, illetve az adatbázis üzemeltetőknek van joguk belépni.
+			\par Weblapunk tartalmaz egy kapcsolatfelvételi űrlapot, melynek célja a felhasználókkal való kommunikáció biztosítása. Amennyiben valamilyen hiba, esetleg észrevétel, panasz lépne fel, a felhasználóknak lehetőségük van ezeket a kéréseket elküldeni a rendszer üzemeltetőknek. A kapcsolatfelvételi űrlap a ,,Rólunk'' menüpontban található meg a lap alján. A felhasználónak meg kell adnia a teljes nevét, email címét, egy tárgyat a levélnek, valamint a szövegtörzset, melyben 500 karakterben kifejtheti észrevételeit, esetleg panaszait. Az adat egy adatbázisban rögzül, melyhez a rendszer üzemeltetőknek, illetve az adatbázis üzemeltetőknek van joguk belépni.
 			\begin{figure}[ht]
 				\centering
 				\includegraphics[scale=0.30]{./images/contactme}
@@ -416,7 +422,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\end{figure}
 		\subsection{Galéria}
 			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
-			\par Weblapunk felhasználóinak lehetőségük van a varázstoronyban elhelyezett kellékekről készült képek megtekintésére a ,,Galéria" fül alatt, mely a fejlécen található. A képek méretei következtében csak korlátozott számú képeket lehet megtekinteni, melyek rákattintásával a kép teljes méretében megtekinthető. 
+			\par Weblapunk felhasználóinak lehetőségük van a varázstoronyban elhelyezett kellékekről készült képek megtekintésére a ,,Galéria'' fül alatt, mely a fejlécen található. A képek méretei következtében csak korlátozott számú képeket lehet megtekinteni, melyek rákattintásával a kép teljes méretében megtekinthető. 
 			\begin{figure}[ht]
 				\centering
 				\includegraphics[scale=0.30]{./images/gallery}
