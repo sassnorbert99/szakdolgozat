@@ -14,6 +14,8 @@
 \usepackage{mathtools,amssymb,amsthm}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{float}
+
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -25,8 +27,12 @@
 \begin{document}
 \institute{Matematikai és Informatikai Intézet}
 \title{A szakdolgozat címe}
-\author{Szerző neve\\szak}
-\supervisor{Dr. Geda Gábor\\beosztás}
+
+%\author{Szerző neve\\szak}
+\author{ Sass-Gyarmati Norbert\\Programtervező informatikus BSc
+	\collaborator
+	Oravecz Zsolt\\Programtervező informatikus BSc}
+\supervisor{Dr. Geda Gábor\\Egyetemi docens}
 \city{Eger}
 \date{2021}
 \maketitle
@@ -53,14 +59,16 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\section{rajzok ismertetése}
 
 \chapter{Rendszerünk működése}
-	\section{Terepasztalunk működése}
+	\section{Terepasztalunk mozgatása}
 		\subsection{Napállás kalkulátor}
 			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par Feladatom ebben a cikkben az volt, hogy matematikai úton megvalósítsak egy szoftvert, mely egy adott napból és egy szélességi, hosszúsági fokból képes legyen kiszámolni az adott nap deklinációs szögét, azaz a Nap szöghelyzetét a szoláris délben. Ezen kívül kitudja számolni a rendszer az adott nap naphosszát, a napfelkelte és naplemente megközelítő értékét, zenit szöget, illetve abból a Napmagassági szöget. Továbbá képes megmondani, hogy a terepasztalunk hány fokos szögben kell elforduljon ahhoz, hogy az arányokat megtartva szimulálhassunk egy ország éghajlati és napszaki adatait. További feladata, hogy képes megmondani, hogy egy fixen telepített déli tájolású 40 fokos naprendszer különböző országokban eltérő napokban milyen szögbe esik, illetve az ebbe eső szögnek milyen termelői hatékonysága van.
 			\par Feladatomat Python nyelven írtam, melyhez a PyCharm Community Edition keretrendszert használtam. 
+			\par Kezdetben meg kellett határoznom egy évszámból, illetve szélességi és hosszúsági fokból a deklinációs, zenit, Napmagassági szöget, illetve a napfelkelte, naplementét, ezek kettő adatok alapján pedig a teljes nappalhosszt. 
+			\lstinputlisting[language=Python]{./codes/sunapp.py}
 			\begin{definicio}
-				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését az 1.5. ábra mutatja.
-				\par KÉP!!!!!!!
+				Deklináció: a Nap szöghelyzete a szoláris délben (azaz ha a Nap a helyi délkörön van) az egyenlítő síkjához viszonyítva. A Föld a Nap körül ellipszis pályán kering, miközben maga a Föld is forog saját tengelye körül. A földpálya síkja és az Egyenlítő által meghatározott sík egymással szöget zár be, azaz a Föld forgásának a tengelye szöget zár be a földpálya síkjára állított merőlegessel. Értéke a napközeli és a naptávoli pontban 23,5, a tavaszi és az őszi napéjegyenlőség idején zérus. Északon pozitív. –23,5 <=  Deklináció <= 23,5. A deklinációs szög értelmezését a 3.1-es ábra mutatja.
+			
 				\cite{Kornyezet}
 			\end{definicio}
 			\begin{definicio}
@@ -76,20 +84,26 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				Napmagasság szöge: a Napnak szögben kifejezett magassága a megfigyelő horizontjából, azaz a vízszintes és a Naphoz húzott egyenes által bezárt szög. Értéke 0 és 90 fok között van. A napmagasság szöge komplementere a zenit szögnek.
 				\cite{Kornyezet}
 			\end{definicio}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{./images/declination}
+				\caption{A deklinációs szög értelmezése}
+				\label{fig:declination}
+			\end{figure}
 			\par Ezek definíciók alapján sikerült egy szélességi és hosszúsági fok, illetve egy a felhasználó által kiválasztott dátum megadásával kiszámolni az adott ország deklinációs, zenit, Napmagassági szög, illetve nappalhosszát kiszámolni.
-			\par KÉP A PYTHONNAL KÉSZÍTETT KÓDRÉSZLETRŐL!!!!!!!!!!!!!
 			\par A további adatok kiszámításához (napfelkelte, naplemente, asztal elfordulása) ezek adatok elengedhetetlenek.
 			\subsubsection{Napfelkelte, naplemente kiszámítása}
 				\par A napfelkelte és napnyugta meghatározása a pontos földrajzi koordináták (hosszúsági és szélességi fok) valamint a dátum alapján történik.\cite{kiszamolo}
 				\par Kiszámításához egy metódust hoztam létre, melnyek a  ,,calcsunriseandsunset" nevet adtam. Ez a metódus egy dátumot vár a felhasználótól, illetve a rendszer felhasználja az általa eltárolt latitude és longitude fokokat. A dátumból ezután egy julián dátumot készítünk, mely a Kr. e. 4713. év első napjától eltelt napok számával és óra-perc-másodperc helyett a nap decimális törtrészeivel adja meg az időpontokat.\cite{julian}
 				\par Ezután csinálunk egy julián csillagot, melyhez már a hosszúsági fokot is felhasználjuk. Matematikai képletek segítségével pedig ezek segítségével kiszámoljuk a napfelkelte és naplemente értékét
-				\lstinputlisting[language=Python]{calcriseset.py}
+
+				\lstinputlisting[language=Python]{./codes/calcriseset.py}
 			\subsubsection{Asztal forgatása}
 				\par Az asztal forgatásához a deklinációs\cite{Kornyezet} szöget vettem segítségül. A deklinációs szög megmondja, hogy egy adott napban egy országban a Nap milyen szögben helyezkedik el szoláris délben, így képes minden ország beállításával is megmondani ezt a bizonyos szöget. Ehhez viszonyítottam az asztal eltolását, hiszen egy Magyarországhoz északibb ország különböző hónapokban más viselkedést produkálnak, például nyáron hegyesebb, télen tompább szög. Ugyanez igaz a nálunk délibb országokhoz is, csak ott ezek negáltja történik. 
 				\par Ez a bizonyos szög országon belül is havonta változik, minden nap maximum 0,5 fokkal. Az asztal tehát a deklinációs szög negáltjával fog változni, hiszen az arányokat megtartván az északi pontot helyezzük a megváltozott érték helyére.
-				\lstinputlisting[language=Python]{table.py}
+				\lstinputlisting[language=Python]{./codes/table.py}
 				\par A napcellák elhelyezkedése a Naphoz képest, illetve a pontos szög meghatározása ugyanebben a metódusban definiált. Az égtájak konstans értékként vannak definiálva, melyben az értékek fokban értendők. A napcellák elhelyezkedése tehát a Dél - deklináció. A napcellák hatékonyságáról\cite{gershoj} tanulmányok szerint a déli 35-40 fok az optimális, így a rendszert is úgy állítottuk be, hogy egy magyarországi déli tájolású 40 fokban legyen.
-				\lstinputlisting[language=Python]{solar.py}
+				\lstinputlisting[language=Python]{./codes/solar.py}
 				\par Ahogy a kódrészletből is látszik, mivel a telepített napcellák tájolástól és napszaktól függetlenül déli 40 fokban helyezkednek el, így az optimalizálás is csak a 40 fokos szöghöz igazodik. Optimalizálásnál az alábbi 5 esetek különböztetjük meg:
 				\begin{itemize}
 					\item Ha északkeletre esik: Azaz a szögtartomány így írható le: 0 < szög < 90. Ilyen esetben a hatékonyságuk 75\%-os
@@ -106,7 +120,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Napállás kalkulátor - Rest API}
 			A feladat elkészítéséért Oravecz Zsolt a felelős. 
 	\section{Szimulációk}
-		\subsection{Fogyasztó probléma szimulálása}
+		\subsection{Fogyasztó probléma szimulálása} \label{fogyaszto}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Ahhoz, hogy a fogyasztók energiaigényeiket feltudjuk mérni, szükségünk volt egy szimulátor programra, melyben megtudjuk adni, hogy menni fogyasztó fogja használni a terepasztalunkat. A fogyasztók az alábbiak lehetnek:
 			\begin{itemize}
@@ -120,20 +134,20 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par Ezek után szükségem volt egy szabványra mely kimondja, hogy egy átlagos iskola, illetve kórház milyen szabályoknak kell megfeleljenek. A kutatásaimat felhasználva egy iskola hivatalos szabványa, hogy 2,5$m^{2}$ jut egy diák számára\cite{school_m2}. Tehát egy iskola kalkulálása ezek szorzatából tevődik össze. Továbbá kutatásaim arra is rámutattak, hogy egy kórházban 6-8$m^{2}$ jut egy beteg részére. Így az iskola, illetve a kórház mérete és ebből kiszámítva a fogyasztása nagyban függ az intézményekben tartózkodó tanulók, vagy betegektől.
 			\par Szimulátor programom Python nyelven írtam a PyCharm\footnote{A PyCharm egy integrált fejlesztői környezet (IDE), amelyet a számítógépes programozásban használnak, kifejezetten a Python nyelv számára\cite{pycharm}.} segítségével. A szimulátorban a felhasználó konzolos ablakon keresztül megadhatja a szoftvernek a házak, lakások, iskolák, kórházak, tanulók, illetve betegek számát, majd ezek adatokból képes kiszámolni az átlagos fogyasztási igényt, valamint ugyanezt az adatot lebontja napra pontosan.
 			\par Szoftveremben minden intézmény egy külön osztály, melyek más-más számításokat kell végezzenek az igény kiszámításához. 
-			\lstinputlisting[language=Python]{consumers.py}
+			\lstinputlisting[language=Python]{./codes/consumers.py}
 			\par Ahogy a kódrészletből is látható, egy családi ház konstruktorának fogyasztási értéke 230, míg egy lakás átlagos fogyasztási értéke 200. Napra lebontva pedig egy átlagos naphosszt választottam, így minden értéket 30-al oszt el, így lebontván napi szintre az értékeket. 
 			\par Az iskolák és kórházak összetettebb konstruktorral rendelkeznek, melyek nagyban függnek a paraméterként megadott tanulók, illetve betegektől.
-			\lstinputlisting[language=Python]{calculate_estates.py}	
+			\lstinputlisting[language=Python]{./codes/calculate_estates.py}	
 			\par Ahogy a kódrészletből tisztán látható, az iskola és kórház konstruktorai már egy tanuló, illetve beteg paramétert is várnak, melyből kitudja számolni az intézmény átlagos négyzetméterét, illetve ebből az adatból képes kiszámolni a négyzetméterre jutó energia igényüket.
 			\par A különféle fogyasztók értékeit listában tárolom, illetve ciklusok segítségével tudom feltölteni. A felhasználó a program lefutása után konzolból megadhatja a különböző értékeket, mely során a szoftver egyes osztályait meghívván, beállítja a számára szükséges értékekkel a paramétereit, majd közli a felhasználóval az alábbi adatokat:
-			\lstinputlisting[language=Python]{estate.py}	
+			\lstinputlisting[language=Python]{./codes/estate.py}	
 			
 		\subsection{Vízerőmű szimulálása}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par A vízerőmű rendszerünk, mely szivattyús tárolós elven működik, egy szimuláción keresztül is tudjuk szemléltetni. A szimuláció a folyamatot képes szemléltetni, a vízerőmű működését, illetve a leállítás- újraindítás folyamatát. 
 			\par A szimuláció elkészítéséhez Python programozási nyelvet használtam. 
-			\lstinputlisting[language=Python]{water.py}		
-			\lstinputlisting[language=Python]{watermain.py}					
+			\lstinputlisting[language=Python]{./codes/water.py}		
+			\lstinputlisting[language=Python]{./codes/watermain.py}					
 			\par Ahogy a kódrészletből is látható, maga a szoftver két külön szálon fut, egyik szál foglalkozik az erőmű működésével, míg a másik szál a felhasználók számára van, melyben konzolba beírva megadhatja az erőmű leállítás, illetve újraindítás funkciójának gombját. A rendszer egy körfolyamatban működik, mely ciklikusan ismétli önmagát, így ha a felhasználó nem állítja le a rendszert, örök körfolyamatban fog részt venni. 
 			\par A szálak egy közös osztályban vannak definiálva, melyben az osztály egyes metódusai végzik el a szálkezelést. A körfolyamat egyszerű, két tartály van, az első feljebb van, míg a második közel az elsőhöz. Legyenek elnevezve a tartályok, A: első tartály, B: második tartály. Kezdetben a B tartály tele van, amiben van egy szivattyú, mely elkezdi az A tartályba szivattyúzni a vizet. Ez a folyamat addig megy, míg az A tartály teljesen tele nem lesz. Fontos továbbá megjegyezni, hogy ilyen esetben nem feltétlenül lesz üres a B tartály. Az erőmű jó szemléltetése és átláthatósága érdekében a programomban ilyen esetben a B teljesen kiürül. Amint az A tartály tele lesz, megnyitja a csapot és visszafolyik a B tartályba a víz. A csapnál van a generátor, mely vízfolyamból elektromos áramot képes termelni. Amint az A tartály a teljes vízkészletet visszaadta a B tartálynak, a körfolyamat újraindul. 
 			\par A felhasználónak azonban van lehetősége ezt a folyamatot leállítani. Két opciója van:
@@ -154,15 +168,55 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\item input: a bemenő jelből származó adat
 				\item AP: maximális Volt érték, melyet képes az analóg port olvasni
 			\end{itemize}
-			A kód tehát:
-			\lstinputlisting[language=C++]{voltage.ino}			
+			\par Minden robotikai projektet egy kapcsolási rajz előz meg. A kapcsolási rajz a projekthez készített eszközök kapcsolásait tartalmazza, melyben előre definiáljk azokat a portokat, melyeket a hardver összeállítása után használni fogunk. Továbbá azért nagyon fontos minden építés előtt kapcsolási rajzot készíteni, mert ez alapján virtuálisan is ki lehet próbálni, ezzel hibákat tudunk megelőzni.
+			\par A kapcsolási rajz tehát:
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.30]{./images/solarCalculator}
+				\caption{Kapcsolási rajz a hardver összeállításáról}
+			\end{figure}
+			\par A kapcsolási rajz után a következő lépés a kód összeállítása. A kód megkezdése előtt fontos, hogy a kapcsolási rajzon definiált portokat használjuk a szoftveren is.
+			\par A kód tehát:
+			\lstinputlisting{./codes/voltage.ino}			
 			A kódrészletben látható, hogy a napcellánk pozitív tartományát az Arduino UNO A0-ás portjához kapcsoltam, melyet az \textit{inPin} változóba deklaráltam. Az A0 egy analóg port, melyből a 0-ásat választottam ki. Továbbá az is látható, hogy később ennek a bemenetnek kiolvasott értékét elárolom egy \textit{value} változóba, mely után a képletbe behelyettesítve kitudom számolni az aktuális termelési értéket Voltban mérve. Az A érték jelen esetben 5 lesz, hiszen 5 Volt a maximális érték, melyet képes az analóg port fogadni.
 			\par A kilowatt kiszámításához be kellett vezetni egy konstans értéket, mely az aktuális napcella maximális teljesítményéből fakad. Ez a kísérletben 0,52 amper, hiszen a napcella 520mAh-t képes leadni. 
 			\par A kísérletek után a felhasználóval közölni kellett az adatokat, melyhez egy 16x2-es LCD kijelzőt használtam. A kijelzőn megjelenik az aktuális Volt, illetve ezt átszámítva a kilowatt értéke.
 			
 		\subsection{Encoder működésének szimulálása}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Vízerőművünk modellezéséhez, illetve szimulálásához elgengedhetetlen a vízturbina teljes forgásának kiszámítása egy adott időintervallum alatt. A forgási érték alapján lehet meghatározni, hogy egy vízturbina percenként hányszor forgatja meg a turbinát, illetve ezek forgatások során mennyi energia keletkezik.
+			\par Az érzékelő vagy szenzor olyan elem, amely egy mérendő tulajdonságtól függő jelet szolgáltat. A szenzorok csoportosíthatók az általuk mért fizikai, kémiai, biológiai mennyiségek alapján.\cite{encoder} 
+			\par Az encoder-t csoportosíthatjuk a fizikai mennyiség alapján, ezen belül is a forgómozgásra vonatkozó csoporthoz. Tehát az encoder képes megmondani a forgatási mozgáshoz tartozó elváltozásokat.
+			\par Szimulációm egy Arduino UNO-hoz csatolt Encoder működését mutatja be, melyről leolvashatjuk, hogy hányszor fordul egy teljes kört az encoder. 
+			\par Szimulációm szemléltetéséhez C++ nyelvet használtam, mely közvetlen kommunikál az Arduino UNO mikrokontrollerrel az Arduino saját szoftverén keresztül. 
+			\par A kapcsolási rajz tehát:
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.35]{./images/encoderplan}
+				\caption{Kapcsolási rajz az encoder összeállításáról}
+			\end{figure}
+			\par Ahogy a képen is látható, a szimuláció előállításához nincs másra szükségünk, mint egy mikrokontrollerre, illetve az Arduino Encoderre és az ezeket összekötő jumper kábelekre\footnote{A jumper kábel egy elektromos vezeték, melynek mindkét vége catlakozóval, vagy pedig tűvel van ellátva}. Mivel a szimulációm nem lcd kijelzőn, hanem soros monitoron szemléltetem, így az lcd panelt és a hozzá szükséges i2c protokolt nem szükséges hozzá csatolni.
+			
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
+			 \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			 \par Ahhoz, hogy a telepített napcellákat optimálisan tudjuk elhelyezni a terepasztalon, további tanulmányokat kellett végezni az egyes tájolások optimális értékeinek kiszámításához. 
+			 \par Az optimális értékeket Magyarország elhelyezkedési viszonylataira helyeztük, így minden érték Magyarországon belül optimális. Célunk, hogy a terepasztal felhasználói számára egy szemléltetést mutassunk, hogy Magyarországi tájolásokkal különböző országokban milyen értékekkel szolgálnak a különböző eszközök.
+			 \par Tanulmányok során megtudtuk, hogy a tető dőlésszöge, illetve a tájolás hatással van a teljesítményre, melyet a következő ábra szemléltet:
+			 \begin{figure}[H]
+			 	\centering
+			 	\includegraphics[scale=0.60]{./images/tajolas}
+			 	\caption{A tájolás és a tető dőlésszögének hatása a végleges teljesítményre\cite{tajolas}}
+			 \end{figure}
+			 \par Ezek értékek alapján tehát felállíthatunk egy táblázatot, melyben pontosan láthatjuk a dőlésszög, illetve tájolás alapján a teljesítmény értékét \%-ban mérve:
+			 \begin{figure}[H]
+			 	\centering
+			 	\includegraphics[scale=0.60]{./images/grafikon}
+			 	\caption{A tájolás és a tető dőlésszögének hatása táblázatban\cite{tajolas}}
+			 \end{figure}
+		 	\par Mivel a telepített napcellák nem változtathatják dőlésszögüket, így azok fixen 40$^{\circ}$-ra vannak beállítva. Ez esetben elég, ha a táblázatnak a 40$^{\circ}$-os sorát nézzük. 
+		 	\par Rendszerünk, mely képes az asztalt elforgatni, az asztal elforgatása után közli a felhasználóval a telepített napcellák aktuális pozícióját fokban mérve. Így a rendszer megmondja, hogy a napcellák aktuálisan hány százalékos teljesítménnyel képesek termelni áramot.
+		 	\par Jól láthatjuk, hogy a 40$^{\circ}$-os sornál a déli 40$^{\circ}$ az optimális, tehát a 100\%. Ezután ha a napcella Délkelet, illetve Délnyugat irányba néz, akkor már csak 90\%, továbbá ha keleti, vagy nyugati irányba néz, akkor csak 75\%-os teljesítményt képes leadni.
 	\section{Termelők és fogyasztók}
 		\subsection{termelők ismertetése}
 		\subsection{fogyasztók ismertetése}
@@ -179,13 +233,54 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		Modellünk olyan fogyasztási értékeket fog szemléltetni, mely a valóságnak arányosan eleget tesz. A fogyasztók számát dinamikusan lehet majd szabályozni, mely hatással lesz a rendszer működésére. A modellünkben a fogyasztók különböző nyitófeszültségű LED-ek lesznek, melyekkel a fogyasztók energiafelhasználását tudjuk szimbolizálni. A projektünkben a fogyasztók egységes áramot használnak, azonban a számítások során a valóságnak megfelelő értékekkel számolunk.
 		
 	\section{modellek}
+	
 		\subsection{Időjárás állomás}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
 			\par Modellünk tartalmaz egy kis éghajlat elemző műszert is, melyre egy 16x2-es LCD kijelző van csatolva, amin adatokat tudunk leolvasni az éppen aktuális hőmérsékletről és páratartalomról. Ez a műszer szemlélteti a teremben aktuális hőmérsékletet, illetve páratartalmat.
+			\par A modell elkészítése előtt szükséges egy kapcsolási rajzot készíteni, melyben előre meghatározzuk a használni kívánt portok számát, illetve azok értékét. 
+				\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.30]{./images/TemperatureAndHumidity}
+				\caption{Kapcsolási rajz az időjárás állomáshoz}
+			\end{figure}
+			\par Ahogy a kapcsolási rajzon is látható az Arduino UNO-n kívül szükségünk van egy DHT11-es szenzorra, ismertebb nevén egy hőmérséklet és páratartalom szenzorra, valamint egy lcd kijelzőre és a hozzá tartozó I2C eszközre, mely egy protokollt valósít meg, amely adatok küldésére és fogadására szolgál.
+			\par A hardveres kapcsolási rajzot követően hozzákezdhetünk a szoftveres részhez. Mivel a felhasználó az lcd kijelzőn láthatja a hőmérsékletet, illetve páratartalmat, először az lcd működését kell definiálni. Fontos megjegyezni, hogy ez a 16x2-es lcd kijelző önállóan nem képes egyedi karakterek megjelenítésére, azonban egy karakternek lefoglalt helyre manuálisan készíthetünk egyet. Ez azért fontos, mert a fok jel csak így lesz megjeleníthető.
+			\par A kód elején szükséges az előre definiált portokat deklarálni, illetve egyéb olyan változókat, melyeket később a rendszer használni fog.
+			\lstinputlisting{./codes/weatherStationInit.ino}
+			\par Ezek után inicializálhatjuk az lcd-t, valamint kiírhatjuk a kezdeti értékeket az lcd kijelzőre. A kezdeti érték nem más, mint a ,,hom = ? $^{\circ}$C", ,,para = ? \%"				
+			\lstinputlisting{./codes/weatherStationVoid.ino}
+			\par Végezetül megírjuk rá a hőmérséklet és páratartalomhoz elkészített algoritmust a ,,loop()" metódusba.
+			\lstinputlisting{./codes/weatherStationLoop.ino}			
+			\par A felhasználó az összeállított hardver számítógéphez való kapcsolása után nyomon követheti a szobában mérhető aktuális hőmérséklet celsiusban, illetve páratartalmat százalékosan mérve.
 		\subsection{Fogyasztók modellezése}
-			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Kisméretű házak, épületek, gyárak, iskolák, melyek más fogyasztási igényekkel vannak ellátva)
-			
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
+			\par A fényforrások és egyéb elektronikai eszközök a különböző energia felhasználású fogyasztókat modellezik. Célunk valósághűen modellezni a fogyasztókat. (Családi házak, lakások, kórházak, valamint iskolák, melyek más fogyasztási igényekkel vannak ellátva) 
+			\par Korábbi fejezetekben már kifejtettem  (\ref{fogyaszto}) a különféle fogyasztók havi, illetve napi fogyasztási igényeit. A szimulátor kiválóan mutatja, hogy a felhasználótól megkapott inputokból, melyek a fogyasztók beállításait végzik, hogy állítja elő a fogyasztási igény megközelítési értékét. 
+			\par Szimulátor után a következő feladat ennek az algoritmusnak lemodellezése Arduino-n, hogy később a teljes rendszer ezek adatok alapján tudja beállítani a fogyasztók igényeinek értékét. Fontos tudni, hogy míg a szimulációban a felhasználó minden adathoz hozzá fért, a modellünkben bizonyos értékek konstansként szerepelnek. Ilyen értékek a tanulók, illetve betegek beállítása. Mivel nem minden felhasználó ismert a témákban, így egy átlag beteg és tanuló állományt rögzít a rendszer. 
+			\par A modell, mint már említettem, C++ programozási nyelven írtam az Arduino IDE segítségével. A  modell önmaga nem igényel az  Arduino UNO mikrokontrolleren kívül egyéb alkatrészeket, azonban a szemléltetés érdekében egy 16x2-es kék lcd panellel összekötöttem az Arduino UNO, hogy minden lefutásnál közölje a felhasználóval a kívánt adatokat. A kapcsolási rajz tehát tartalmaz egy Arduino Uno mikrokontrollert és a hozzá kapcsolt lcd kijelzőt.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.30]{./images/consumeProblem}
+				\caption{Kapcsolási rajz a fogyasztó problémához}
+			\end{figure}
+			\par A modell az lcd panelen kívül egy úgynevezett soros porton közvetíti a kimenő értékeket, így a felhasználó a számítógépen is követheti a fogyasztók aktuális igényeinek megközelítő értékét.
+			\begin{megjegyzes}
+				Fontos tudni, hogy a soros portra kiírt adatok olvasásához is szükségünk van az Arduino UNO számítógéphez való csatlakoztatása.
+			\end{megjegyzes}
+			\par Miután definiáltuk a portokat a kapcsolási rajz segítségével, hozzá kezdhetünk a kódhoz, melyben az előre definiált portokat használjuk fel.
+			\par Először az osztályokat kell definiálni. Az osztályok a különféle fogyasztókat tartalmazza, melyek más fogyasztási értékkel kerülnek kiszámításra.
+			\lstinputlisting{./codes/consumer.ino}			
+			\par Majd ezután beállíthatjuk a szoftver lefutás utáni viselkedését. A következőkben definiálni fogjuk az lcd kijelzőt, valamint létrehozzuk az adatszerkezeteket, melyben tárolni tudjuk a deklarált fogyasztókat. Miután létrehoztuk és feltöltöttük az adatszerkezetben a kívánt adatokat, soros porton keresztül közvetítjük a felhasználónak a fogyasztási értékeket. 
+			\lstinputlisting{./codes/void.ino}				
+			\par A felhasználó ezután az Arduino UNO számítógéphez történő csatlakoztatása után soros porton keresztül követheti a szoftver kimeneti értékeit. Ezután már csak az lcd kijelzőn kell feltüntessük az értékeket, amennyiben a felhasználó nem csak a soros porton szeretné megtekinteni a tartalmat. Mivel az lcd kijelző 16x2-es, így csak két sorban tud, maximum 16 karakter/sort megjeleníteni. A szoftver szemléltetése érdekében az lcd csak a havi, illetve napi fogyasztási igényt közli a felhasználóval. 
+			\lstinputlisting{./codes/loop.ino}					
+			\par Ahogy a kódrészletből is látható, az lcd működéséhez szükséges paramétereket a loop() metódus törzsében kell definiálni, mivel az lcd kijelzőn közölt adatok állandó jelleggel kell megjelenjenek.
 	\section{prototípusok}
+		\par A prototípus egy olyan objektum kezdeti modellje, melyet a terv tesztelésére készítettek. A szó a görög „primitív alak” szóból származik. A prototípusokat széles körben használják tervezések során, hogy tökéletesítsék az elemeket és folyamatokat, mielőtt azokat nagyobb léptékben megvalósítanák. \cite{prototype}
+		\par A prototípus létfontosságú része a tervezési folyamatnak, mert lehetővé teszi a tervezők számára, hogy a terméket működés közben láthassák, így tudják nyomon követni, hogy mi az, ami működik. Továbbá hasznos a tervek bemutatására a vállalatvezetőknek vagy a befektetőknek, hogy rávegyék őket egy projekt támogatására.\cite{prototype}
 		\subsection{telepített napcellák prototípusai}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
+			\par A teljes telepített napcellák elkészítése előtt meg kellett győződjünk, hogy egy napcella arduino UNO-hoz kapcsolva valóban képes
 		\subsection{intelligens napcellák prototípusai}
  	\section{Napcellák}
  		\subsection{telepített napcellák}
@@ -267,6 +362,29 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A felhasználóknak lehetőségük van egyes eszközöket részletesebben tanulmányozni, mely az eszközök ablakra kattintva lesz elérhető. A gombra kattintva eléjük tárul az általunk fejlesztett projektek részletes beszámolója, illetve azok leírása, egyéb tartalma. Ezek természetesen a térkép menüpont alatt is megtalálhatók, hiszen azok gombaira kattintva átirányítja felhasználóinkat az általuk választott oldalra.
 			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			\par Az első képen a Cartesius-búvár, illetve annak részletes leírása található, míg a második képen a terepasztal, mely egy intelligensen működő energetikai rendszert valósít meg.
+		\subsection{Kvíz lehetőség}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Weblapunkon az eszközök menüpontnál néhány eszközön elérhető egy úgynevezett kvíz lehetőség, mely azért készült, hogy teszteljék tudásukat az adott témából. 
+			\par Az eszközök képet, illetve szöveget tartalmaznak, némelyek pedig interaktív tartalmakat, melyek a következők lehetnek:
+			\begin{itemize}
+				\item Vezérelhető felület
+				\item Interaktív kvíz felület
+			\end{itemize}
+			\par A kvíz felületet egy gombnyomással lehet elérni a kiválasztott eszköz menüpontnál, ezután lehetősége van a felhasználónak az eszközhöz csatolt olvasmány alapján kitölteni a teszt feladatokat. 
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.30]{./images/quiztest}
+				\caption{Kvíz kitöltéséhez létrehozott form}
+				\label{fig:test}
+			\end{figure}
+			\par A tesztkitöltés után a ,,Beküld" gombra kattintva a weblap egy másik oldalra irányítja át a felhasználót, melyen meg tudja tekinteni az elért pontszámait, illetve egy kis megjegyzést a pontszámaihoz. Visszalépés esetén egy gomb funkcionál, mely rákkattintására vissza irányítja a felhasználót az eredeti oldalra.	
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.30]{./images/quizresult}
+				\caption{Kvíz eredményének közlése a felhasználó számára}
+				\label{fig:result}
+			\end{figure}
+			
 			
 		\subsection{Felhasználók}
 			\par Weblapunk rendelkezik admin szintű felhasználókkal, melyek feladata a kategóriák, illetve egyes posztok karbantartása. Így az admin felhasználók fejléce kiegészül egy “Kategória készítése” menüponttal, melyben az általa, vagy közösen megbeszélt kategóriákat tudja feltölteni. Adminként nem lehet regisztrálni, ezt a rendszer tulajdonostól lehet igényelni, melyet a rendszer karbantartó át ír az adatbázison keresztül.
@@ -280,7 +398,23 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Kapcsolatfelvétel}
 			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Weblapunk tartalmaz egy kapcsolatfelvételi űrlapot, melynek célja a felhasználókkal való kommunikáció biztosítása. Amennyiben valamilyen hiba, esetleg észrevétel, panasz lépne fel, a felhasználóknak lehetőségük van ezeket a kéréseket elküldeni a rendszer üzemeltetőknek. A kapcsolatfelvételi űrlap a ,,Rólunk" menüpontban található meg a lap alján. A felhasználónak meg kell adnia a teljes nevét, email címét, egy tárgyat a levélnek, valamint a szövegtörzset, melyben 500 karakterben kifejtheti észrevételeit, esetleg panaszait. Az adat egy adatbázisban rögzül, melyhez a rendszer üzemeltetőknek, illetve az adatbázis üzemeltetőknek van joguk belépni.
-			\par KÉP!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.30]{./images/contactme}
+				\caption{Kapcsolatfelvételi lehetőség felhasználók számára}
+				\label{fig:contactme}
+			\end{figure}
+		\subsection{Galéria}
+			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős.} 
+			\par Weblapunk felhasználóinak lehetőségük van a varázstoronyban elhelyezett kellékekről készült képek megtekintésére a ,,Galéria" fül alatt, mely a fejlécen található. A képek méretei következtében csak korlátozott számú képeket lehet megtekinteni, melyek rákattintásával a kép teljes méretében megtekinthető. 
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.30]{./images/gallery}
+				\caption{Galériában elhelyezett képek megtekintése}
+				\label{fig:contactme}
+			\end{figure}
+		\subsection{Összefoglaló}
+			\par Rendszerünk célja tehát a kliensek teljes körű kiszolgálása, valamint az újonnan látogatók tájékozódásának elősegítése. Ezen kívül rendszerünk felhasználói könnyen és egy letisztult weblapon keresztül információkat gyűjthet egy általa választott témából, illetve személyes megjegyzéseit és  tapasztalatait meg tudja osztani a rendszeren belül, hogy mindenki számára elérhető forrás legyen.
 
 \chapter{Fejlesztői környezetek és publikációi}
 	\par Ebben a fejezetben bemutatjuk az általunk használt fejlesztői környezetet és a fejlesztéshez szükséges komponenseket, azok tulajdonságait, illetve funkcióit.
@@ -289,13 +423,19 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	\par Szükségünk volt egy verziókövető rendszer elsajátításához. Ezen rendszerek legnagyobb előnyei, hogy egy projekten többen is dolgozhatunk egyszerre, anélkül, hogy egymás munkáját hátráltatnánk, illetve ha valaki változtatást készít és feltölti, azt a rendszer nyomon tudja követni. Ha ketten egyszerre ugyanazon az állományon végeznek módosítást, a rendszer feltöltéskor megpróbálja összefésülni (merge) a módosításokat, ha nem sikerül, jól láthatóan megjeleníti az ütközéseket. Ilyen esetekben megtudjuk nézni a konfliktust okozó állományokat és lehetőségünk van a két állományt manuálisan összefésülni. Ezzel a módszerrel folyamatosan szinkronban lehetett mindkettőnk munkája.
 	\par A Git verziókövető rendszert választottuk, mert korábban már használtuk Windows, illetve Linux rendszeren, és jó tapasztalataink vannak róla. Korábbi kurzusainkon is használtuk, így könnyebb volt a Git verziókövetőt elsajátítani. 
 	\par Ahhoz, hogy fejlesztés közben ne hátráltassuk egymás munkáját, szükség van egy kliensre, mely könnyen kezelhető felületet biztosít a hozzáféréshez, a projekt klónozásához, feltöltéshez, stb. Windows alatt a Github Desktopot használjuk, MacOS alatt pedig terminálban kezeljük a verziókövető funkcióit.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.35]{./images/github}
+		\caption{Projekt elemei Githubon}
+		\label{fig:github}
+	\end{figure}
 	\section{Trello feladatkövető rendszer}
 	\par Ahhoz, hogy feltudjuk osztani kettőnk közt a feladatokat, szükségünk volt a verziókövető rendszeren kívül egy feladatkövető rendszerhez is. A projekt megkezdése előtt a feladatokat szóban, illetve papíralapon osztottuk fel, azonban egy idő után átláthatatlanná vált a feladatok megosztása. Szükségünk volt egy feladatkövető rendszer elsajátításában. Ezen rendszerek legnagyobb előnye, hogy táblázatokban tudjuk összefoglalni a feladatokat, illetve azokhoz könnyen hozzátudjuk rendelni a fejlesztőket. Választásunk a Trello feladatkövető rendszerre esett, mert korábban már használtuk, így könnyebb volt a rendszer elsajátítása. 
 	
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.35]{trello}
+		\includegraphics[scale=0.35]{./images/trello}
 		\caption{A projekt feladataira bontva trelloban}
 		\label{fig:trello}
 	\end{figure}
@@ -303,18 +443,17 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 	
 	\section{Technológiák}
 		\subsection{Python}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-		\subsection{Python és a C nyelv integrációja}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
 		\subsection{PHP nyelv}
-	\section{Arduino}
-		\subsection{szenzorok és kellékek ismertetése}
-		
-
+	\section{Arduino szenzorok és kellékek ismertetése}
+		\subsection{Arduino UNO}
+		\subsection{Arduino NANO}
+		\subsection{16 x 2 LCD kijelző}
+		\subsection{DHT11}		
+		\subsection{ENCODER}
+		\subsection{I2C}
+		\subsection{title}
 
 \begin{tetel}
 Tétel szövege.
@@ -323,10 +462,6 @@ Tétel szövege.
 \begin{proof}
 Bizonyítás szövege.
 \end{proof}
-
-\begin{definicio}
-Definíció szövege.
-\end{definicio}
 
 \begin{megjegyzes}
 Megjegyzés szövege.
@@ -353,6 +488,11 @@ Megjegyzés szövege.
 \textsc{\url{https://en.wikipedia.org/wiki/Arduino_Uno}}
 \bibitem{arduino}
 \textsc{\url{https://hu.wikipedia.org/wiki/Arduino}}
-
+\bibitem{tajolas}
+\textsc{\url{https://gershojenergia.com/napelem-kisokos/optimalis-napelem-elhelyezes/}}
+\bibitem{prototype}
+\textsc{\url{https://go.gale.com/ps/i.do?p=SCIC&u=dclib_main&v=2.1&it=r&id=GALE\%7CENKDZQ347975681&asid=1618891200000~6b0db278}}
+\bibitem{encoder}
+\textsc{\url{https://hu.wikipedia.org/wiki/Érzékelő}}
 \end{thebibliography}
 \end{document}
