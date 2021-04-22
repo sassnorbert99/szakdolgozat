@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  22 APR 2021 20:00
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  22 APR 2021 19:19
+>>>>>>> Stashed changes
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.16)  22 APR 2021 19:19
 >>>>>>> Stashed changes
@@ -88,10 +92,17 @@ Now handling font encoding PD1 ...
 )
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+<<<<<<< Updated upstream
 )
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
+=======
+)
+(e:/Programok/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+>>>>>>> Stashed changes
 \Hy@SavedSpaceFactor=\count179
 Package hyperref Info: Option `unicode' set `true' on input line 4338.
 
@@ -151,6 +162,7 @@ Package hyperref Info: Driver (autodetected): hpdftex.
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
@@ -203,6 +215,20 @@ Package atveryend Info: \enddocument detected (standard20110627).
 ty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
+=======
+
+(e:/Programok/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count185
+\c@bookmark@seq@number=\count186
+
+(e:/Programok/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.s
+ty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+>>>>>>> Stashed changes
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.s
 ty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
@@ -230,6 +256,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks16
 )
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -305,6 +334,9 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2020/09/01 3.48 The Babel package
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/09/01 3.48 Babel common definitions
@@ -312,6 +344,7 @@ File: babel.def 2020/09/01 3.48 Babel common definitions
 \U@D=\dimen149
 \l@babelnohyphens=\language86
 
+<<<<<<< Updated upstream
 =======
 
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/babel/babel.def
@@ -320,6 +353,8 @@ File: babel.def 2020/09/01 3.48 Babel common definitions
 \U@D=\dimen149
 \l@babelnohyphens=\language86
 
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -501,6 +536,7 @@ File: l3backend-pdftex.def 2020-09-11 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box52
 ) (./document.aux
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -533,6 +569,8 @@ LaTeX Warning: Label `fig:result' multiply defined.
 
 LaTeX Warning: Label `fig:contactme' multiply defined.
 
+=======
+>>>>>>> Stashed changes
 
 LaTeX Warning: Label `fig:contactme' multiply defined.
 
@@ -564,6 +602,7 @@ LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 Overfull \hbox (30.99757pt too wide) in paragraph at lines 23--27
 \T1/lmr/m/n/12 Up-dated up-stream                                              
@@ -574,6 +613,11 @@ Overfull \hbox (30.99757pt too wide) in paragraph at lines 23--27
 \AtBeginShipoutBox=\box53
 Package hyperref Info: Link coloring OFF on input line 27.
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+=======
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring OFF on input line 27.
+ (e:/Programok/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+>>>>>>> Stashed changes
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -582,6 +626,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+<<<<<<< Updated upstream
 )
 =======
 \AtBeginShipoutBox=\box53
@@ -595,6 +640,9 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (e:/Programok/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+>>>>>>> Stashed changes
+=======
 )
 >>>>>>> Stashed changes
 \c@section@level=\count289
@@ -671,15 +719,25 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 27.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+<<<<<<< Updated upstream
 
 
+=======
+
+
+>>>>>>> Stashed changes
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
+=======
+
+
+>>>>>>> Stashed changes
 =======
 
 
@@ -716,6 +774,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count296
+<<<<<<< Updated upstream
 
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/base/report.cls
 LaTeX Info: Redefining \cal on input line 577.
@@ -726,6 +785,14 @@ LaTeX Info: Redefining \mit on input line 578.
 {e:/Programok/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 <eszterhazy-logo-hu.pdf, id=518, 256.07469pt x 84.78476pt>
 =======
+)
+<eszterhazy-logo-hu.pdf, id=273, 256.07469pt x 84.78476pt>
+>>>>>>> Stashed changes
+=======
+
+(e:/Programok/texlive/2020/texmf-dist/tex/latex/base/report.cls
+LaTeX Info: Redefining \cal on input line 577.
+LaTeX Info: Redefining \mit on input line 578.
 )
 <eszterhazy-logo-hu.pdf, id=273, 256.07469pt x 84.78476pt>
 >>>>>>> Stashed changes
@@ -776,6 +843,7 @@ ogramok/texlive/2020/texmf-dist/tex/latex/thesis-ekf/eszterhazy-logo-hu.pdf>]
 
 ]
 
+<<<<<<< Updated upstream
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -798,6 +866,11 @@ l.71 ...nyos Diákköri Konferencia}{5}{chapter.1}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+=======
+{e:/Programok/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <e:/Pr
+ogramok/texlive/2020/texmf-dist/tex/latex/thesis-ekf/eszterhazy-logo-hu.pdf>]
+(./document.toc [2
+>>>>>>> Stashed changes
 
 [3] [4])
 \tf@toc=\write4
@@ -817,6 +890,9 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 3. fejezet.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 (e:/Programok/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -843,6 +919,9 @@ Overfull \hbox (10.17953pt too wide) in paragraph at lines 37--38
 =======
 [8]) [9]
 <./images/declination.png, id=472, 576.1525pt x 550.055pt>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 File: ./images/declination.png Graphic file (type png)
 <use ./images/declination.png>
@@ -904,6 +983,9 @@ Overfull \hbox (31.3294pt too wide) in paragraph at lines 15--16
 ) (./codes/estate.py [16]) [17] (./codes/water.py [18]) (./codes/watermain.py)
 [19] [20]
 <./images/solarCalculator.png, id=794, 961.5925pt x 518.93875pt>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 File: ./images/solarCalculator.png Graphic file (type png)
 <use ./images/solarCalculator.png>
@@ -921,6 +1003,9 @@ l.7 void
 =======
          setup() <./images/solarCalculator.png>]) [22]
 <./images/encoderplan.jpg, id=850, 637.38126pt x 424.58624pt>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 File: ./images/encoderplan.jpg Graphic file (type jpg)
 <use ./images/encoderplan.jpg>
@@ -969,13 +1054,20 @@ l.216 	\section
 l.199 			
           <./images/encoderplan.jpg>]
 <./images/tajolas.png, id=858, 364.36125pt x 350.30875pt>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 File: ./images/tajolas.png Graphic file (type png)
 <use ./images/tajolas.png>
 Package pdftex.def Info: ./images/tajolas.png  used on input line 224.
 (pdftex.def)             Requested size: 218.61842pt x 210.18686pt.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <./images/grafikon.png, id=1244, 324.21124pt x 398.48875pt>
+=======
+<./images/grafikon.png, id=860, 324.21124pt x 398.48875pt>
+>>>>>>> Stashed changes
 =======
 <./images/grafikon.png, id=860, 324.21124pt x 398.48875pt>
 >>>>>>> Stashed changes
@@ -999,7 +1091,11 @@ l.245 			\item E
                 lektromos töltőállomások (használattól függően vált...
  <./images/grafikon.png>]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <./images/TemperatureAndHumidity.png, id=1259, 977.6525pt x 527.9725pt>
+=======
+<./images/TemperatureAndHumidity.png, id=878, 977.6525pt x 527.9725pt>
+>>>>>>> Stashed changes
 =======
 <./images/TemperatureAndHumidity.png, id=878, 977.6525pt x 527.9725pt>
 >>>>>>> Stashed changes
@@ -1024,6 +1120,9 @@ l.264 			\par
 (./codes/weatherStationVoid.ino [27]) (./codes/weatherStationLoop.ino [28])
 [29]
 <./images/consumeProblem.png, id=999, 642.4pt x 542.025pt>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 File: ./images/consumeProblem.png Graphic file (type png)
 <use ./images/consumeProblem.png>
@@ -1075,9 +1174,15 @@ Underfull \hbox (badness 1142) in paragraph at lines 309--309
  [][][]\T1/lmr/m/n/10 Egy ter-ve-z�-si min-ta. Model-View-Controller. H�-rom f�
  kom-po-nens-b�l �ll: Mo-dell, N�-
  []
+<<<<<<< Updated upstream
 
 [36
 
+=======
+
+[36
+
+>>>>>>> Stashed changes
 ] [37]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 43.
@@ -1096,11 +1201,15 @@ File: ./images/quizresult.png Graphic file (type png)
 Package pdftex.def Info: ./images/quizresult.png  used on input line 410.
 (pdftex.def)             Requested size: 385.44298pt x 212.29475pt.
  [41pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 l.434 			\par
               KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <./images/quiztes
@@ -1112,6 +1221,8 @@ Package pdftex.def Info: ./images/contactme.png  used on input line 446.
 (pdftex.def)             Requested size: 385.44298pt x 212.59589pt.
  [46pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 =======
+=======
+>>>>>>> Stashed changes
 l.418 			\par
               KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <./images/quiztes
 t.png>]
@@ -1121,11 +1232,15 @@ File: ./images/contactme.png Graphic file (type png)
 Package pdftex.def Info: ./images/contactme.png  used on input line 430.
 (pdftex.def)             Requested size: 385.44298pt x 212.59589pt.
  [42pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 l.450 		\subsection
                    {Galéria} <./images/quizresult.png>]
@@ -1136,6 +1251,8 @@ Package pdftex.def Info: ./images/gallery.png  used on input line 455.
 (pdftex.def)             Requested size: 385.44298pt x 194.82938pt.
  [47pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 =======
+=======
+>>>>>>> Stashed changes
 l.434 		\subsection
                    {Galéria} <./images/quizresult.png>]
 <./images/gallery.png, id=1193, 1284.8pt x 649.42625pt>
@@ -1144,11 +1261,15 @@ File: ./images/gallery.png Graphic file (type png)
 Package pdftex.def Info: ./images/gallery.png  used on input line 439.
 (pdftex.def)             Requested size: 385.44298pt x 194.82938pt.
  [43pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 l.462 \chapter
               {Fejlesztői környezetek és publikációi} <./images/contactme.
@@ -1189,6 +1310,15 @@ re.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+=======
+l.446 \chapter
+              {Fejlesztői környezetek és publikációi} <./images/contactme.
+png>] [44pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+>>>>>>> Stashed changes
 l.446 \chapter
               {Fejlesztői környezetek és publikációi} <./images/gallery.pn
 g>]
@@ -1213,6 +1343,9 @@ Package pdftex.def Info: ./images/trello.png  used on input line 465.
 (pdftex.def)             Requested size: 449.68674pt x 225.89732pt.
 
 Overfull \hbox (8.669pt too wide) in paragraph at lines 465--466
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
  [][] 
  []
@@ -1220,6 +1353,7 @@ Overfull \hbox (8.669pt too wide) in paragraph at lines 465--466
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 =======
@@ -1281,10 +1415,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [52pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3
+=======
+[46pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+>>>>>>> Stashed changes
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< Updated upstream
 l.538 		\clearpage
                   pdfTeX warning (ext4): destination with the same identifier (
 name{figure.4.4}) has been already used, duplicate ignored
@@ -1323,6 +1461,8 @@ lencback.png>] [54
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 563--564
 =======
+=======
+>>>>>>> Stashed changes
 l.487 \end{tetel}
                   <./images/github.png>] [47pdfTeX warning (ext4): destination 
 with the same identifier (name{figure.5.2}) has been already used, duplicate ig
@@ -1333,6 +1473,9 @@ nored
 l.497 \begin{thebibliography}{2}
                                  <./images/trello.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 505--506
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 []\T1/lmr/m/sc/12 https://gershojenergia.com/napelem-kisokos/optimalis-napelem-
 
@@ -1340,7 +1483,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 565--566
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 507--508
 >>>>>>> Stashed changes
@@ -1350,7 +1497,11 @@ zolgaltatasok /
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 565--566
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 507--508
 >>>>>>> Stashed changes
@@ -1360,7 +1511,11 @@ dij-[]elmu ?
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 565--566
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 507--508
 >>>>>>> Stashed changes
@@ -1369,7 +1524,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--508
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 567--568
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 509--510
 >>>>>>> Stashed changes
@@ -1379,7 +1538,11 @@ exandra _ Novikova / 2 / El %
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 567--568
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 509--510
 >>>>>>> Stashed changes
@@ -1389,7 +1552,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 577--578
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 519--520
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 519--520
 >>>>>>> Stashed changes
@@ -1398,7 +1565,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--520
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 579--580
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 521--522
+>>>>>>> Stashed changes
 =======
 Underfull \hbox (badness 10000) in paragraph at lines 521--522
 >>>>>>> Stashed changes
@@ -1406,6 +1577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 521--522
 = dclib _ main & v = 2 . 1 & it = r & id =
  []
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [55
 
@@ -1426,11 +1598,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
 >>>>>>> Stashed changes
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
+[48
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
+ (./document.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
+>>>>>>> Stashed changes
 
 
 Package rerunfilecheck Warning: File `document.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
+<<<<<<< Updated upstream
 
 Package rerunfilecheck Info: Checksums for `document.out':
 <<<<<<< Updated upstream
@@ -1601,6 +1784,10 @@ PDF statistics:
  835 named destinations out of 1000 (max. 500000)
  1175 words of extra memory for PDF output out of 10000 (max. 10000000)
 =======
+=======
+
+Package rerunfilecheck Info: Checksums for `document.out':
+>>>>>>> Stashed changes
 (rerunfilecheck)             Before: 9CD93612C48229CBCAA2F2037568CF3E;12635
 (rerunfilecheck)             After:  4A547729B4FCB1C115FFFA43E61A6AB7;12792.
 
@@ -1639,5 +1826,8 @@ PDF statistics:
  1353 compressed objects within 14 object streams
  729 named destinations out of 1000 (max. 500000)
  607 words of extra memory for PDF output out of 10000 (max. 10000000)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 

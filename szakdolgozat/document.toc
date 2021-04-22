@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Rendszerről összefoglalóan}{7}{chapter.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.1}Tudományos Diákköri Konferencia}{7}{section.1.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.2}Előnyök és hátrányok}{7}{section.1.2}%
@@ -68,6 +69,8 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.6}I2C}{54}{subsection.4.4.6}%
 \select@language {magyar} \contentsline {subsection}{\numberline {4.4.7}title}{54}{subsection.4.4.7}%
 =======
+=======
+>>>>>>> Stashed changes
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Tudományos Diákköri Konferencia}{5}{chapter.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.1}Szakasz címe}{5}{section.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {1.1.1}Alszakasz címe}{5}{subsection.1.1.1}%
@@ -139,4 +142,7 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.5}ENCODER}{47}{subsection.5.4.5}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.6}I2C}{47}{subsection.5.4.6}%
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.7}title}{47}{subsection.5.4.7}%
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
