@@ -311,15 +311,37 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		
 
 \chapter{Weblap}
-	\section{Támogatott elemek}
-		\subsection{Alszakasz címe}
-		Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről.
+	\section{Bevezetés}
+	Oravecz Zsolt
+		Makettünk elkészítésével, szeretnénk hozzájárulni a megújuló energiaforrások elterjedéséhez, illetve szeretnénk működését, minden megtekintővel megismertetni. Ezt nagyban segítik a Nemzeti Média- és Hírközlési Hatóság 2018-as online piackutatásában olvasható adatok. A megkérdezettek 76\%-a gondolja úgy, hogy az internetnek köszönhetően gyorsabban és több információhoz jut, 74\% gondolja úgy, hogy az internet nagy segítségére van a tanulásban. \cite{NMHHlakossagi}  Ezen információk és személyes tapasztalataink ösztönöztek arra, hogy az elkészült eszközünkhöz egy webalkalmazást is készítsünk, mellyel minden internethasználóhoz eljuttathatjuk az általunk közölt információkat, élményeket. Továbbá az is célunk, hogy egy egyedi tanulásmódszertant készítsünk, mellyel a felhasználók interakcióba lépve az eszközzel, játékosan, élmennyeket szerezve ismerjenek meg új technológiákat. 
 		
-		A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
-	\section{CodeIgniter fejlesztői környezet}
+		
+	\section{CodeIgniter keretrendszer}
+	Oravecz Zsolt
+	A webalkalmazás elkészítésénél figyelembe kellett vennünk az alábbi szempontokat:
+	\begin{itemize}
+		\item -	az alkalmazást PHP nyelven szeretnénk elkészíteni
+		\item szerverünk nem rendelkezik nagy méretű háttértárral,
+		\item a használt rendszer támogassa az MVC fejlesztési modellt\footnote{Egy tervezési minta. Model-View-Controller. Három fő komponensből áll: Modell, Nézet,Vezérlő.},
+		\item könnyen lehessen bővíteni, ha később bővül az elkészített eszközeink száma,
+		\item terepasztalunk működtetése közben sok információt kell mozgatnunk a felhasználó és az eszköz között. Természetesen elengedhetetlen hogy a rendszer képes legyen adatbázis műveletek végrehajtására,
+		\item és végül, de nem utolsó sorban, a használt rendszer legyen költség hatékony. 
+	\end{itemize}
+	Így esett választásunk a \emph{Codeigniter} PHP alapú, nyílt forráskódú keretrendszerre. Ez a keretrendszer megfelel a legtöbb elvárásunknak. Továbbá felhasználó barát, számos hasznos funkciót tartalmaz, jól dokumentált. A felhasznált fájlok és könyvtárak csak a használatukkor töltődnek be a memóriába, ezzel spórolva az erőforrásainkon.
 	\section{Adatbázis}
+	Oravecz Zsolt
+	
+	A weboldal használatához, az oda látogatóknak regisztrálniuk kell magukat, és így létre kell hozniuk egy felhasználói fiókot, így hozzáférve az oldalon található szolgáltatásokhoz, és alkalmazásokhoz. A felhasználó fiókok elengedhetetlenek az alkalmazás megfelelő működéséhez. Minden egyes felhasználóhoz tartoznak adatok, ezek lehetnek: vezetéknév, keresztnév, irányítószám, felhasználói név, jelszó, látogatás dátuma, illetve egy időbélyeg, ami akkor kerül bejegyzésre, amikor a felhasználó egy adott oldalt nyit meg, ennek a várakozási lista elkészítéséhez van köze. Ezt a későbbiekben részletezzük. 
+	
+	
+	Ahhoz, hogy az eszköz és a felhasználó közötti adatcsere létrejöjjön, további adatokat kell tárolnunk. A felhasználói fiókok és az eszköz adatait egy adatbázisban tároljuk elkülönítve egymástól, vagyis megkülönböztetünk felhasználók, és eszközök adattáblát. 
+	Amikor egy eszköz állapota megváltozik, azt az adatbázis, megfelelő adattáblájának, megfelelő objektumához tartozó mezőbe írja bele. Amikor a felhasználó egy adott információt szeretne megtudni, lekérdezést indít az adatbázis felé. A lekért adatok pedig megjelennek a weboldalon, ilyen adatok lehetnek például, az aktuális fogyasztók száma, az asztal földrajzi helyzete, vagy a megtermelt energia mennyisége. 
+	
+	
+	A weboldalunk PHP nyelven íródott, ehhez egy olyan adatbáziskezelő eszközt kellett választanunk, mely támogatja a PHP nyelvet. A phpMyAdmin egy nyílt forrású eszköz, amely rendelkezik egy felhasználóbarát kezelőfelülettel. A felület elérhető a böngészőből, és egy kezdő szintű felhasználói is problémák nélkül használhatja. A grafikus felhasználói felület mellett lehetőségünk nyílik SQL parancsok futtatására is. 
+	
 	\section{Weblapról}
-		\subsection{vezérlő felület}
+		\subsection{Az eszközök vezérlése}
 			A rendszer fő szempontja a mobilos vezérlés, így jogosan érezhetjük azt, hogy ez inkább a fiatalabb generációkat célozza meg, azonban fontos, hogy minden korosztály számára érthető és egyértelmű legyen az információ, ami a felületen megjelenik.
 			Első lépésként a látogatóknak regisztrálni kell a felület használatához. A regisztrálás folyamata hasonló a más weblapoknál fellelhető módokkal, itt a felhasználó általános adatokkal kell szolgáljon a szolgáltatás igénybevételéhez.
 			
@@ -364,7 +386,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 				\end{itemize}
 			\end{enumerate}
 		\subsection{Jelmagyarázat a térképhez}
-			szoftverünk könnyebb értelmezése érdekében létrehoztunk egy jelmagyarázatot, melyben az egyes tartalmak funkcióit tároljuk. Weblapunk három funkciót biztosít a felhasználók számára:
+		A térkép megfelelő értelmezéséhez létrehoztunk egy jelmagyarázatot, mely mobiltelefonos, és számítógépes nézetben is egy gomb, melyet megnyomva felugrik egy sáv, itt a felhasználó megtudhatja, hogy a térképen jelölt eszközök mely kategóriába sorolható. 
+			
+			 Weblapunk három funkciót biztosít a felhasználók számára:
 			\begin{itemize}
 				\item megtekinthető
 				\item interaktív
@@ -378,6 +402,9 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A felhasználóknak lehetőségük van egyes eszközöket részletesebben tanulmányozni, mely az eszközök ablakra kattintva lesz elérhető. A gombra kattintva eléjük tárul az általunk fejlesztett projektek részletes beszámolója, illetve azok leírása, egyéb tartalma. Ezek természetesen a térkép menüpont alatt is megtalálhatók, hiszen azok gombaira kattintva átirányítja felhasználóinkat az általuk választott oldalra.
 			\par KÉP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			\par Az első képen a Cartesius-búvár, illetve annak részletes leírása található, míg a második képen a terepasztal, mely egy intelligensen működő energetikai rendszert valósít meg.
+		\subsection{Várólista}
+		\textbf{A feladat elkészítéséért Oravecz Zsolt a felelős}
+		
 		\subsection{Kvíz lehetőség}
 			\textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
 			\par Weblapunkon az eszközök menüpontnál néhány eszközön elérhető egy úgynevezett kvíz lehetőség, mely azért készült, hogy teszteljék tudásukat az adott témából. 
@@ -552,9 +579,15 @@ Megjegyzés szövege.
 \textsc{\url{https://go.gale.com/ps/i.do?p=SCIC&u=dclib_main&v=2.1&it=r&id=GALE\%7CENKDZQ347975681&asid=1618891200000~6b0db278}}
 \bibitem{encoder}
 \textsc{\url{https://hu.wikipedia.org/wiki/Érzékelő}}
+<<<<<<< Updated upstream
 \bibitem{encoderwiki}
 \textsc{\url{https://en.wikipedia.org/wiki/Rotary_encoder}}
 \bibitem{youtubeenc}
 \textsc{\url{https://www.youtube.com/watch?v=v4BbSzJ-hz4}}
+=======
+\bibitem{NMHHlakossagi}
+\textsc{NMHH Lakossági internethasználat, Online piackutatás 2018.}
+
+>>>>>>> Stashed changes
 \end{thebibliography}
 \end{document}
