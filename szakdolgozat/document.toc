@@ -67,5 +67,5 @@
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.3}16 x 2 LCD kijelz\IeC {\H o}}{47}{subsection.5.4.3}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.4}DHT11}{47}{subsection.5.4.4}% 
 \select@language {magyar} \contentsline {subsection}{\numberline {5.4.5}ENCODER}{47}{subsection.5.4.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {5.4.6}I2C}{47}{subsection.5.4.6}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {5.4.7}title}{47}{subsection.5.4.7}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4.6}I2C}{50}{subsection.5.4.6}% 
+\select@language {magyar} \contentsline {subsection}{\numberline {5.4.7}title}{50}{subsection.5.4.7}% 

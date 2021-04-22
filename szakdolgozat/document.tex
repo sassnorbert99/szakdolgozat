@@ -212,6 +212,7 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 			\par A loop() metódusban először az ,,aValue"-nak adunk értéket, mely az A pin digitális portról kiolvasott értéke. Amennyiben ez a jelenlegi érték nem egyenlő a ,,lastPin" értékével, akkor tudjuk, hogy órajárással megegyezően forog az encoder, hiszen ellentétes értékekkel rendelkeznek. Ilyen esetben a ,,count" értékét emelhetjük eggyel, illetve az ,,operate" true érték adásával megjegyezhetjük, hogy az encoder biztosan az órajárással megyezően mozog.
 			\par Mivel az encoder egy teljes forgást 40 ilyen értékkel tesz meg, ezért a teljes kör kiszámításához nincs más dolgunk, mint az aktuális értéket elosztani 40-el, így biztosan tudjuk, hogy amennyiben az érték osztható 40-el, írassa ki a rendszer a soros monitorra a jelenlegi teljes körök számát.
 			\par Ezek után már nincs más dolgunk, mint a lastPin értékét átállítani a jelenlegi feszültségi értékre, hiszen a következő cikluslefutás során az utolsó érték lesz az előzőnek az aktuális feszültségi értéke.
+			\par Az encoderről részletesebben a \ref{encoder} fejezetben lehet olvasni.
 			
 	\section{optimalizálás}
 		\subsection{telepített napcellák optimalizálása, tájolása}
@@ -467,8 +468,50 @@ Megújuló energiaforrásnak nevezzük az energiahordozók azon csoportját, ame
 		\subsection{Arduino NANO}
 		\subsection{16 x 2 LCD kijelző}
 		\subsection{DHT11}		
-		\subsection{ENCODER}
+		\subsection{ENCODER} \label{encoder}
+			\par \textbf{A feladat elkészítéséért Sass-Gyarmati Norbert a felelős}
+			\par Ebben a fejezetben az encoder működéséről olvashatunk kicsit részletesebben, illetve szemléletesebben. Az forgási encoder, más néven tengely encoder, egy elektromechanikus eszköz, amely átalakítja a tengely  szöghelyzetét vagy mozgását analóg, vagy digitális kimeneti jelekké.\cite{encoderwiki}
+			\par Mint ahogy azt már olvashattuk, az encoder kimenete két jelet képes felvenni, 0-ás és 1-egy értékeket.  A 0-ás az alacsony, az 1-es pedig a magas feszültségi értéket jelenti. Egy encoder két kimeneti pinnel is rendelkezik, legyen az egyik A és B. Kezdetben, ha az encodert az óramutató járásával megegyezően forgatjuk, akkor az A jelű pinnek magas, míg a B jelű pinnek ugyanúgy alacsony értéke lesz. Az encodert tovább forgatva a B jelű pin is magas értéket vesz fel, ezek után az A pin alacsony lesz, míg a B pin magas, végezetül mindkét pin újra alacsony feszültségi értékkel fog rendelkezni. A következő ábrák a folyamat körforgását fogják szemléltetni.
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.50]{./images/firstenc}
+				\caption{A magas, B alacsony feszültségi szint}
+				\label{fig:first}
+			\end{figure}
+			\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.50]{./images/secondenc}
+			\caption{A magas B magas feszültségi szint}
+			\label{fig:second}
+			\end{figure}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.50]{./images/thirdenc}
+				\caption{A alacsony B magas feszültségi szint}
+				\label{fig:third}
+			\end{figure}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.50]{./images/forthenc}
+				\caption{A alacsony B alacsony feszültségi szint}
+				\label{fig:forth}
+			\end{figure}
+			\par Korábban megbeszéltük, hogy míg egy óramutató járásával megegyezően forgó encoder A és B kimeneti pinjei eltérő értékeket vesznek fel, a folyamat teljes felírása után láthatjuk, hogy ellentétes forgás során mindkét pin értéke azonos lesz. A további képeken a feszültségi szinteket láthatjuk a forgási irányok megváltoztatása során.
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.50]{./images/fullenc}
+				\caption{Feszültségi szintek változása óramutató járásával megegyezően}
+				\label{fig:fullenc}
+			\end{figure}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=1.2]{./images/fullencback}
+				\caption{Feszültségi szintek változása óramutató járásával ellentétesen}
+				\label{fig:fullencback}
+			\end{figure}
+		\clearpage
 		\subsection{I2C}
+			\par Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		\subsection{title}
 
 \begin{tetel}
@@ -510,5 +553,7 @@ Megjegyzés szövege.
 \textsc{\url{https://go.gale.com/ps/i.do?p=SCIC&u=dclib_main&v=2.1&it=r&id=GALE\%7CENKDZQ347975681&asid=1618891200000~6b0db278}}
 \bibitem{encoder}
 \textsc{\url{https://hu.wikipedia.org/wiki/Érzékelő}}
+\bibitem{encoderwiki}
+\textsc{\url{https://en.wikipedia.org/wiki/Rotary_encoder}}
 \end{thebibliography}
 \end{document}
