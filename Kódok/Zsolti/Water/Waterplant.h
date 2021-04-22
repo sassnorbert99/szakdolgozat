@@ -8,7 +8,7 @@ class Waterplant
         /** Default constructor */
         Waterplant(int _felsotartaly,int _alsotartaly,int _szivattyu,int _csap );
         /** Default destructor */
-        virtual ~Waterplant();
+       
         int felsotartaly,alsotartaly,szivattyu,csap;
         
         void Szivattyuzasindit();

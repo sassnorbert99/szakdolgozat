@@ -17,7 +17,7 @@ Solarplant::Solarplant(int _lrpin, int _udpin,
     udposition=0;
     
     
-    diff=40;
+    diff=150;
     delaytime=20;
     
 }
