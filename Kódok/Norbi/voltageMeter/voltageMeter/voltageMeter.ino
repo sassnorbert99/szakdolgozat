@@ -41,17 +41,17 @@ void loop()
 {
   lcd.display();
   int value = analogRead(inPin);         //Read the signal at pin A0 and result put on variable value
-  
+  int count = 3;
   float volts = (value / 1024.0) * 5;    //Convert 1024 levels in Volts value
   float amper = 0.52;
   float kW = (volts * amper) / 1000;
 
   
   lcd.setCursor(10,0);                   //Put the cursor at second row and the first column
-  lcd.print(volts);                      //Print volts value
+  lcd.print(count * volts);                      //Print volts value
   lcd.print("V");                       //print V symbol
   lcd.setCursor(6,1);                   //Put the cursor at second row and the first column
-  lcd.print(kW, 6);
+  lcd.print(count * kW, 6);
   lcd.print("k");
   lcd.print("W");
   delay(500);
