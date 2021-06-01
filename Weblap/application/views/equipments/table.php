@@ -1,19 +1,5 @@
 
-<?php /*
-$statement="SELECT username,currentpage,visitdate FROM users WHERE currentpage='".$title."'";
-var_dump($statement);
-        
-        $conn = mysqli_connect("89.40.126.232:8080", "varazstorony", "VarazsTorony_18", "varazstorony") or die("Connection Error: " . mysqli_error($conn));
-        $result=mysqli_query($conn,$statement );
-        $insert_id = mysqli_insert_id($conn);
-        var_dump($result);
-
-        while( $row = mysqli_fetch_assoc( $result)){
-            $rows[] = $row; // Inside while loop
-}
-        var_dump($this->session->all_userdata());
-
-*/
+<?php 
 
 ?>
 <style type="text/css">
@@ -21,10 +7,7 @@ var_dump($statement);
   background: #000;
 
 }
-/*body {
- background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
- background-color: #cccccc;
-}*/
+
 .shimmer {
   font-family: "Lato";
   font-weight: 300;
@@ -365,8 +348,7 @@ require_once('mqtt.php');
       
         jQuery(function() {
 
-            // Schedule the reloadNames function to run every 5 seconds.
-            // So, the list of names will be updated every 5 seconds.
+            
 
             setInterval(waiterssystem, 2000);
           
@@ -385,7 +367,7 @@ require_once('mqtt.php');
       waiters=data;
       });
         try{
-           //var waiters=document.getElementById("waiters").innerHTML; 
+         
          waiters = jQuery.parseJSON(waiters);
        
          var currentuser= "<?php echo $_SESSION['username']; ?>";
@@ -427,10 +409,7 @@ require_once('mqtt.php');
         }
 
 
-        //var a=document.getElementById("waitermessage").innerHTML;
-        //var currentValue = parseInt($("#waitermessage").text(),10);
-        //currentValue=currentValue+1;
-        //document.getElementById("waitermessage").innerHTML = currentValue;
+        
         
     }
 

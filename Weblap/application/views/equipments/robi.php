@@ -273,8 +273,7 @@ require_once('mqtt.php');
       
         jQuery(function() {
 
-            // Schedule the reloadNames function to run every 5 seconds.
-            // So, the list of names will be updated every 5 seconds.
+            
 
             setInterval(waiterssystem, 2000);
           
@@ -294,7 +293,7 @@ require_once('mqtt.php');
       });
         
         try{
-          //var waiters=document.getElementById("waiters").innerHTML; 
+        
          waiters = jQuery.parseJSON(waiters);
          
          var currentuser= "<?php echo $_SESSION['username']; ?>";
@@ -336,10 +335,7 @@ require_once('mqtt.php');
          
 
 
-        //var a=document.getElementById("waitermessage").innerHTML;
-        //var currentValue = parseInt($("#waitermessage").text(),10);
-        //currentValue=currentValue+1;
-        //document.getElementById("waitermessage").innerHTML = currentValue;
+        
     }
 
     

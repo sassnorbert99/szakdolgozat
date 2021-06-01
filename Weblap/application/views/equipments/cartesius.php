@@ -17,10 +17,7 @@
   background: #000;
 
 }
-/*body {
- background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
- background-color: #cccccc;
-}*/
+
 .shimmer {
   font-family: "Lato";
   font-weight: 300;

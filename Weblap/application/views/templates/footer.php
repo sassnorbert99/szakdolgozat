@@ -85,7 +85,7 @@ $(document).ready(function() {
         <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/badget.js"></script>
          <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/functiontofindIndexByKeyValue.js"></script>
       <!--For hiding navbar -->
-      <!--https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp-->
+     
     <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/navigation.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/changevisibility.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/countdown.js"></script>
@@ -95,10 +95,7 @@ $(document).ready(function() {
       <!-- ------------------ -->
        <script type="text/javascript" src="<?php echo base_url()?>/assets/scripts/userexit.js"></script>
     
-       <!-- 
-        <script type="text/javascript" src="<?php echo base_url()?>/assets/qrCode/qr-scanner.min.js"></script>
-       <script type="text/javascript" src="<?php echo base_url()?>/assets/qrCode/qr-scanner-worker.min.js"></script>
-       -->
+      
       
      
 

@@ -6,7 +6,7 @@
 				
 				
 				
-				$conn = mysqli_connect("89.40.126.232:8080", "varazstorony", "VarazsTorony_18", "varazstorony") or die("Connection Error: " . mysqli_error($conn));
+				$conn = mysqli_connect() or die("Connection Error: " . mysqli_error($conn));
 				$result=mysqli_query($conn,$statement );
 				$insert_id = mysqli_insert_id($conn);
 				$rows=array();
