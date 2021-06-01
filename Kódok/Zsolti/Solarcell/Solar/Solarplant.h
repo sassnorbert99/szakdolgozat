@@ -9,18 +9,15 @@ class Solarplant
          Solarplant(int _lrpin, int _udpin,
                int _leftport,int _rightport,int _upport,int _downport);
 
-        /** Default destructor */
-        virtual ~Solarplant();
-
-        int lrpint,udpin;
+       int lrpint,udpin;
         int leftport,rightport,upport,downport;
         int lrposition,udposition;
         int left,right,up,down;
         int diff;
         int delaytime;
         
-        Servo leftright;
-        Servo updown;
+        Servo horizontal;
+        Servo vertical;
         bool enabled;
 
 

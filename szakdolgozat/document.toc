@@ -1,68 +1,68 @@
-\select@language {magyar} \contentsline {chapter}{\numberline {1}Rendszerr\IeC {\H o}l \IeC {\"o}sszefoglal\IeC {\'o}an}{5}{chapter.1}% 
-\select@language {magyar} \contentsline {section}{\numberline {1.1}Tudom\IeC {\'a}nyos Di\IeC {\'a}kk\IeC {\"o}ri Konferencia}{5}{section.1.1}% 
-\select@language {magyar} \contentsline {section}{\numberline {1.2}El\IeC {\H o}ny\IeC {\"o}k \IeC {\'e}s h\IeC {\'a}tr\IeC {\'a}nyok}{5}{section.1.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {1.3}rajzok ismertet\IeC {\'e}se}{5}{section.1.3}% 
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Rendszer\IeC {\"u}nk m\IeC {\H u}k\IeC {\"o}d\IeC {\'e}se}{6}{chapter.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Terepasztalunk mozgat\IeC {\'a}sa}{6}{section.2.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Nap\IeC {\'a}ll\IeC {\'a}s kalkul\IeC {\'a}tor}{6}{subsection.2.1.1}% 
-\select@language {magyar} \contentsline {subsubsection}{Napfelkelte, naplemente kisz\IeC {\'a}m\IeC {\'\i }t\IeC {\'a}sa}{10}{section*.3}% 
-\select@language {magyar} \contentsline {subsubsection}{Asztal forgat\IeC {\'a}sa}{11}{section*.4}% 
-\select@language {magyar} \contentsline {subsubsection}{Hibakezel\IeC {\'e}sek}{13}{section*.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Nap\IeC {\'a}ll\IeC {\'a}s kalkul\IeC {\'a}tor - Rest API}{13}{subsection.2.1.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.2}Szimul\IeC {\'a}ci\IeC {\'o}k}{13}{section.2.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Fogyaszt\IeC {\'o} probl\IeC {\'e}ma szimul\IeC {\'a}l\IeC {\'a}sa}{13}{subsection.2.2.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}V\IeC {\'\i }zer\IeC {\H o}m\IeC {\H u} szimul\IeC {\'a}l\IeC {\'a}sa}{17}{subsection.2.2.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}Napcell\IeC {\'a}k teljes\IeC {\'\i }tm\IeC {\'e}ny\IeC {\'e}nek szimul\IeC {\'a}l\IeC {\'a}sa}{19}{subsection.2.2.3}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.2.4}Encoder m\IeC {\H u}k\IeC {\"o}d\IeC {\'e}s\IeC {\'e}nek szimul\IeC {\'a}l\IeC {\'a}sa}{22}{subsection.2.2.4}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.3}optimaliz\IeC {\'a}l\IeC {\'a}s}{26}{section.2.3}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k optimaliz\IeC {\'a}l\IeC {\'a}sa, t\IeC {\'a}jol\IeC {\'a}sa}{26}{subsection.2.3.1}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.4}Termel\IeC {\H o}k \IeC {\'e}s fogyaszt\IeC {\'o}k}{27}{section.2.4}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}termel\IeC {\H o}k ismertet\IeC {\'e}se}{27}{subsection.2.4.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}fogyaszt\IeC {\'o}k ismertet\IeC {\'e}se}{27}{subsection.2.4.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.5}modellek}{28}{section.2.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}Id\IeC {\H o}j\IeC {\'a}r\IeC {\'a}s \IeC {\'a}llom\IeC {\'a}s}{28}{subsection.2.5.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}Fogyaszt\IeC {\'o}k modellez\IeC {\'e}se}{31}{subsection.2.5.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.6}protot\IeC {\'\i }pusok}{36}{section.2.6}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k protot\IeC {\'\i }pusai}{36}{subsection.2.6.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}intelligens napcell\IeC {\'a}k protot\IeC {\'\i }pusai}{37}{subsection.2.6.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.7}Napcell\IeC {\'a}k}{37}{section.2.7}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}telep\IeC {\'\i }tett napcell\IeC {\'a}k}{37}{subsection.2.7.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}intelligens napcell\IeC {\'a}k}{37}{subsection.2.7.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {2.7.3}napcell\IeC {\'a}k integr\IeC {\'a}ci\IeC {\'o}ja}{37}{subsection.2.7.3}% 
-\select@language {magyar} \contentsline {section}{\numberline {2.8}V\IeC {\'\i }zer\IeC {\H o}m\IeC {\H u}}{37}{section.2.8}% 
-\select@language {magyar} \contentsline {chapter}{\numberline {3}Weblap}{38}{chapter.3}% 
-\select@language {magyar} \contentsline {section}{\numberline {3.1}Bevezet\IeC {\'e}s}{38}{section.3.1}% 
-\select@language {magyar} \contentsline {section}{\numberline {3.2}CodeIgniter keretrendszer}{38}{section.3.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {3.3}Adatb\IeC {\'a}zis}{39}{section.3.3}% 
-\select@language {magyar} \contentsline {section}{\numberline {3.4}Weblapr\IeC {\'o}l}{40}{section.3.4}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Az eszk\IeC {\"o}z\IeC {\"o}k vez\IeC {\'e}rl\IeC {\'e}se}{40}{subsection.3.4.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Bel\IeC {\'e}ptet\IeC {\H o} modul}{40}{subsection.3.4.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}Kezd\IeC {\H o}lap}{40}{subsection.3.4.3}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}R\IeC {\'o}lunk}{40}{subsection.3.4.4}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.5}Blog}{40}{subsection.3.4.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.6}Kateg\IeC {\'o}ri\IeC {\'a}k}{41}{subsection.3.4.6}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.7}T\IeC {\'e}rk\IeC {\'e}p}{41}{subsection.3.4.7}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.8}Jelmagyar\IeC {\'a}zat a t\IeC {\'e}rk\IeC {\'e}phez}{42}{subsection.3.4.8}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.9}Eszk\IeC {\"o}z\IeC {\"o}k}{42}{subsection.3.4.9}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.10}V\IeC {\'a}r\IeC {\'o}lista}{43}{subsection.3.4.10}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.11}Kv\IeC {\'\i }z lehet\IeC {\H o}s\IeC {\'e}g}{43}{subsection.3.4.11}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.12}Felhaszn\IeC {\'a}l\IeC {\'o}k}{44}{subsection.3.4.12}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.13}Poszt k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{44}{subsection.3.4.13}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.14}Kateg\IeC {\'o}ria k\IeC {\'e}sz\IeC {\'\i }t\IeC {\'e}se}{44}{subsection.3.4.14}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.15}Kapcsolatfelv\IeC {\'e}tel}{44}{subsection.3.4.15}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.16}Gal\IeC {\'e}ria}{45}{subsection.3.4.16}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {3.4.17}\IeC {\"O}sszefoglal\IeC {\'o}}{45}{subsection.3.4.17}% 
-\select@language {magyar} \contentsline {chapter}{\numberline {4}Fejleszt\IeC {\H o}i k\IeC {\"o}rnyezetek \IeC {\'e}s publik\IeC {\'a}ci\IeC {\'o}i}{47}{chapter.4}% 
-\select@language {magyar} \contentsline {section}{\numberline {4.1}Git verzi\IeC {\'o}k\IeC {\"o}vet\IeC {\H o} rendszer}{47}{section.4.1}% 
-\select@language {magyar} \contentsline {section}{\numberline {4.2}Trello feladatk\IeC {\"o}vet\IeC {\H o} rendszer}{48}{section.4.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {4.3}Technol\IeC {\'o}gi\IeC {\'a}k}{49}{section.4.3}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Python}{49}{subsection.4.3.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}PHP nyelv}{49}{subsection.4.3.2}% 
-\select@language {magyar} \contentsline {section}{\numberline {4.4}Arduino szenzorok \IeC {\'e}s kell\IeC {\'e}kek ismertet\IeC {\'e}se}{49}{section.4.4}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}Arduino UNO}{49}{subsection.4.4.1}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}Arduino NANO}{49}{subsection.4.4.2}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.3}16 x 2 LCD kijelz\IeC {\H o}}{49}{subsection.4.4.3}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.4}Dht11}{49}{subsection.4.4.4}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.5}Encoder}{49}{subsection.4.4.5}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.6}I2C}{52}{subsection.4.4.6}% 
-\select@language {magyar} \contentsline {subsection}{\numberline {4.4.7}title}{52}{subsection.4.4.7}% 
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Rendszerről összefoglalóan}{5}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Tudományos Diákköri Konferencia}{5}{section.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Előnyök és hátrányok}{5}{section.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {1.3}rajzok ismertetése}{5}{section.1.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Rendszerünk működése}{6}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Terepasztalunk mozgatása}{6}{section.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Napállás kalkulátor}{6}{subsection.2.1.1}%
+\select@language {magyar} \contentsline {subsubsection}{Napfelkelte, naplemente kiszámítása}{10}{section*.3}%
+\select@language {magyar} \contentsline {subsubsection}{Asztal forgatása}{11}{section*.4}%
+\select@language {magyar} \contentsline {subsubsection}{Hibakezelések}{13}{section*.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Napállás kalkulátor - Rest API}{13}{subsection.2.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Szimulációk}{13}{section.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Fogyasztó probléma szimulálása}{13}{subsection.2.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Vízerőmű szimulálása}{17}{subsection.2.2.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.3}Napcellák teljesítményének szimulálása}{19}{subsection.2.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.2.4}Encoder működésének szimulálása}{22}{subsection.2.2.4}%
+\select@language {magyar} \contentsline {section}{\numberline {2.3}optimalizálás}{26}{section.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}telepített napcellák optimalizálása, tájolása}{26}{subsection.2.3.1}%
+\select@language {magyar} \contentsline {section}{\numberline {2.4}Termelők és fogyasztók}{27}{section.2.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}termelők ismertetése}{27}{subsection.2.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}fogyasztók ismertetése}{27}{subsection.2.4.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.5}modellek}{28}{section.2.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}Időjárás állomás}{28}{subsection.2.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}Fogyasztók modellezése}{31}{subsection.2.5.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.6}prototípusok}{36}{section.2.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}telepített napcellák prototípusai}{36}{subsection.2.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}intelligens napcellák prototípusai}{37}{subsection.2.6.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.7}Napcellák}{37}{section.2.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.1}telepített napcellák}{37}{subsection.2.7.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.2}intelligens napcellák}{37}{subsection.2.7.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.7.3}napcellák integrációja}{37}{subsection.2.7.3}%
+\select@language {magyar} \contentsline {section}{\numberline {2.8}Vízerőmű}{37}{section.2.8}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Weblap}{38}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}Bevezetés}{38}{section.3.1}%
+\select@language {magyar} \contentsline {section}{\numberline {3.2}CodeIgniter keretrendszer}{38}{section.3.2}%
+\select@language {magyar} \contentsline {section}{\numberline {3.3}Adatbázis}{39}{section.3.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.4}Weblapról}{40}{section.3.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.1}Az eszközök vezérlése}{40}{subsection.3.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.2}Beléptető modul}{40}{subsection.3.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.3}Kezdőlap}{40}{subsection.3.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.4}Rólunk}{40}{subsection.3.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.5}Blog}{40}{subsection.3.4.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.6}Kategóriák}{41}{subsection.3.4.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.7}Térkép}{41}{subsection.3.4.7}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.8}Jelmagyarázat a térképhez}{42}{subsection.3.4.8}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.9}Eszközök}{42}{subsection.3.4.9}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.10}Várólista}{43}{subsection.3.4.10}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.11}Kvíz lehetőség}{43}{subsection.3.4.11}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.12}Felhasználók}{44}{subsection.3.4.12}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.13}Poszt készítése}{44}{subsection.3.4.13}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.14}Kategória készítése}{44}{subsection.3.4.14}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.15}Kapcsolatfelvétel}{44}{subsection.3.4.15}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.16}Galéria}{45}{subsection.3.4.16}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.4.17}Összefoglaló}{45}{subsection.3.4.17}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Fejlesztői környezetek és publikációi}{47}{chapter.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Git verziókövető rendszer}{47}{section.4.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Trello feladatkövető rendszer}{48}{section.4.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Technológiák}{49}{section.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Python}{49}{subsection.4.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}PHP nyelv}{49}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Arduino szenzorok és kellékek ismertetése}{49}{section.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}Arduino UNO}{49}{subsection.4.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}Arduino NANO}{49}{subsection.4.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.3}16 x 2 LCD kijelző}{49}{subsection.4.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.4}Dht11}{49}{subsection.4.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.5}Encoder}{49}{subsection.4.4.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.6}I2C}{52}{subsection.4.4.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.7}title}{52}{subsection.4.4.7}%

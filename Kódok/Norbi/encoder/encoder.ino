@@ -21,7 +21,7 @@ boolean operate;
    aValue = digitalRead(pinA);
    if (aValue != lastPin)
    { 
-     if (digitalRead(pinB) != aVal) //We're Rotating Clockwise
+     if (digitalRead(pinB) != aValue) //We're Rotating Clockwise
      { 
        count ++;
        operate = true;  
