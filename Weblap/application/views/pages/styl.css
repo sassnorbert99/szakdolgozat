@@ -1,0 +1,1937 @@
+input[type=text]::-webkit-input-placeholder {
+	color: #004c6a;
+}
+
+input[type=text]:-moz-placeholder {
+	color: #004c6a; 
+}
+
+input[type=text]::-moz-placeholder {
+	color: #004c6a;
+}
+
+input[type=text]:-ms-input-placeholder {  
+	color: #004c6a;  
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif);
+	background-position: center -630px;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+}
+
+/* FÅ‘ keret */
+#main {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* FelsÅ‘ nyelvvÃ¡lasztÃ³ Ã©s keresÅ‘ */
+#main #langSearchBox {
+	height: 40px;
+	background-color: rgba(255,255,255,0.4);
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+	position: relative;
+	z-index: 1000;
+}
+
+/* Nyelvek listÃ¡ja */
+#main #langSearchBox ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 30px;
+}
+
+#main #langSearchBox ul li {
+	color: #004467;
+	font-family: 'alegreya_sansregular';
+	font-size: 13px;
+	text-transform: uppercase;
+	float: left;
+	line-height: 40px;
+	margin: 0 5px 0 0;
+}
+
+#main #langSearchBox ul li a {
+	color: #004466;
+	text-decoration: none;
+	display: block;
+}
+
+#main #langSearchBox ul li a:hover {
+	color: #5699b9;
+	text-decoration: none;
+}
+
+/*.countdown_container {
+	font-family: 'alegreya_sansregular';
+	font-weight: normal;
+	position: relative;
+	background: url('../images/szamlalo_vegleges_kilogo.png') no-repeat;
+	width: 960px;
+	height: 110px;
+	margin-top: 10px;
+}
+.countdown_container .countDown {
+	font-family: alegreya_sanslight;
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 315px;
+    margin-left: -145px;
+}
+.countdown_container .countDown .el {
+	background: #013c53;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    margin-right: 10px;
+}
+.countdown_container .countDown .el.light {
+	background: #0066cc;
+	padding: 5px 5px 5px 5px;
+}
+.countdown_container .countDown .el .number {
+	font-size: 50px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+.countdown_container .countDown .el .desc {
+	font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 19px 0 0 0;
+    line-height: 12px;
+	letter-spacing: 1px;
+}
+*/
+
+.contact_container {
+	font-family: alegreya_sansregular;
+    font-weight: normal;
+    font-size: 15px;
+    width: 576px;
+    height: 25px;
+    padding-top: 12px;
+    padding-left: 44px;
+    display: inline-block;
+    text-align: center;
+    color: #004c6a;
+}
+
+/* blind icon */
+li.blind a {
+	display: block;
+	width: 27px;
+	height: 27px;
+	background: url('images/LatasserultJel.png') no-repeat 0 6px;
+	padding-top: 6px;
+	margin-right: 6px;
+}
+
+
+/* KeresÅ‘ doboz */
+#main #langSearchBox #search {
+	position: absolute;
+	top: 4px;
+	right: 24px;
+	width: 95px;
+	height: 26px;
+	background: none;
+	background-image: url(../images/searchInputBg.png);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	border: 0px solid #ffffff;
+	padding: 0 30px 0 5px;
+	color: #004467;
+	font-family: 'alegreya_sansregular';
+	font-size: 13px;
+	outline: none;
+}
+
+/* NagyÃ­tÃ³ */
+#main #langSearchBox #searchBtn {
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	width: 17px;
+	height: 15px;
+	background: none;
+	background-image: url(../images/searchButton.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	border: 0px solid #ffffff;
+	color: transparent;
+	cursor: pointer;
+}
+
+/* FelsÅ‘ menÃ¼ */
+#main #topMenuBox {
+	height: 60px;
+	/*	overflow: hidden;*/
+}
+
+#main #topMenuBox ul, #main #topMenuBox ul li ul.submenu {
+	position: relative;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 25px;
+}
+
+#main #topMenuBox ul li {
+	color: #004c6a;
+	font-family: 'alegreya_sanslight';
+	font-size: 14px;
+	text-transform: uppercase;
+	float: left;
+	line-height: 60px;
+}
+
+#main #topMenuBox ul li a {
+	font-family: 'alegreya_sansblack';
+	color: #004c6a;
+	text-decoration: none;
+	display: block;
+	padding: 0 8px;
+}
+
+#main #topMenuBox ul li:hover a {
+	color: #ffffff;
+	background-color: #5799b9;
+	text-decoration: none;
+}
+
+#main #topMenuBox ul li:hover ul.submenu {
+	display: block;
+}
+
+#main #topMenuBox ul li ul.submenu {
+	background-color: #5799b9;
+	display: none;
+	position: absolute;
+	list-style-type: none;
+	padding: 20px 0 20px 10px;
+	margin: 0;
+	top: 60px;
+	left: 0;
+	width: 950px;
+	z-index: 1000;
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);	
+}
+
+#main #topMenuBox ul li ul.submenu li {
+	font-size: 14px;
+	line-height: 28px;
+	text-transform: none;
+	padding: 5px 0;
+}
+
+#main #topMenuBox ul li ul.submenu li a {
+	color: #ffffff;
+	width: 220px;
+	padding: 0;
+	margin: 0 0 0 15px;
+	line-height: 20px;
+	font-family: 'alegreya_sanslight';
+}
+
+#main #topMenuBox ul li ul.submenu li a:hover {
+	color: #000000;
+	/*font-family: 'alegreya_sansblack';*/
+}
+
+/* LogÃ³, naptÃ¡r, slide */
+#main #slideBox {
+	position: relative;
+	height: 360px;
+}
+
+#main #slideBox #logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 130px;
+	background-color: #ffffff;
+	background-image: url(../images/logo.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#main #slideBox #calendar {
+	position: absolute;
+	top: 130px;
+	left: 0;
+	width: 240px;
+	height: 230px;
+	background-color: #004b69;
+}
+
+#main #slideBox #slider {
+	position: absolute;
+	top: 0;
+	left: 240px;
+	width: 720px;
+	height: 360px;
+}
+
+#main #slideBox #slider ul li .overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 240px;
+	height: 360px;
+	background-color: rgba(0,75,105,0.8);
+}
+
+#main #slideBox #slider ul li .overlay h1 {
+	padding: 60px 40px 0 40px;
+	font-size: 19px;
+	font-family: 'alegreya_sansblack';
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+#main #slideBox #slider ul li .overlay h1 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#main #slideBox #slider ul li .overlay h1 a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#main #slideBox #slider ul li .overlay p {
+	padding: 20px 40px 0 40px;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'alegreya_sansregular';
+}
+
+/* Tartalom */
+#main #contentBox {
+	position: relative;
+}
+
+#main #contentBox #topBox {
+	position: relative;
+	height: 130px;
+}
+
+#main #contentBox #topBox #logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 240px;
+	height: 130px;
+	background-color: #ffffff;
+	background-image: url(../images/logo.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#main #contentBox #topBox #midiButtons {
+	width: 720px;
+	height: 60px;
+	margin: 0 0 0 240px;
+}
+
+#main #contentBox #topBox #midiButtons ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main #contentBox #topBox #midiButtons ul li {
+	float: left;
+	width: 120px;
+	height: 60px;
+	background-image: url(../images/buttons.png);
+}
+
+#main #contentBox #topBox #midiButtons ul li a {
+	/*	display: block;*/
+}
+
+#main #contentBox #topBox #midiButtons ul li img {
+	border: 0px solid #ffffff;
+	width: 120px;
+	height: 75px;
+}
+
+#main #contentBox #topBox #submenu {
+	height: 70px;
+	width: 720px;
+	margin: 0 0 0 240px;
+}
+
+#main #contentBox #topBox #submenu ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 3px 0 0 0;
+	text-align: center;
+}
+
+#main #contentBox #topBox #submenu ul li {
+	color: #ffffff;
+	font-family: 'alegreya_sanslight';
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 30px;
+	display: inline-block;
+}
+
+#main #contentBox #topBox #submenu ul li a {
+	font-family: 'alegreya_sansblack';
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0 2px;
+}
+
+#main #contentBox #topBox #submenu ul li a:hover {
+	color: #458299;
+	text-decoration: none;
+}
+
+#main #contentBox #container {
+	display: table;
+	width: 960px;
+	height: 600px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+#main #contentBox #container #leftMenu {
+	display: table-cell;
+	width: 240px;
+	padding: 15px 0 0 0;
+}
+
+#main #contentBox #container #leftMenu ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 20px 0 20px;
+}
+
+#main #contentBox #container #leftMenu ul li {
+	font-family: 'alegreya_sansregular';
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#main #contentBox #container #leftMenu ul li a {
+	color: #004c6a;
+	text-decoration: none;
+	display: block;
+	padding: 5px 0;
+}
+
+#main #contentBox #container #leftMenu ul li a strong {
+	font-family: 'alegreya_sansblack';	
+	font-size: 16px;
+	display: block;
+	padding: 25px 0 0 0;
+}
+
+#main #contentBox #container #leftMenu.ck-left ul li a,
+ #main #contentBox #container #leftMenu.gtk-left ul li a, 
+ #main #contentBox #container #leftMenu.ttk-left ul li a, 
+ #main #contentBox #container #leftMenu.tktk-left ul li a,
+ #main #contentBox #container #leftMenu.avk-left ul li a, 
+ #main #contentBox #container #leftMenu.ik-left ul li a {
+	color: #ffffff;
+}
+
+#main #contentBox #container #leftMenu ul li a:hover {
+	color: #004c6a;
+	text-decoration: none;
+}
+
+.main-left {
+	background-color: #99b7c3;
+}
+
+.btk-left {
+	background-color: #fac145;
+}
+
+.ck-left {
+	background-color: #c90538;
+}
+
+.gtk-left {
+	/*background-color: #af6410;*/
+	background-color: #60543D;
+}
+
+.tktk-left {
+	background-color: #00ACA6;
+}
+
+.ttk-left {
+	background-color: #85A63C;
+}
+
+.avk-left {
+	background-color: #336600;
+}
+
+.ik-left {
+	background-color: #8f2531;
+}
+
+/* BelsÅ‘ oldal tartalma*/
+#main #contentBox #container #contentText {
+	display: table-cell;
+	width: 720px;
+	max-width: 720px;
+}
+
+/* KenyÃ©rmorzsa menÃ¼ */
+#main #contentBox #container #contentText #breadcrumb {
+	padding: 0 0 0 30px;
+	color: #004b69;
+}
+
+#main #contentBox #container #contentText #breadcrumb a {
+	font-family: 'alegreya_sanslight';
+	font-size: 14px;
+	color: #004b69;
+	text-transform: uppercase;
+	padding: 0 3px 0 0;
+	text-decoration: none;
+}
+
+#innerContent {
+	position: relative;
+}
+
+/* BelsÅ‘ oldalak cÃ­msorai */
+#main #contentBox #container #contentText h1, #main #contentBox #container #contentText h2 {
+	font-family: 'alegreya_sansblack';
+	font-size: 22px;
+	color: #004b69;
+	text-transform: uppercase;
+	padding: 10px 30px 0 30px;
+}
+
+#main #contentBox #container #contentText h1 a, #main #contentBox #container #contentText h2 a {
+	color: #004b69;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText h1 a:hover, #main #contentBox #container #contentText h2 a:hover {
+	color: #004b69;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText h3 {
+	font-family: 'alegreya_sansbold';
+	font-size: 14px;
+	color: #004b69;
+	text-transform: uppercase;
+	/*	padding: 0 30px 10px 30px;*/
+}
+
+#main #contentBox #container #contentText h3 a {
+	color: #004b69;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText h3 a:hover {
+	color: #004b69;
+	text-decoration: none;
+}
+
+/* BerlsÅ‘ oldal cikk */
+#main #contentBox #container #contentText p {
+	padding: 10px 30px;
+	font-family: 'alegreya_sansregular';
+	font-size: 14px;
+	color: #004b69;
+	line-height: 16px;
+}
+
+#main #contentBox #container #contentText p strong {
+	font-family: 'alegreya_sansblack';
+}
+
+#main #contentBox #container #contentText p img {
+	padding: 0 10px 10px 0;
+	max-width:100%;
+}
+
+#main #contentBox #container #contentText ul {
+	padding: 10px 30px;
+} 
+
+#main #contentBox #container #contentText ul li {
+	font-family: 'alegreya_sansregular';
+	font-size: 14px;
+	color: #004b69;
+	line-height: 16px;
+} 
+
+#main #contentBox #container #contentText ul li a {
+	text-decoration: underline;
+	color: #004b69;
+}
+
+#main #contentBox #container #contentText ul li a:hover {
+	text-decoration: none;
+	color: #004b69;
+}
+
+#main #contentBox #container #contentText p a {
+	color: #004b69;
+	text-decoration: underline;
+}
+
+#main #contentBox #container #contentText p a:hover {
+	color: #004b69;
+	text-decoration: none;
+}
+
+/* BelsÅ‘ oldal cikk, kÃ©ppel */
+#main #contentBox #container #contentText div.withImage {
+	position: relative;
+	padding: 10px 30px;
+}
+
+#main #contentBox #container #contentText div.withImage img {
+	padding: 0 40px 0 0;
+}
+
+#main #contentBox #container #contentText div.withImage p {
+	position: absolute;
+	bottom: 0; 
+	left: 150px;
+}
+
+#main #contentBox #container #contentText div.withImage p strong {
+	font-family: 'alegreya_sansbold';
+	text-transform: uppercase;
+}
+
+#main #contentBox #container #contentText div.withImage p a {
+	color: #004b69;
+	text-decoration: underline;
+}
+
+#main #contentBox #container #contentText div.withImage p a:hover{
+	color: #004b69;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText p a.more {
+	font-family: 'alegreya_sansbold';
+	font-size: 14px;
+	color: #004b69;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText p a.more:hover {
+	color: #004b69;
+	text-decoration: none;
+}
+
+#main #contentBox #container #contentText #breadcrumb a:hover {
+	text-decoration: none;
+}
+
+.main-submenu {
+	background-color: #004b69;
+}
+
+.btk-submenu {
+	background-color: #fac145;
+}
+
+.ck-submenu {
+	background-color: #c90538;
+}
+
+.gtk-submenu {
+	background-color: #60543D;
+}
+
+.tktk-submenu {
+	background-color: #00ACA6;
+}
+
+.ttk-submenu {
+	background-color: #85A63C;
+}
+
+.avk-submenu {
+	background-color: #336600;
+}
+
+.ik-submenu {
+	background-color: #8f2531;
+}
+
+#main #toolbar {
+        background-image: url(../images/sideBar.png);
+        background-position:  top left;
+        background-repeat: no-repeat;
+        height: 100%; 
+	top: 0; 
+	left: -10px; 
+	width: 43px; 
+	position: absolute; 
+	z-index: 8000;
+}
+
+#main #toolbar ul {
+	list-style-type: none;
+	padding: 10px 0 0 30px;
+	margin: 0;
+}
+
+#main #toolbar ul li {
+	color: #ffffff;
+	font-family: 'alegreya_sansregular';
+	font-size: 14px;
+	padding: 10px 0;
+        text-transform: uppercase;
+        width: 200px;
+}
+
+#main #toolbar ul li.title {
+    font-size: 18px;
+    font-family: 'alegreya_sansblack';
+}
+
+#main #toolbar ul li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#main #toolbar ul li a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+/*
+#main #toolbar #btn {
+	position: absolute; 
+	top: 405px; 
+	right: -29px; 
+	width: 39px; 
+	height: 64px; 
+	background-image: url(../images/toolbarArrow1.png);
+	background-position: top right; 
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#main #toolbar #btn.isDown {
+	background-image: url(../images/toolbarArrow.png);
+	background-position: top right; 
+	background-repeat: no-repeat;
+}
+*/
+#main #toolbar .text {
+	position: absolute;
+	top: 365px;
+	left: -60px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	writing-mode: tb-rl;
+	font-family: 'alegreya_sansbold';
+	font-size: 12px;
+	color: #004e6d;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* Piktogrammok */
+#main #slideBox #widget, #main #contentBox #widget {
+	position: absolute;
+	top: 0px;
+	left: 965px;
+	width: 50px;
+	height: 360px;
+}
+
+#main #slideBox #widget ul, #main #contentBox #widget ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main #slideBox #widget ul li, #main #contentBox #widget ul li {
+	width: 43px;
+	height: 43px;
+	margin: 0 0 5px 0;
+	background-color: #00385a;
+	background-image: url(../images/icons.png);
+	-webkit-box-shadow: 0px 4px 3px 0px rgba(0, 56, 90, 0.5);
+	-moz-box-shadow:    0px 4px 3px 0px rgba(0, 56, 90, 0.5);
+	box-shadow:         0px 4px 3px 0px rgba(0, 56, 90, 0.5);
+	/*	
+		-webkit-box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.5);
+		box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.5);
+	*/	
+}
+
+#main #slideBox #widget ul li a, #main #contentBox #widget ul li a {
+	display: block;
+}
+
+#main #slideBox #widget ul li img, #main #contentBox #widget ul li img {
+	border: 0px solid #ffffff;
+	width: 43px;
+	height: 43px;
+}
+
+.competition-icon {
+	background-position: 0 43px;
+}
+
+.competition-icon:hover {
+	background-position: 42px 43px;
+}
+
+
+.television-icon {
+	background-position: 0 0;
+}
+
+.television-icon:hover {
+	background-position: 43px 0;
+}
+
+.library-icon {
+	background-position: 0 344px;
+}
+
+.library-icon:hover {
+	background-position: 43px 344px;
+}
+
+.sport-icon {
+	background-position: 0 301px;
+}
+
+.sport-icon:hover {
+	background-position: 44px 301px;
+}
+
+.elearning-icon {
+	background-position: 0 258px;
+}
+
+.elearning-icon:hover {
+	background-position: 43px 258px;
+}
+
+.eoc-icon {
+	background-position: 0 215px;
+}
+
+.eoc-icon:hover {
+	background-position: 43px 215px;
+}
+
+.webmail-icon {
+	background-position: 0 172px;
+}
+
+.webmail-icon:hover {
+	background-position: 43px 172px;
+}
+
+.phone-icon {
+	background-position: 0 129px;
+}
+
+.phone-icon:hover {
+	background-position: 43px 129px;
+}
+
+.social-icon {
+	background-position: 0 86px;
+}
+
+.social-icon:hover {
+	background-position: 43px 86px;
+}
+
+/* Slider finomhangolÃ¡s*/
+.bx-wrapper .bx-viewport  {
+	border: 0 solid #ffffff;
+	left: 0;
+	box-shadow: none;
+}
+
+.bx-wrapper {
+	margin: 0;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+	right: 0;
+	width: 240px;
+	bottom: 30px;
+	z-index: 1000;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	border: 1px solid #ffffff;
+	background-color: transparent;
+	margin: 0 2px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background-color: #ffffff;
+}
+
+/* NaptÃ¡r finomhangolÃ¡s */
+#inlineCalendar .ui-widget-content {
+	background: none;
+	border: 0 solid #ffffff;
+}
+
+#inlineCalendar .ui-datepicker {
+	margin: 10px 0 0 16px;
+	width: 200px;
+	padding: 0;
+}
+
+/* FejlÃ©c */
+#inlineCalendar .ui-datepicker th {
+	font-family: 'alegreya_sansblack';
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: normal !important;
+}
+
+/* Napok */
+#inlineCalendar .ui-state-default, #inlineCalendar .ui-widget-content .ui-state-default, #inlineCalendar .ui-widget-header .ui-state-default {
+	background: none;
+	font-family: 'alegreya_sanslight';
+	font-size: 14px;
+	color: #ffffff;
+	border: 0 solid #ffffff;
+}
+
+/* MÃ¡sik hÃ³nap */
+#inlineCalendar .ui-priority-secondary, #inlineCalendar .ui-widget-content .ui-priority-secondary, #inlineCalendar .ui-widget-header .ui-priority-secondary {
+	color: #4d8297;
+}
+
+/* AktÃ­v nap */
+#inlineCalendar .ui-state-active, #inlineCalendar .ui-widget-content .ui-state-active, #inlineCalendar .ui-widget-header .ui-state-active {
+	background-color: #5799b9;
+	font-family: 'alegreya_sansblack';
+}
+
+#inlineCalendar .ui-datepicker .ui-datepicker-header {
+	padding: 0;
+}
+
+#inlineCalendar .ui-widget-header {
+	background: none;
+	border: 0 solid #ffffff;
+}
+
+#inlineCalendar .ui-datepicker .ui-datepicker-title {
+	font-family: 'alegreya_sansblack';
+	font-size: 14px;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#inlineCalendar .ui-datepicker .ui-datepicker-title {
+	line-height: 30px;	
+	height: 30px;
+	font-weight: normal !important;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+	display: none;
+}
+
+.ui-datepicker-prev-year, .ui-datepicker-prev-month, .ui-datepicker-next-year, .ui-datepicker-next-month {
+	width: 7px;
+	height: 13px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0 3px;
+}
+
+.ui-datepicker-prev-year, .ui-datepicker-prev-month {
+	background-image: url(../images/prevArrow.png);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+.ui-datepicker-next-year, .ui-datepicker-next-month {
+	background-image: url(../images/nextArrow.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+.ui-datepicker-next-year {
+	margin: 0 10px 0 0;
+}
+/* NEPTUN, Kari gombok */
+#main #buttonBox {
+	width: 960px;
+	height: 60px;
+	margin: 10px 0 0 0;
+}
+
+#main #buttonBox ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main #buttonBox ul li {
+	float: left;
+	width: 120px;
+	height: 60px;
+	background-image: url(../images/buttons.png);
+}
+
+#main #buttonBox ul li.neptun-btn {
+	width: 240px;
+}
+
+#main #buttonBox ul li a {
+	display: block;
+	width: 240px;
+    height: 60px;
+	/*border: 1px solid red;*/
+}
+
+#main #buttonBox ul li img {
+	border: 0px solid #ffffff;
+	width: 240px;
+	height: 60px;
+}
+
+#main #buttonBox ul li.neptun-btn img {
+	border: 0px solid #ffffff;
+	width: 240px;
+	height: 65px;
+}
+
+.neptun-btn {
+	background-position: 960px 0;
+}
+
+.neptun-btn:hover {
+	background-position: 960px 60px;
+}
+
+.btk-btn {
+	background-position: 720px 0;
+}
+
+.btk-btn:hover {
+	/*background-position: 720px 60px;*/
+}
+
+.btk-btn.active {
+	/*background-position: 720px 60px;*/
+}
+
+.ck-btn {
+	background-position: 576px 0;
+}
+
+.ck-btn:hover {
+	/*background-position: 576px 60px;*/
+}
+
+.ck-btn.active {
+	/*background-position: 576px 60px;*/
+}
+
+.gtk-btn {
+	background-position: 432px 0;
+}
+
+.gtk-btn:hover {
+	/*background-position: 432px 60px;*/
+}
+
+.gtk-btn.active {
+	/*background-position: 432px 60px;*/
+}
+
+.tktk-btn {
+	background-position: 288px 0;
+}
+
+.tktk-btn:hover {
+	/*background-position: 288px 60px;*/
+}
+
+.tktk-btn.active {
+	/*background-position: 288px 60px;*/
+}
+
+.ttk-btn {
+	background-position: 144px 0;
+}
+
+.ttk-btn:hover {
+	/*background-position: 144px 60px;*/
+}
+
+.ttk-btn.active {
+	background-position: 144px 60px;
+}
+
+.avk-btn, .avk-btn a {
+	/*background-position: 144px 0;*/
+	background-color: #95c795;
+	color: #967c80;
+}
+
+.avk-btn.active a{
+	color: black;
+}
+
+.avk-btn:hover {
+	/*background-position: 144px 60px;*/
+}
+
+.avk-btn.active {
+	/*background-position: 144px 60px;*/
+}
+
+.ik-btn, .ik-btn a {
+	/*background-position: 144px 0;*/
+	/*background-color: #f7cdd6;*/
+	color: #967c80;
+}
+
+.ik-btn.active a{
+	color: black;
+}
+
+.ik-btn:hover {
+	/*background-position: 144px 60px;*/
+}
+
+.ik-btn.active {
+	/*background-position: 144px 60px;*/
+}
+
+/* Buttonbox 2 */
+#main #buttonBox.buttonBox2 {
+	height: auto;
+	margin-bottom: 10px;
+	position: relative;
+}
+#main #buttonBox.buttonBox2 ul {
+	background-image: url(../images/buttons2.jpg);
+	background-repeat: no-repeat;
+	height: 130px;
+}
+#main #buttonBox.buttonBox2 ul li {
+	background: none;
+}
+#main #buttonBox.buttonBox2 li.neptun-btn,
+#main #buttonBox.buttonBox2 li.neptun-btn a{
+	height: 65px;
+}
+#main #buttonBox.buttonBox2 li.neptun-btn:hover {
+	background-position: 0 0;
+}
+#main #buttonBox.buttonBox2 .campus-btn {
+	cursor: pointer;
+	width: 240px;
+	height: 60px;
+	background: none;
+}
+#main #buttonBox.buttonBox2 .campus-btn.comenius:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -240px -131px;
+}
+#main #buttonBox.buttonBox2 .campus-btn.egri:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -480px -131px;
+}
+#main #buttonBox.buttonBox2 .campus-btn.gyongyosi:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -720px -131px;
+}
+#main #buttonBox.buttonBox2 .campus-btn.jaszberenyi:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -720px -131px;
+}
+
+#main #buttonBox.buttonBox2 .btn2 {
+	margin-top: 10px;
+	cursor: pointer;
+	width: 120px;
+	margin-left: 20px;
+}
+.btn2 a {
+	width: 120px !important;
+}
+#main #buttonBox.buttonBox2 .btk-btn {
+	margin-left: 0 !important;
+}
+#main #buttonBox.buttonBox2 .gtk-btn {
+	margin-left: 20px;
+}
+#main #buttonBox.buttonBox2 .ik-btn {
+	margin-left: 30px;
+}
+#main #buttonBox.buttonBox2 .ak-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -240px -200px;
+}
+#main #buttonBox.buttonBox2 .btk-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -240px -200px;
+}
+#main #buttonBox.buttonBox2 .gtk-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -380px -200px;
+}
+#main #buttonBox.buttonBox2 .ik-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -530px -200px;
+}
+#main #buttonBox.buttonBox2 .pk-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -670px -200px;
+}
+#main #buttonBox.buttonBox2 .ttk-btn:hover {
+	background-image: url(../images/buttons2.jpg);
+	background-position: -810px -200px;
+}
+
+#main #buttonBox.buttonBox2 img {
+	width: auto;
+}
+
+/* beloldal */
+#main #contentBox #topBox #midiButtons.midiButtons2 ul li {
+	background-image: url(../images/buttons2.jpg);
+}
+
+.midiButtons2 .ak-btn {
+	background-position: 720px -70px;
+	width: 120px !important;
+}
+/*.midiButtons2 .ak-btn.active,*/
+.midiButtons2 .ak-btn:hover {
+	background-position: -240px -200px;
+}
+
+.midiButtons2 .btk-btn {
+	background-position: 720px -70px;
+}
+/*.midiButtons2 .btk-btn.acitve,*/
+.midiButtons2 .btk-btn:hover {
+	background-position: -240px -200px;
+}
+
+.midiButtons2 .gtk-btn{
+	background-position: 580px -70px;
+}
+/*.midiButtons2 .gtk-btn.active,*/
+.midiButtons2 .gtk-btn:hover {
+	background-position: -380px -200px;
+}
+
+.midiButtons2 .ik-btn {
+	background-position: 440px -70px;
+}
+/*.midiButtons2 .pk-btn.acitve,*/
+.midiButtons2 .ik-btn:hover {
+	background-position: -520px -200px;
+}
+
+.midiButtons2 .pk-btn {
+	background-position: 300px -70px;
+}
+/*.midiButtons2 .ttk-btn.acitve,*/
+.midiButtons2 .pk-btn:hover {
+	background-position: -660px -200px;
+}
+
+.midiButtons2 .ttk-btn {
+	background-position: 150px -70px;
+}
+/*.midiButtons2 .ik-btn.acitve,*/
+.midiButtons2 .ttk-btn:hover {
+	background-position: -810px -200px;
+}
+
+
+/* Kiemelt Ã©s kari hÃ­rek gombjai */
+#main #newsButtonsBox {
+	width: 960px;
+	height: 40px;
+	margin: 10px 0 0 0;
+}
+
+#main #newsButtonsBox ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#main #newsButtonsBox ul li {
+	float: left;
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 40px;
+	font-size: 16px;
+	font-family: 'alegreya_sansmedium';
+}
+
+#main #newsButtonsBox ul li.priority-btn {
+	width: 130px;
+	padding-left: 40px;
+}
+
+#main #newsButtonsBox ul li a {
+	display: block;
+	text-decoration: none;
+}
+
+#main #newsButtonsBox ul li.active a {
+	font-family: 'alegreya_sansblack';
+}
+
+#newsButtonsBox .ik-btn {
+	background-color: #f7ced6;
+}
+
+.priority-btn {
+	background-color: #99b7c3;
+}
+
+.priority-btn a {
+	color: #678e9d;
+}
+
+.priority-btn.active  a {
+	color: #004c6a;
+}
+
+.btk-btn {
+	background-color: #ffe5b4;
+}
+
+.btk-btn a {
+	color: #adb192;
+}
+
+.btk-btn.active a {
+	color: #000000;
+	background-color: #fac145;
+}
+
+.ck-btn {
+	background-color: #f0a9a3;
+}
+
+.ck-btn a {
+	color: #967c80;
+}
+
+.ck-btn.active a {
+	color: #000000;
+	background-color: #c90538;
+}
+
+.gtk-btn {
+	background-color: #e0baa3;
+}
+
+.gtk-btn a {
+	color: #86857d;
+}
+
+.gtk-btn.active a {
+	color: #000000;
+	background-color: #60543D;
+}
+
+.tktk-btn {
+	background-color: #a8e1db;
+}
+
+.tktk-btn a {
+	color: #65a1a7;
+}
+
+.tktk-btn.active a {
+	color: #000000;
+	background-color: #009fa0;
+}
+
+.ttk-btn {
+	background-color: #cbd5a0;
+}
+
+.ttk-btn a {
+	color: #7a997a;
+}
+
+.ttk-btn.active a {
+	color: #000000;
+	background-color: #85A63C;
+}
+
+.ik-btn {
+	background-color: #8f2531;
+}
+
+.ik-btn a {
+	color: #7a997a;
+}
+
+.ik-btn.active a {
+	color: #000000;
+	background-color: #8f2531;
+}
+
+/* HÃ­rek lista doboza*/
+#main .newsBox {
+	height: 515px;
+}
+
+#main .newsBox ul li {
+	float: left;
+	width: 225px;
+	height: 454px;
+	margin: 20px 20px 20px 0;
+	background-color: #ffffff;
+}
+
+#main .newsBox ul li:last-child {
+	margin: 20px 0 20px 0;
+}
+
+#main .newsBox ul li h2 {
+	font-family: 'alegreya_sansblack';
+	font-size: 16px;
+	padding: 25px;
+	color: #004c6a;
+	text-transform: uppercase;
+}
+
+#main .newsBox ul li h2 a {
+	color: #004c6a;
+	text-decoration: none;
+}
+
+#main .newsBox ul li h2 a:hover {
+	color: #004c6a;
+	text-decoration: none;
+}
+
+#main .newsBox ul li p {
+	padding: 0 20px;
+	font-family: 'alegreya_sansregular';
+	font-size: 13px;
+	color: #004c6a;
+}
+
+#main #priorityNews {
+	background-color: #99b7c3;
+}
+
+#main #avkNews {
+	background-color: #95c795;
+	display: none;
+}
+
+#main #ikNews {
+	background-color: #8f2531;
+	display: none;
+}
+
+#main #btkNews {
+	background-color: #fac145;
+	display: none;
+}
+
+#main #ckNews {
+	background-color: #c90538;
+	display: none;
+}
+
+#main #gtkNews {
+	/*background-color: #af6410;*/
+	background-color: #60543D;
+	display: none;
+}
+
+#main #tktkNews {
+	background-color: #009fa0;
+	display: none;
+}
+
+#main #ttkNews {
+	background-color: #89a412;
+	display: none;
+}
+
+
+
+/* ScrollbÃ¡r finomhangolÃ¡s */
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+	height: 20px;
+}
+
+.mCSB_scrollTools {
+	opacity: 1;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+	margin: 0;
+	height: 20px;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+	height: 20px;
+	margin: 0;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;	
+}
+
+.mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}
+
+#main #priorityNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #004b69;
+}
+
+#main #priorityNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #ccdbe1;
+}
+
+#main #btkNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #ffe5b4;
+}
+
+#main #ckNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #f5cfcc;
+}
+#main #ckNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #f0a9a3;
+}
+
+#main #btkNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #fff3dd;
+}
+
+#main #gtkNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #e0baa3;
+}
+
+#main #gtkNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #f0dcd0;
+}
+
+#main #tktkNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #a8e1db;
+}
+
+#main #tktkNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #ccefeb;
+}
+
+#main #ttkNews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #cbd5a0;
+}
+
+#main #ttkNews .mCSB_scrollTools .mCSB_draggerRail {
+	background-color: #e1e7c7;
+}
+
+/* LÃ¡blÃ©c*/
+#main #footer {
+	background-color: #337188;
+	background-image: url(../images/footers.png);
+	background-repeat: no-repeat;
+	padding: 25px 0 20px 0;
+}
+
+#main #innerFooter {
+	background-color: #337188;
+	background-image: url(../images/innerFooters.png);
+	background-repeat: no-repeat;
+	padding: 25px 0 20px 0;
+}
+
+#main #footer img, #main #innerFooter img {
+	width: 82px;
+	margin: 0 auto;
+	display: block;
+}
+
+#main #footer ul, #main #innerFooter ul {
+	padding: 30px 20px 20px 20px;
+	column-count: 6;
+	column-gap: 20px;
+	-moz-column-count: 6;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 6;
+	-webkit-column-gap: 20px;	
+	/*	display: none;*/
+}
+
+#main #footer ul li a, #main #innerFooter ul li a {
+	font-family: 'alegreya_sansregular';
+	font-size: 14px;
+	color: #b2c8d2;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+#main #footer ul li strong a, #main #innerFooter ul li strong a {
+	font-family: 'alegreya_sansblack';
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 10px 0 0 0;
+	display: block;
+}
+
+.priorityFooter {
+	background-position: 0 0;
+}
+
+.btkFooter {
+	background-position: -960px 0;
+}
+
+.ckFooter {
+	background-position: -1920px 0;
+}
+
+.gtkFooter {
+	background-position: -2880px 0;
+}
+
+.tktkFooter {
+	background-position: -3840px 0;
+}
+
+.ttkFooter {
+	background-position: -4800px 0;
+}
+
+#searchForm {
+	padding: 0 0 0 30px;
+}
+
+#searchForm input[type=text] {
+	color: #004c6a;
+	font-family: 'alegreya_sansbold';
+	font-size: 16px;
+	background-color: #cee1e9;
+	width: 330px;
+	height: 50px;
+	line-height: 52px;
+	border: 0 solid #ffffff;
+	margin: 2px 0;
+	padding: 0 10px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+
+#searchForm input.dates, #searchForm input.dates {
+	width: 159px;
+}
+
+#searchForm select {
+	color: #004c6a;
+	font-family: 'alegreya_sansbold';
+	font-size: 16px;
+	background-color: #cee1e9;
+	width: 330px;
+	height: 50px;
+	line-height: 52px;
+	border: 0 solid #ffffff;
+	margin: 2px 0;
+	padding: 0 10px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+}
+
+#searchForm input[type=radio] {
+	width: 20px;
+	height: 10px;
+}
+
+#searchForm label {
+	color: #004c6a;
+	font-family: 'alegreya_sanslight';
+	font-size: 16px;	
+	line-height: 50px;
+	text-transform: uppercase;
+	padding: 0 0 0 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+.pagination {
+	text-align: center;
+}
+
+.pagination a {
+	color: #004c6a;
+	font-family: 'alegreya_sansbold';
+	font-size: 16px;
+	text-decoration: none;
+	padding: 0 5px;
+}
+
+.pagination a.current {
+	color: #99b7c3;
+}
+
+.pagination a:hover {
+	color: #004c6a;
+	text-decoration: none;
+}
+
+.calTitle {
+	color: #ffffff;
+	font-family: 'alegreya_sansblack';
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.submit {
+	width: 330px;
+	height: 50px;
+	border: 0 solid #ffffff;
+	color: #004c6a;
+	background-color: #cee1e9;
+	font-family: 'alegreya_sansbold';
+	font-size: 16px;
+	line-height: 52px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#submenu h1 {
+	color: #ffffff;
+	font-family: "alegreya_sansbold";
+	font-size: 18px;
+	line-height: 70px;
+	text-align: left;
+	padding: 0 0 0 30px;
+	text-transform: uppercase;
+}
+
+/* Google Maps */
+#map_canvas { height: 300px; margin: 0 0 20px 0;}
+
+
+#main #contentBox #container #contentText .page p {
+	padding: 10px 0;
+}
+
+.page {
+	padding: 0 30px;
+	font-family: "alegreya_sansregular";
+	font-size: 14px;
+	color: #004B69;
+	line-height: 16px;
+}
+
+.qtip-light {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #004b69;
+    font-family: "alegreya_sansbold"
+}
+
+#szolgBtn {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+    width: 33px;
+    height: 130px;
+    cursor:  pointer;
+}
+
+#palyaBtn {
+    position: absolute;
+    top: 371px;
+    left: 10px;
+    width: 33px;
+    height: 129px;
+    cursor:  pointer;
+}
+
+#btn {
+    background-image: url(../images/sideBarOpen.png);
+    background-position:  top left;
+    background-repeat: no-repeat;
+    height: 100%; 
+    top: 0; 
+    left: 240px; 
+    width: 46px; 
+    position: absolute; 
+    z-index: 8000;
+    display: none;
+}
+
+.gallery img {
+	margin: 5px 5px 0 0;
+}
+.gallery h1 {
+	padding: 10px 0 10px 0 !important;
+}
+
+.list .date,
+#main #contentBox #container #contentText p.date{
+	line-height: 15px !important;
+    padding: 0 30px !important;
+}
+
+
+#rendezvenyszervezesLi {
+	background: #ccdbe1;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 170px !important;
+}
+#rendezvenyszervezesLink {
+	color: #1c5873;
+	font-weight: bold;
+}
+
+#tavoktatasLi {
+	background: #ccdbe1;
+    color: white;
+    padding-left: 40px;
+    padding-right: 10px;
+    width: 100px !important;
+}
+#tavoktatasLink {
+	color: #1c5873;
+	font-weight: bold;
+}
+
+/********************** koronavÃ­rus dialog ********************************/
+.ui-widget.koronavirus_dialog, .ui-widget.kutatok_dialog {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: .8em;
+}
+
+.ui-widget-content.koronavirus_dialog, .ui-widget-content.kutatok_dialog {
+    background: #F9F9F9;
+    border: 1px solid #260000;
+    color: #222222;
+}
+
+.ui-dialog.koronavirus_dialog, .ui-dialog.kutatok_dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog.koronavirus_dialog .ui-dialog-content, .ui-dialog.kutatok_dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ui-dialog.koronavirus_dialog .ui-widget-header, .ui-dialog.kutatok_dialog .ui-widget-header {
+    background: #260000;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+	height: 30px;
+}
+
+.ui-dialog.koronavirus_dialog .ui-dialog-titlebar, .ui-dialog.kutatok_dialog .ui-dialog-titlebar {
+    padding: 0.5em 0.5em 0.1em 0.5em;
+    position: relative;
+    font-size: 1.2em;
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+	border-top-left-radius: 0px !important;
+}
+
+.ui-dialog.koronavirus_dialog .ui-dialog-titlebar .ui-button-icon-primary, .ui-dialog.kutatok_dialog .ui-dialog-titlebar .ui-button-icon-primary {
+	background-image: url(images/ui-icons_777777_256x240.png)
+}
+
+.koronavirus_dialog, .kutatok_dialog {
+	z-index: 2000 !important;
+	overflow: hidden !important;
+}
+#p2020 {
+	float: right;
+	
+}
+.p2020fixed {
+	position: fixed;
+	top: 5px;
+	right: 0;
+	margin-top:0;
+}
+.p2020default {
+	position: absolute;
+	top: 146px;
+	right: 0;
+	margin-top: 120px;
+}
+
+
