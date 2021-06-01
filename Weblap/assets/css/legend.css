@@ -1,0 +1,90 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 980px) {
+	
+    #navigation {
+        
+        display: inline !important;
+
+    }
+    #jelmagyarazatgomb{
+      font-size: 500%;
+    }
+    #fomenu{
+      font-size: 400%;
+    }
+    .nav-item{
+      font-size: 250%;
+    }
+    .navbar-brand{
+      font-size: 150%;
+    }
+    .navbarSupportedContent{
+      font-size: 300%;
+    }
+    .colors{
+      font-size: 260%;
+    }
+    #colorbadge{
+      font-size: 130%;
+    }
+    #colordescription{
+      font-size: 140%;
+    }
+    #showhidebutton{
+      display: none;
+    }
+    #login{
+    	font-size: 180%;
+    }
+    #logindesc{
+    	font-size: 200%;
+    }
+
+
+    
+
+}
+
+@media only screen and (orientation: landscape) and (max-width: 980px) {
+    #navigation {
+        
+        display: inline !important;
+    }
+    #jelmagyarazatgomb{
+      font-size: 200%;
+    }
+    #fomenu{
+      font-size: 200%;
+    }
+    .nav-item{
+      font-size: 130%;
+    }
+    .navbar-brand{
+      font-size: 130%;
+    }
+    #showhidebutton{
+      display: none;
+    }
+}
+
+@media (min-width: 981px) {
+    #navigation{
+     
+    }
+}
+.jelmagyarazatmegnyitasa{
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  align-self:  center ; 
+}

@@ -1,0 +1,162 @@
+.aboutcontainer .image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 40%;
+  height: auto;
+}
+
+.aboutcontainer .overlay {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 40%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.aboutcontainer .container:hover .overlay {
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+}
+
+.aboutcontainer .text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+  .aboutcontainer >html {
+  font-size: 62.5%;
+}
+ .aboutcontainer {
+  font-size: 1.6rem;
+  background-color: #060606;
+  color: #c7c6ac;
+  font-family: adelle;
+ligatures;
+  
+  justify-content: center;
+  font-synthesis: none;
+  
+}
+
+.credits h1 {
+  font-family: adelle-condensed;
+  text-align: center;
+  font-weight: 400;
+  font-variant-caps: all-small-caps;
+  font-size: 6rem;
+}
+.credits h1 em {
+  font-variant-caps: normal;
+  font-size: 0.8em;
+}
+.credits h2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+  font-variant-caps: all-small-caps;
+}
+.aboutcontainer h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.aboutcontainer h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.aboutcontainer p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.aboutcontainer .smcaps {
+  font-variant-caps: all-small-caps;
+}
+.aboutcontainer .credits {
+  flex-basis: 100rem;
+  margin: 2rem 0;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  padding: 1rem;
+}
+.aboutcontainer .credits__single {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 0 2rem;
+  text-align: center;
+}
+.aboutcontainer .credits__single dt {
+  font-variant-caps: all-small-caps;
+  margin-top: 1.7rem;
+}
+.aboutcontainer .credits__single dd {
+  margin-top: 0.6rem;
+}
+.aboutcontainer .credits__double {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 2rem;
+}
+.aboutcontainer .credits__double dt {
+  text-align: right;
+  font-variant-caps: all-small-caps;
+  margin-top: 1.7rem;
+}
+.aboutcontainer .credits__double dd {
+  text-align: left;
+  grid-column: 2 / 3;
+  margin-top: 0.6rem;
+}
+.aboutcontainer .credits__double dt + dd {
+  margin-top: 1.7rem;
+}
+.aboutcontainer .credits__inline {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.7rem;
+}
+.aboutcontainer .credits__inline li {
+  padding: 0.3rem 0.8rem;
+}
+.aboutcontainer .credits__music {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.7rem;
+}
+.aboutcontainer .credits__music dl {
+  text-align: center;
+  padding: 0 2rem 2rem 2rem;
+  flex-basis: 30rem;
+}
+.aboutcontainer .credits__music dt {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.aboutcontainer .credits__music dd {
+  font-size: 1.5rem;
+}
+.aboutcontainer footer {
+  margin: 3rem;
+}
