@@ -16,7 +16,6 @@ body {
 	<div class="container" style="width: 90%">
 		
 		<div class="vertical-align" >
-			<!--<img id="equipmentsimg" alt="cartesius.jpeg" class="centere" src="<?php echo base_url()?>/assets/images/eke.png"  >-->
 			<img src="<?php echo base_url()?>/assets/images/eke.png" alt="EKE" class="centere">
 			<h1 class="text-center"><p id="login">Bejelentkezés</p></h1>
 			<div class="form-group" >

@@ -4,12 +4,6 @@
  background-color: #cccccc;
 }
 
-/*
-.ul{
-  position:absolute;
-  margin:0;
-  padding:0;
-}
 */
 .li{
   text-align:center;
@@ -278,49 +272,6 @@
 <div class="pagination-links">
     <?php echo $this->pagination->create_links(); ?>
 </div>
-           
-
-
-
- <!--
-
-
-
-
-
-<h2>Posztok</h2>
-<?php if(empty($posts)):?>
-  <h3 align="center">Jelenleg nincs egy poszt sem. :(</h3>
-<?php endif;?>
-<?php foreach($posts as $post) : ?>
-  <h3 class="color"><?php echo $post['title']; ?></h3>  
-  <div class="row">
-    <div class="col-md-3">
-      <ul class="ul">
-        <li class="li">
-          <img class="post-thumb" src="<?php echo site_url(); ?>assets/images/<?php echo $post['post_image']; ?>">
-        </li>
-      </ul>
-      
-    </div>
-    <div class="col-md-9">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">Posztolva ekkor: <?php echo $post['created_at']; ?> a   <?php echo $post['name']; ?> témakörben.</li>
-  </ol>
-      <small class="breadcrumb-item active"></small><br>
-    <?php echo word_limiter($post['body'], 60); ?>
-    <br><br>
-    </div>
-  </div>
-<?php endforeach; ?>
-<div class="pagination-links">
-    <?php echo $this->pagination->create_links(); ?>
-</div>
-
-
-
- -->
-
 
 
 

@@ -239,7 +239,7 @@ p {
     <p>A weboldal az <em>Interaktív hardware – software-rendszer fejlesztése természettudományos ismeretek
 népszerűsítése céljából a Varázstoronyban</em> című projekt részeként készült.</p>
 
-    <dt>Projektet készítette</dt>
+    <dt>OTDK Projektet készítette</dt>
     <dd>Horváth Krisztián</dd>
     <dd>Keller Zsófia</dd>
     <dd>Oravecz Zsolt</dd>
@@ -249,7 +249,7 @@ népszerűsítése céljából a Varázstoronyban</em> című projekt részekén
     <dt>Weboldalt készítette</dt>
     <dd>Oravecz Zsolt</dd>
     <dd>Sass-Gyarmati Norbert</dd>
-    <dd>Horváth Krisztián</dd>
+    
 
     
     
@@ -259,8 +259,8 @@ népszerűsítése céljából a Varázstoronyban</em> című projekt részekén
     
   </dl>
 
-<!--
-  <h2>Csapat</h2>
+
+  <h2>Weboldal fejlesztők</h2>
   <dl class="credits__double">
     <dt>Design</dt>
     <dd>Sass-Gyarmati Norbert</dd>
@@ -271,26 +271,20 @@ népszerűsítése céljából a Varázstoronyban</em> című projekt részekén
     <dt>MQTT</dt>
     <dd>Oravecz Zsolt</dd>
 
-    <dt>Eszközök kiépítése</dt>
-    <dd>Horváth Krisztián</dd>
-    <dd>Keller Zsófia</dd>
-    <dd>Oravecz Zsolt</dd>
-    <dd>Sass-Gyarmati Norbert</dd>
-    <dd>Szűcs Norbert</dd>
+    
 
     <dt>Adatbázis kapcsolatok</dt>
-    <dd>Sass-Gyarmati Norbert</dd>
     <dd>Oravecz Zsolt</dd>
+    
 
     <dt>Kvíz</dt>
     <dd>Sass-Gyarmati Norbert</dd>
 
     <dt>Beléptető modul</dt>
-    <dd>Oravecz Zsolt</dd>
     <dd>Sass-Gyarmati Norbert</dd>
+    
 
-    <dt>Rezümé</dt>
-    <dd>Keller Zsófia</dd>
+    
 
   </dl>
 
@@ -323,34 +317,8 @@ népszerűsítése céljából a Varázstoronyban</em> című projekt részekén
       <dd>https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif</dd>
     </dl>
   </div>
--->
-<h2>Külön köszönet</h2>
-  <ul class="credits__inline">
-    <li>Szűcs Norbert</li>
-    <li>Dr. Geda Gábor</li>
-  </ul>
 
-  <h2>Források</h2>
-  <div class="credits__music">
-    <dl>
-      <dt>Infó</dt>
-      <dd>https://uni-eszterhazy.hu</dd>
-    </dl>
-    <dl>
-      <dt>Kép</dt>
-      <dd>https://www.varazstorony.hu</dd>
-      <dd>https://uni-eszterhazy.hu/hu</dd>
-      <dd>EKE- Varázstorony</dd>
-    </dl>
-    <dl>
-      <dt>Kezdőlap</dt>
-      <dd>https://uni-eszterhazy.hu/hu/egyetem/kultura/varazstorony</dd>
-    </dl>
-    <dl>
-      <dt>Animáció</dt>
-      <dd>https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif</dd>
-    </dl>
-  </div>
+
   
 
   <footer>
@@ -422,18 +390,6 @@ require_once "contact-view.php";
             </div>
         </form>
     </div>
-
-<!-- Add font awesome icons -->
-<!--
-<h3>Weblap fejlesztőinek elérhetőségei:</h3>
-<a href="https://www.facebook.com/norbi.sassgyarmati/" class="fa fa-facebook"></a> Sass-Gyarmati Norbert
-<br>
-<br>
-  <a href="#" class="fa fa-facebook"></a> Oravecz Zsolt  
-<br>
-<br>
-<a href="#" class="fa fa-facebook"></a> Horváth Krisztián
--->
 
 </div>
 

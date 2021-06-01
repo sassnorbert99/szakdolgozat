@@ -55,21 +55,9 @@
 <button id="stop-button">Kamera kikapcsolása</button>
 
 </div>
-
-
-<!--<b>Last detected at: </b>-->
-
-
-<!--
-<h1>Scan from File:</h1>
-<input type="file" id="file-selector">
-<b>Detected QR code: </b>
-<span id="file-qr-result">None</span>
--->
 <script type="module">
 
     import QrScanner from '/assets/qrCode/qr-scanner.min.js';
-    //import QrScanner from "./qrCode/qr-scanner.min.js";
     QrScanner.WORKER_PATH = '/assets/qrCode/qr-scanner-worker.min.js';
 
     const video = document.getElementById('qr-video');
@@ -111,13 +99,9 @@
             window.location.replace("https://varazstorony.robucation.com/equipments/slope");
             break;
           default:
-            // code block
             break;
         }
     }
-
-    // ####### Web Cam Scanning #######
-
     QrScanner.hasCamera().then(hasCamera => camHasCamera.textContent = hasCamera);
 
     const scanner = new QrScanner(video, result => setResult(camQrResult, result), error => {
@@ -135,8 +119,6 @@
             }
         });
     });
-
-    // for debugging
     window.scanner = scanner;
 
 
@@ -151,8 +133,6 @@
     document.getElementById('stop-button').addEventListener('click', () => {
         scanner.stop();
     });
-
-    // ####### File Scanning #######
 
     fileSelector.addEventListener('change', event => {
         const file = fileSelector.files[0];

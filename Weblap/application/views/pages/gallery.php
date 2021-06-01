@@ -191,44 +191,33 @@ p a:visted {
             <div class="gallery">
               
             <?php 
-            // Image extensions
             $image_extensions = array("png","jpg","jpeg","gif");
 
-            // Target directory
             $dir = './assets/images/terkepek/gallery';
             if (is_dir($dir)){
                 
                 if ($dh = opendir($dir)){
                     $count = 1;
 
-                    // Read files
                     while (($file = readdir($dh)) !== false){
 
                         if($file != '' && $file != '.' && $file != '..'){
                             
-                            // Thumbnail image path
                             $thumbnail_path = "../assets/images/terkepek/gallery/".$file;
 
-                            // Image path
                             $image_path = "../assets/images/terkepek/gallery/".$file;
                             
                             $thumbnail_ext = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
                             $image_ext = pathinfo($image_path, PATHINFO_EXTENSION);
 
-                            // Check its not folder and it is image file
                             if(!is_dir($image_path) && 
                                 in_array($thumbnail_ext,$image_extensions) && 
                                 in_array($image_ext,$image_extensions)){
                                 ?>
-
-                                <!-- Image -->
                                 <a href="<?php echo $image_path; ?>">
                                     <img src="<?php echo $thumbnail_path; ?>" alt="" title=""/>
                                 </a>
-                                <!-- --- -->
                                 <?php
-
-                                // Break
                                 if( $count%4 == 0){
                                 ?>
                                     <div class="clear"></div>
@@ -246,13 +235,13 @@ p a:visted {
             </div>
             
 
-            <!-- A videót kiszedtem mert egy csomó hibát okozott. Zsolti.-->
-            <!--<h1 class="shimmer">A videó megtekintéséhez katt ide:</h1>
+            
+            <h1 class="shimmer">A videó megtekintéséhez katt ide:</h1>
             <div class="centere">              
               <iframe frameborder="0" width="420" height="345" src="//www.youtube.com/embed/DwXELNidJ7k"></iframe>                                          
           </div>
           
-        </div>-->
+        </div>
 
 
         <!-- Script -->

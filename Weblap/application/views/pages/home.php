@@ -64,13 +64,11 @@
 		ga('send', 'pageview');
 
 	</script>
-	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
     <script type="text/javascript">
         window.cookieconsent_options = {"message":"A weboldalon cookie-kat használunk, amik segítenek minket a lehető legjobb szolgáltatások nyújtásában.","dismiss":"Megértettem","learnMore":"Tovább olvasom","link":"https://it.uni-eszterhazy.hu/adatvedelmi_nyilatkozat.html","theme":"light-top"};
     </script>
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
-    <!-- End Cookie Consent plugin -->
     <style type="text/css">
     .cc_container{
         /*background-color: #99b7c3 !important;*/
@@ -486,9 +484,6 @@
         <div style="text-align: center;">
           <a href="http://old.ektf.hu/" style="color: #b2c8d2; font-family: 'alegreya_sansregular'; font-size: 14px; text-decoration: none;">A régi honlap elérhető a http://old.ektf.hu/ címen.</a><br /><br />
         </div>
-	<!--
-	<hr>
-	<a href="http://old.ektf.hu">old.ektf.hu</a>-->
     </div>
 	<a href="#" id="footerBtn"><img src="https://uni-eszterhazy.hu/public/images/footerLogo.png" alt="" title="" /></a>
 </div>
@@ -496,7 +491,6 @@
 					<div id="toolbar">
 	    <ul style="display:none;" id="szolg">
 	        <li class="title">Szolgáltatások</li>
-	        <!-- <li><a href="http://oktatas.ektf.hu/hallgatoi_szolgaltato_kozpont" target="_blank">Hallgatói Szolgáltató Központ</a></li> -->
 	        <li><a href="http://www.hotelestella.hu/" target="_blank">Hotel eStella</a></li>
 	        <li><a href="https://uni-eszterhazy.hu/hu/egyetem/hallgatok-/kollegiumok" target="_blank">Vendégszállás kollégiumokban</a></li>
 	        <li><a href="http://isc.ektf.hu/" target="_blank">Informatikai Szolgáltató Centrum és Digitális Iroda</a></li>
@@ -504,9 +498,6 @@
 	        <li><a href="http://tik.ektf.hu/nyelvvizsgak/" target="_blank">Nyelvvizsgák</a></li>
 	        <li><a href="https://iki.uni-eszterhazy.hu/hu/iki/nyelvvizsgak/intezmenyi-nyelvi-vizsga" target="_blank">Intézményi nyelvvizsga</a></li>
 	        <li><a href="https://uni-eszterhazy.hu/hu/egyetem/hallgatok-/kometi" target="_blank">Korttárssegítés</a></li>
-	        <!--<li><a href="http://tik.ektf.hu/tanacsadas/pszichologiai_tanacsadok" target="_blank">Pszichológiai tanácsadás</a></li>
-	        <li><a href="http://tik.ektf.hu/tanacsadas/joga" target="_blank">Életmód klub</a></li>
-	        <li><a href="http://tik.ektf.hu/kgyhki/karrier_es_oregdiak_iroda" target="_blank">Karrier és Öregdiák Iroda</a></li>-->
 	        <li><a href="https://uni-eszterhazy.hu/hu/egyetem/hallgatok-/szakmai-gyakorlat-2072" target="_blank">Szakmai gyakorlat</a></li>
 	        <li><a href="http://www.nkk.uni-eger.hu/hu/nkk/munkatarsaknak" target="_blank">Oktatói mobilitás</a></li>
 	        <li><a href="http://www.nkk.uni-eger.hu/hu/nkk/hallgatoknak" target="_blank">Hallgatói mobilitás</a></li>

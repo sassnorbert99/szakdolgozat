@@ -15,18 +15,7 @@
     <div id = "navbar">
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url(); ?>">Kezdőlap</a></li>
-        <!--<li><a href="<?php echo base_url(); ?>about">Rólunk</a></li>
-        <li><a href="<?php echo base_url(); ?>posts">Blog</a></li>
-        <li><a href="<?php echo base_url(); ?>categories">Categories</a></li>-->
         <li><?php echo anchor(base_url('users/list/'),'Users');?></li>
-
-
-        
-        
-        
-        
-        
-
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php if(!$this->session->userdata('logged_in')): ?>
@@ -117,7 +106,7 @@
 
 
   <?php  
- $connect = mysqli_connect("89.40.126.232:8080", "varazstorony", "VarazsTorony_18", "varazstorony");  
+ $connect = mysqli_connect("", "", "", "");  
  $query ="SELECT * FROM posts ORDER BY id desc";  
  $result = mysqli_query($connect, $query); 
  ?>  

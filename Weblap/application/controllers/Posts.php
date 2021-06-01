@@ -68,11 +68,7 @@
 			}else{
 				
 				$config['upload_path'] = './assets/images/posts';
-				//$config['upload_path'] = APPPATH . '/img';
 				$config['allowed_types'] = 'jpg|jpeg|gif|png';
-				//$config['max_size'] = '5000';
-				//$config['max_width'] = '2000';
-				//$config['max_height'] = '2000';
 				$this->load->library('upload', $config);
 				
 
@@ -86,8 +82,7 @@
 					
 					$data = array('upload_data' => $this->upload->data());
 
-					$post_image = $_FILES['file']['name'];		
-					////////////////////////////////////////////////////////////
+					$post_image = $_FILES['file']['name'];
 					$upload_data = $this->upload->data();
                 	$fileName = $upload_data['file_name'];
 
@@ -95,8 +90,8 @@
         			
         			$this->load->library('ftp');
         			$ftp_config['hostname'] = 'varazstorony.robucation.com';
-        			$ftp_config['username'] = 'varazstorony';
-        			$ftp_config['password'] = 'EKElabor2021';
+        			$ftp_config['username'] = '';
+        			$ftp_config['password'] = '';
         			$ftp_config['debug']    = TRUE;
 					
 					$this->ftp->connect($ftp_config);

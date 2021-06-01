@@ -229,17 +229,6 @@
 }
 </style>
 
-<!--<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.style1 {
-	text-align: left;
-}
-.style2 {
-	margin: 4px;
-}
-</style>
-</head>-->
 <table style="width: 95%;margin: 0 auto;" >
 	<tr >
     <td colspan="2">

@@ -56,7 +56,7 @@
 				$user_id = $this->user_model->login($username, $password);
 
 				$query = "SELECT admin FROM users WHERE username='$username'";
-               $link = mysqli_connect('89.40.126.232:8080','varazstorony','VarazsTorony_18','varazstorony');
+               $link = mysqli_connect('','','','');
                if (mysqli_connect_errno()) {
     				printf("Connect failed: %s\n", mysqli_connect_error());
     			exit();

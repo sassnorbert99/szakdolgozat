@@ -11,15 +11,6 @@
 				redirect('users/login');
 			}
 			$data['title'] = ucfirst($page);
-
-
-
-
-     //Itt amikor a felhasználó be van jelentkezve rögzítjük az adatbázisban hogy melyik oldalon jár jelenleg,
-     //És mikor látogatta azt meg
-    
-			
-   
     
 			$this->load->view('templates/header');
 			$this->load->view('qr/demo'.$page, $data);

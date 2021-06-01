@@ -125,8 +125,6 @@
         scanner.stop();
     });
 
-    // ####### File Scanning #######
-
     fileSelector.addEventListener('change', event => {
         const file = fileSelector.files[0];
         if (!file) {
