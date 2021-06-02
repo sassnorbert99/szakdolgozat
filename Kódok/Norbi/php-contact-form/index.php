@@ -5,13 +5,12 @@ if(!empty($_POST["send"])) {
 	$subject = $_POST["subject"];
 	$content = $_POST["content"];
 
-	$conn = mysqli_connect("localhost:8889", "root", "root", "contact") or die("Connection Error: " . mysqli_error($conn));
-	mysqli_query($conn, "INSERT INTO tblcontact (user_name, user_email,subject,content) VALUES ('" . $name. "', '" . $email. "','" . $subject. "','" . $content. "')");
+	$conn = mysqli_connect("", "", "", "") or die("Connection Error: " . mysqli_error($conn));
+	mysqli_query($conn, "INSERT INTO table (user_name, user_email,subject,content) VALUES ('" . $name. "', '" . $email. "','" . $subject. "','" . $content. "')");
 	$insert_id = mysqli_insert_id($conn);
-	//if(!empty($insert_id)) {
 	   $message = "Your contact information is saved successfully.";
 	   $type = "success";
-	//}
+	
 }
 require_once "contact-view.php";
 ?>
