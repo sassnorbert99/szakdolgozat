@@ -5,7 +5,13 @@ int totaldegree = 0;
 int lastPin;  
 int aValue;
 boolean operate;
-
+/*terepasztalhoz:
+encoder több állapotot legyen képes felvenni:
+- áttétekkel meg kell csinálni, hogy az encoder legalább akkor 2x-3x
+körbeérjen
+- val: int round = something
+Ezzel beszorozni a 40-et, mert 40 állapotérték egy teljes fordulás
+*/
  void setup() 
  { 
    pinMode (pinA,INPUT);
@@ -21,7 +27,7 @@ boolean operate;
    aValue = digitalRead(pinA);
    if (aValue != lastPin)
    { 
-     if (digitalRead(pinB) != aValue) //We're Rotating Clockwise
+     if (digitalRead(pinB) != aValue)
      { 
        count ++;
        operate = true;  
